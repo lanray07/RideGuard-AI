@@ -5,6 +5,7 @@ command -v xcodegen >/dev/null || { echo 'Install XcodeGen first: brew install x
 python3 scripts/create_asset_catalog.py
 # Build-time icon normalization to Apple's required raster dimensions.
 sips --resampleHeightWidth 1024 1024 Marketing/app-icon-master.png --out App/Assets.xcassets/AppIcon.appiconset/AppIcon.png >/dev/null
+cp App/Assets.xcassets/AppIcon.appiconset/AppIcon.png Watch/Assets.xcassets/AppIcon.appiconset/AppIcon.png
 xcodegen generate
 swift test
 mkdir -p build
