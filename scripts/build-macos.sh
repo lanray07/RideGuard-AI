@@ -8,5 +8,5 @@ sips --resampleHeightWidth 1024 1024 Marketing/app-icon-master.png --out App/Ass
 xcodegen generate
 swift test
 mkdir -p build
-xcodebuild -project RideGuard.xcodeproj -scheme RideGuard -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -derivedDataPath build/DerivedData -resultBundlePath build/iPhone.xcresult CODE_SIGNING_ALLOWED=NO build 2>&1 | tee build/iphone-build.log
-xcodebuild -project RideGuard.xcodeproj -target RideGuardWatch -sdk watchsimulator -destination 'generic/platform=watchOS Simulator' CODE_SIGNING_ALLOWED=NO build 2>&1 | tee build/watch-build.log
+xcodebuild -project RideGuard.xcodeproj -scheme RideGuard -destination 'generic/platform=iOS Simulator' -derivedDataPath build/DerivedData -resultBundlePath build/iPhone.xcresult CODE_SIGNING_ALLOWED=NO build 2>&1 | tee build/iphone-build.log
+xcodebuild -project RideGuard.xcodeproj -scheme RideGuardWatch -destination 'generic/platform=watchOS Simulator' -derivedDataPath build/DerivedData CODE_SIGNING_ALLOWED=NO build 2>&1 | tee build/watch-build.log

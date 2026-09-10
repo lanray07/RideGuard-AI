@@ -10,7 +10,7 @@ packages:
 settings:
   base:
     SWIFT_VERSION: '5.0'
-    MARKETING_VERSION: '0.1.0'
+    MARKETING_VERSION: '1.0'
     CURRENT_PROJECT_VERSION: '1'
     CODE_SIGN_STYLE: Automatic
 targets:
@@ -32,7 +32,7 @@ targets:
         embed: true
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.rideguard.app
+        PRODUCT_BUNDLE_IDENTIFIER: com.RideGuardAI.app
         TARGETED_DEVICE_FAMILY: '1,2'
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
     info:
@@ -56,13 +56,13 @@ targets:
       - package: RideGuardCore
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.rideguard.app.watchkitapp
+        PRODUCT_BUNDLE_IDENTIFIER: com.RideGuardAI.app.watchkitapp
     info:
       path: Configuration/Watch-Info.plist
       properties:
         CFBundleDisplayName: RideGuard
         WKApplication: true
-        WKCompanionAppBundleIdentifier: com.rideguard.app
+        WKCompanionAppBundleIdentifier: com.RideGuardAI.app
   RideGuardActivity:
     type: app-extension
     platform: iOS
@@ -71,7 +71,7 @@ targets:
       - path: Shared
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.rideguard.app.activity
+        PRODUCT_BUNDLE_IDENTIFIER: com.RideGuardAI.app.activity
     info:
       path: Configuration/Activity-Info.plist
       properties:
@@ -79,6 +79,10 @@ targets:
         NSExtension:
           NSExtensionPointIdentifier: com.apple.widgetkit-extension
 schemes:
+  RideGuardWatch:
+    build:
+      targets:
+        RideGuardWatch: all
   RideGuard:
     build:
       targets:
