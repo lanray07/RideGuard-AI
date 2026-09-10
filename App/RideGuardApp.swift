@@ -5,7 +5,17 @@ import SwiftData
 struct RideGuardApp: App {
     @State private var store = RideStore.shared
     var body: some Scene {
-        WindowGroup { RootView().environment(store) }
+        WindowGroup {
+            Group {
+                #if targetEnvironment(simulator)
+                if let screen = ProcessInfo.processInfo.environment["RIDEGUARD_SCREENSHOT_SCREEN"] {
+                    CaptureScreen(name: screen)
+                } else { RootView() }
+                #else
+                RootView()
+                #endif
+            }.environment(store)
+        }
             .modelContainer(for: LocalRecord.self)
     }
 }

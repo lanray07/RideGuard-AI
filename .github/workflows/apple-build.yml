@@ -11,14 +11,25 @@ jobs:
         run: brew install xcodegen
       - name: Build and test
         run: bash scripts/build-macos.sh
+      - name: Capture real iPhone and iPad screenshots
+        run: python3 scripts/capture-simulators.py
       - name: Upload build results and artwork
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: RideGuard-build-and-assets
           path: |
-            build/
+            build/*.log
+            build/*.xcresult/
+            build/screenshots/
             Marketing/
             App/Assets.xcassets/
             RideGuard.xcodeproj/
           retention-days: 14
+      - name: Upload screenshots separately
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: RideGuard-screenshots
+          path: build/screenshots/
+          if-no-files-found: ignore
