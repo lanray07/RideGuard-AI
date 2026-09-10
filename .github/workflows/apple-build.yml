@@ -1,0 +1,24 @@
+name: Apple platform build
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  native:
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install XcodeGen
+        run: brew install xcodegen
+      - name: Build and test
+        run: bash scripts/build-macos.sh
+      - name: Upload build results and artwork
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: RideGuard-build-and-assets
+          path: |
+            build/
+            Marketing/
+            App/Assets.xcassets/
+            RideGuard.xcodeproj/
+          retention-days: 14

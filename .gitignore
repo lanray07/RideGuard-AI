@@ -1,0 +1,13 @@
+.build/
+.swiftpm/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+.DS_Store
+.env
+node_modules/
+build/
+RideGuard.xcodeproj/
+submission-private/
+*.p12
+*.mobileprovision

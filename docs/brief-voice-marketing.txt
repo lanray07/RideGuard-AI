@@ -1,0 +1,646 @@
+==================================================
+45. VOICE-FIRST RIDING EXPERIENCE — CORE FEATURE
+==================================================
+
+Voice interaction is a FLAGSHIP SAFETY FEATURE of RideGuard AI.
+
+CORE PRINCIPLE:
+
+“Eyes on the road. Hands on the bike.”
+
+During an active ride, minimise the need for cyclists to touch or look at
+their iPhone.
+
+Where supported by Apple's current APIs, integrate App Intents, Siri,
+Shortcuts, speech technologies, Apple Watch and audio feedback.
+
+Do not invent unsupported Siri capabilities.
+
+--------------------------------------------------
+A. VOICE COMMANDS
+--------------------------------------------------
+
+Design supported hands-free actions for commands/intents such as:
+
+“Report a pothole.”
+
+“Report blocked cycle lane.”
+
+“Report debris.”
+
+“Report roadworks.”
+
+“Report broken glass.”
+
+“Report flooding.”
+
+“Report poor lighting.”
+
+“Report dangerous junction.”
+
+“What's ahead?”
+
+“What's my ETA?”
+
+“Check me in.”
+
+“Share my ride.”
+
+“I'm okay.”
+
+“End my ride.”
+
+“Take me home.”
+
+“Find a lower-risk route home.”
+
+“Repeat that.”
+
+Use App Intents / Siri / Shortcuts where technically supported.
+
+If an interaction cannot be implemented reliably using public Apple APIs,
+do not create a fake voice assistant.
+
+--------------------------------------------------
+B. VOICE HAZARD REPORTING
+--------------------------------------------------
+
+A rider should be able to report an issue with minimal interaction.
+
+Example:
+
+Rider:
+“Report pothole.”
+
+RideGuard:
+“Pothole marked at your current location.”
+
+Record:
+
+• approximate/current location
+• timestamp
+• travel direction where available
+• report category
+
+Do not require the rider to type while moving.
+
+After the ride, optionally ask:
+
+“Would you like to add details to the pothole report?”
+
+--------------------------------------------------
+C. NATURAL VOICE REPORTING
+--------------------------------------------------
+
+Where a reliable speech/AI pipeline is implemented, support natural phrases:
+
+“There's broken glass in the cycle lane.”
+
+“Big pothole here.”
+
+“Roadworks are blocking the bike lane.”
+
+“There’s debris ahead.”
+
+Classify the statement into the appropriate hazard category.
+
+Example structured output:
+
+category: blockedCycleLane
+location: currentLocation
+timestamp: currentTime
+confidence: 0.94
+
+If confidence is low, save it as requiring confirmation rather than
+inventing the classification.
+
+--------------------------------------------------
+D. SPOKEN HAZARD ALERTS
+--------------------------------------------------
+
+Provide optional spoken alerts.
+
+Examples:
+
+“Reported pothole ahead in 200 metres.”
+
+“Roadworks reported ahead.”
+
+“Cycle lane obstruction reported ahead.”
+
+“Complex junction approaching.”
+
+Keep alerts:
+
+• short
+• calm
+• actionable
+• non-alarmist
+
+Do not overwhelm riders with constant speech.
+
+Implement alert prioritisation and cooldown logic.
+
+--------------------------------------------------
+E. “WHAT'S AHEAD?”
+--------------------------------------------------
+
+Allow:
+
+“What's ahead?”
+
+Example response:
+
+“One recent roadworks report is approximately 600 metres ahead.
+Your next turn is right in 400 metres.”
+
+Only mention information supported by current route data.
+
+--------------------------------------------------
+F. VOICE ROUTE COMPARISON
+--------------------------------------------------
+
+Before beginning a ride, allow:
+
+“Find me a lower-risk route to work.”
+
+Example response:
+
+“I found an alternative estimated at 28 minutes.
+It's four minutes longer than the fastest option and uses more
+protected cycling infrastructure.”
+
+Only make comparisons supported by route data.
+
+--------------------------------------------------
+G. VOICE LIVE RIDE
+--------------------------------------------------
+
+Support voice-accessible Live Ride actions.
+
+Examples:
+
+“Start Live Ride.”
+
+“Share this ride with Sarah.”
+
+“What's my ETA?”
+
+“Tell Sarah I'm running late.”
+
+“I'm okay.”
+
+“Check me in.”
+
+“End Live Ride.”
+
+Sensitive actions must use appropriate confirmation.
+
+--------------------------------------------------
+H. OVERDUE CHECK-IN VOICE RESPONSE
+--------------------------------------------------
+
+If RideGuard detects that a ride has exceeded its expected arrival window:
+
+Spoken prompt where technically appropriate:
+
+“Your ride is taking longer than expected. Are you okay?”
+
+Provide extremely simple responses:
+
+“I’m okay.”
+
+“Need more time.”
+
+“End ride.”
+
+“Emergency.”
+
+Never infer an accident merely because the cyclist is late.
+
+--------------------------------------------------
+I. EMERGENCY VOICE ACCESS
+--------------------------------------------------
+
+Provide rapid access to system-supported emergency functionality.
+
+Potential commands/intents:
+
+“Emergency.”
+
+“Call emergency services.”
+
+“Contact my emergency person.”
+
+“Share my location.”
+
+Use native Apple/system capabilities wherever possible.
+
+RideGuard must NEVER claim that it is itself an emergency-response service.
+
+--------------------------------------------------
+J. APPLE WATCH VOICE EXPERIENCE
+--------------------------------------------------
+
+Voice should be especially prominent on Apple Watch.
+
+Allow supported interactions for:
+
+Report Hazard
+
+What's Ahead?
+
+ETA
+
+I'm Okay
+
+Check In
+
+End Ride
+
+Emergency
+
+Combine:
+
+• voice
+• large controls
+• haptics
+• short audio responses
+
+Minimise visual interaction.
+
+--------------------------------------------------
+K. VOICE SETTINGS
+--------------------------------------------------
+
+Create:
+
+Settings → Ride → Voice & Audio
+
+Options:
+
+Voice Guidance
+ON/OFF
+
+Hazard Alerts
+ON/OFF
+
+Navigation Instructions
+ON/OFF
+
+Check-in Prompts
+ON/OFF
+
+Incident Confirmation
+ON/OFF
+
+Voice Volume
+System controlled where appropriate
+
+Alert Detail:
+
+Minimal
+Standard
+Detailed
+
+--------------------------------------------------
+L. DISTRACTION SAFETY
+--------------------------------------------------
+
+The voice system must follow this rule:
+
+RIDING MODE = MINIMAL INTERACTION.
+
+Do not create lengthy conversations during active rides.
+
+Avoid:
+
+long AI answers
+complex menus
+multiple questions
+advertising
+paywall interruptions
+unnecessary notifications
+
+During active cycling:
+
+VOICE → SHORT ANSWER → ACTION → RETURN TO RIDE
+
+--------------------------------------------------
+M. VOICE ARCHITECTURE
+--------------------------------------------------
+
+Create a modular service layer such as:
+
+RideVoiceService
+
+VoiceIntentRouter
+
+SpokenAlertManager
+
+HazardVoiceClassifier
+
+RideAudioSessionManager
+
+Potential functions:
+
+reportHazardByVoice()
+
+classifyHazardSpeech()
+
+announceHazard()
+
+announceNextTurn()
+
+announceETA()
+
+announceRouteComparison()
+
+startLiveRide()
+
+sendCheckIn()
+
+respondToOverduePrompt()
+
+endRide()
+
+Use deterministic application logic for actions.
+
+AI can classify or explain language but should not control
+safety-critical actions without validation.
+
+--------------------------------------------------
+N. PRIVACY
+--------------------------------------------------
+
+Voice data is sensitive.
+
+Clearly disclose:
+
+• whether audio leaves the device
+• whether transcription occurs on-device
+• whether transcripts are stored
+• whether an AI service receives transcripts
+
+Prefer on-device processing when technically appropriate.
+
+Do not retain raw audio unnecessarily.
+
+Provide deletion controls.
+
+==================================================
+46. VOICE-FIRST APP STORE SCREENSHOT
+==================================================
+
+One premium App Store screenshot MUST specifically demonstrate the
+hands-free experience.
+
+HUMANISED SCENE:
+
+Show a realistic urban cyclist actively riding with both hands visibly
+on the handlebars.
+
+The environment should feel authentic:
+
+• real city street
+• believable cycle infrastructure
+• natural clothing
+• properly worn helmet where appropriate
+• realistic bicycle/e-bike
+• believable lighting
+• diverse, relatable rider
+• no staged stock-photo appearance
+
+Overlay the RideGuard UI elegantly without obscuring the rider.
+
+HEADLINE:
+
+“Eyes on the road. Hands on the bike.”
+
+SECONDARY COPY:
+
+“Report hazards and stay updated with voice.”
+
+Show a believable interaction:
+
+RIDER:
+
+“Report blocked cycle lane.”
+
+RIDEGUARD:
+
+“Blocked cycle lane marked.”
+
+Visually reinforce that the phone does not need to be touched.
+
+Do not depict unsafe phone use while cycling.
+
+==================================================
+47. PREMIUM HUMANIZED SCREENSHOT SYSTEM
+==================================================
+
+ALL App Store screenshots must be:
+
+• premium
+• humanized
+• relatable
+• immediately understandable
+• emotionally grounded
+• benefit-led
+• visually consistent
+
+Do NOT simply place screenshots of the app inside generic iPhone frames.
+
+Create a visual story around urban cyclists.
+
+SCREENSHOT 1
+
+REAL SCENARIO:
+Morning commuter preparing to leave for work.
+
+HEADLINE:
+
+“Choose your route with more than speed in mind.”
+
+Show:
+
+Lower Risk — 28 min
+Fastest — 24 min
+
+--------------------------------------------------
+
+SCREENSHOT 2
+
+REAL SCENARIO:
+Cyclist riding through a protected urban cycle lane.
+
+HEADLINE:
+
+“Understand the route before you ride.”
+
+Show explainable Route Risk factors.
+
+--------------------------------------------------
+
+SCREENSHOT 3
+
+REAL SCENARIO:
+Realistic rider encountering roadworks.
+
+HEADLINE:
+
+“Know what riders ahead are seeing.”
+
+Show:
+
+Roadworks ahead
+Reported 12 min ago
+
+--------------------------------------------------
+
+SCREENSHOT 4 — VOICE
+
+Cyclist actively riding with both hands on handlebars.
+
+HEADLINE:
+
+“Eyes on the road. Hands on the bike.”
+
+Show:
+
+“Report blocked cycle lane.”
+
+“Blocked cycle lane marked.”
+
+--------------------------------------------------
+
+SCREENSHOT 5
+
+REAL SCENARIO:
+Cyclist leaving work in the evening.
+
+HEADLINE:
+
+“Let someone know you’re on your way.”
+
+Show:
+
+Live Ride
+Home
+ETA 18:42
+Sharing with Sarah
+
+--------------------------------------------------
+
+SCREENSHOT 6
+
+REAL SCENARIO:
+Trusted contact naturally checking their phone at home.
+
+HEADLINE:
+
+“Keep the people who matter updated.”
+
+Show a privacy-conscious Live Ride status.
+
+--------------------------------------------------
+
+SCREENSHOT 7
+
+REAL SCENARIO:
+Cyclist arriving home and locking their bicycle.
+
+HEADLINE:
+
+“Arrived. Checked in.”
+
+Show:
+
+Ride complete
+Check-in sent
+
+--------------------------------------------------
+
+SCREENSHOT 8
+
+REAL SCENARIO:
+Apple Watch on cyclist's wrist while stationary.
+
+HEADLINE:
+
+“Safety tools on your wrist.”
+
+Show:
+
+Report Hazard
+I'm OK
+Check In
+End Ride
+
+==================================================
+48. HUMANIZED ASSET REQUIREMENTS
+==================================================
+
+Generate/prepare separate premium marketing assets for:
+
+• supported iPhone App Store screenshot sizes
+• supported iPad screenshot sizes
+• Apple Watch marketing where applicable
+• App Store promotional artwork
+• onboarding
+• paywall
+• social media campaign assets
+
+PEOPLE MUST LOOK HUMAN.
+
+Avoid stereotypical AI imagery:
+
+• perfect plastic skin
+• unnatural fingers
+• impossible bicycle geometry
+• fake-looking streets
+• excessive cinematic lighting
+• exaggerated smiles
+• identical models
+• unnatural poses
+• impossible cycling positions
+
+Use believable situations:
+
+Morning commute
+
+Evening commute
+
+University rider
+
+Freelancer cycling across town
+
+Delivery rider
+
+E-bike commuter
+
+Parent checking on an older teen/young adult rider where appropriate
+
+Older recreational urban cyclist
+
+Represent different:
+
+ages
+genders
+skin tones
+body types
+bicycle types
+
+without making diversity look staged.
+
+The product UI must remain the visual hero.
+
+Every screenshot must communicate ONE major benefit within approximately
+2 seconds.
+
+The viewer should understand the problem and solution without needing to
+read small interface text.
+
+FINAL VISUAL PRINCIPLE:
+
+“Real riders. Real streets. Real problems made easier to navigate.”

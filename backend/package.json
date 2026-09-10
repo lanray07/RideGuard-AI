@@ -1,0 +1,7 @@
+{
+  "name": "rideguard-schema-verification",
+  "private": true,
+  "type": "module",
+  "scripts": {"test": "node verify-schema.mjs"},
+  "devDependencies": {"@electric-sql/pglite": "0.5.8"}
+}

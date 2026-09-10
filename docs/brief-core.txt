@@ -1,0 +1,1453 @@
+CODEX MASTER PROMPT
+BUILD A PREMIUM iOS CYCLIST SAFETY APP — “RideGuard AI”
+
+ROLE
+
+Act as a senior iOS engineer, SwiftUI architect, mapping/GIS engineer,
+cycling-safety product designer, privacy engineer, accessibility specialist,
+StoreKit specialist and App Store creative director.
+
+Build a production-quality premium iPhone and Apple Watch application called:
+
+RIDEGUARD AI
+
+Working tagline:
+
+“Choose safer. Ride connected.”
+
+CORE PRODUCT PROMISE
+
+RideGuard AI helps urban cyclists:
+
+• compare routes using safety-related factors
+• understand why one route may be preferable to another
+• see community-reported hazards and incidents
+• report hazards quickly and safely
+• share a live ride with trusted contacts
+• automatically check in after rides
+• receive alerts about relevant hazards
+• build a personal picture of their cycling environment
+
+This is NOT primarily:
+
+• a fitness tracker
+• a racing app
+• a Strava competitor
+• a generic maps app
+• a social network
+
+The central philosophy is:
+
+“Don’t just show the fastest route.
+Help me understand the safer options.”
+
+The visual philosophy is:
+
+“Real riders. Real streets. Clear safety information.”
+
+==================================================
+1. CRITICAL SAFETY PRINCIPLE
+==================================================
+
+Never claim that any route is “safe.”
+
+No routing system can guarantee cyclist safety.
+
+Use terminology such as:
+
+• Lower Risk
+• Higher Risk
+• Safety Factors
+• Risk Score
+• Risk Indicators
+• Lower-risk option
+• Fewer reported hazards
+
+Avoid:
+
+“Safe Route”
+“Guaranteed Safe”
+“Accident-Free”
+“Safest Possible Route”
+
+Every score must be explainable.
+
+Never manufacture accident statistics, crime statistics, collision data,
+road conditions or community reports.
+
+==================================================
+2. PLATFORM
+==================================================
+
+Build primarily for:
+
+• iPhone
+• Apple Watch
+
+Also create responsive iPad support where appropriate.
+
+Use:
+
+• Swift
+• SwiftUI
+• MapKit
+• CoreLocation
+• SwiftData
+• UserNotifications
+• ActivityKit where useful
+• WidgetKit where useful
+• WatchConnectivity
+• StoreKit 2
+• async/await
+• LocalAuthentication
+• Keychain
+
+Follow current Apple Human Interface Guidelines.
+
+Prefer native Apple frameworks.
+
+Use a modular, maintainable architecture.
+
+==================================================
+3. PRIMARY USER
+==================================================
+
+Design for everyday urban riders:
+
+• commuters
+• students
+• delivery riders
+• casual cyclists
+• e-bike riders
+• people cycling home after work
+• cyclists riding after dark
+• parents/guardians concerned about riders
+• people new to urban cycling
+
+Do not design primarily around elite athletes.
+
+==================================================
+4. CORE DIFFERENTIATORS
+==================================================
+
+The product should be built around:
+
+1. Route Risk Score
+2. Explainable route comparison
+3. Community hazard reporting
+4. Live Ride
+5. Trusted Contact Check-ins
+6. Ride Overdue detection
+7. Hazard proximity alerts
+8. Personal Safety Insights
+9. Time-of-day route context
+10. Apple Watch companion
+11. Safety-first navigation UI
+12. Community confirmation system
+
+These are flagship features.
+
+==================================================
+5. ONBOARDING
+==================================================
+
+Create premium, emotional but non-alarmist onboarding.
+
+SCREEN 1
+
+Use a humanised image of a real-looking urban cyclist preparing to commute.
+
+Headline:
+
+“Every ride deserves a little more confidence.”
+
+Supporting text:
+
+Compare routes using cycling safety factors, stay aware of reported hazards,
+and keep trusted people updated while you ride.
+
+CTA:
+
+“Get Started”
+
+--------------------------------------------------
+
+SCREEN 2
+
+Headline:
+
+“Fastest isn’t always your only option.”
+
+Show three realistic route cards.
+
+FASTEST
+24 min
+Risk Score: 67
+
+LOWER RISK
+28 min
+Risk Score: 31
+
+QUIETER
+31 min
+Risk Score: 24
+
+Supporting message:
+
+“See the factors behind each route before you choose.”
+
+--------------------------------------------------
+
+SCREEN 3
+
+Headline:
+
+“Know what riders ahead are seeing.”
+
+Show map reports:
+
+• pothole
+• roadworks
+• blocked cycle lane
+• debris
+• poor lighting
+• dangerous junction
+
+CTA:
+
+“Explore Reports”
+
+--------------------------------------------------
+
+SCREEN 4
+
+Use a humanised scenario.
+
+Cyclist leaving work in the evening.
+
+Headline:
+
+“Someone can know you’re on your way.”
+
+Show:
+
+LIVE RIDE
+
+Home
+ETA 18:42
+
+Sharing with:
+Sarah
+
+Status:
+Riding
+
+--------------------------------------------------
+
+SCREEN 5
+
+Headline:
+
+“Check in without having to remember.”
+
+Show:
+
+“You arrived.”
+
+RideGuard:
+
+“Check-in sent to Sarah.”
+
+--------------------------------------------------
+
+SCREEN 6
+
+Privacy.
+
+Headline:
+
+“Your location is personal.”
+
+Explain clearly:
+
+• when location is collected
+• why it is needed
+• when trusted contacts can see it
+• how sharing stops
+• retention policies
+• deletion controls
+
+Never continuously share location without explicit user permission.
+
+==================================================
+6. HOME SCREEN
+==================================================
+
+Create a beautiful, calm home screen.
+
+Greeting:
+
+“Good morning.”
+
+Primary CTA:
+
+WHERE ARE YOU RIDING?
+
+Destination field.
+
+Quick destinations:
+
+Home
+Work
+Saved
+
+Below:
+
+TODAY NEAR YOU
+
+Example:
+
+3 recent rider reports
+
+1 roadworks report
+
+2 blocked cycle lane reports
+
+Use real data when connected.
+
+Use clearly labelled demo data during development.
+
+==================================================
+7. ROUTE PLANNING
+==================================================
+
+User enters destination.
+
+Calculate multiple route candidates.
+
+Examples:
+
+LOWER RISK
+
+28 min
+5.4 miles
+Risk Score: 31
+
+FASTEST
+
+24 min
+4.9 miles
+Risk Score: 67
+
+QUIETER
+
+31 min
+5.8 miles
+Risk Score: 24
+
+Allow comparison.
+
+Do NOT automatically imply the lowest numerical score guarantees safety.
+
+==================================================
+8. ROUTE RISK SCORE
+==================================================
+
+Create:
+
+RIDEGUARD RISK SCORE
+
+Scale:
+
+0–100
+
+0–20
+Lower observed risk
+
+21–40
+Relatively lower risk
+
+41–60
+Moderate indicators
+
+61–80
+Elevated indicators
+
+81–100
+Higher observed risk
+
+The exact terminology should be validated during UX testing.
+
+Potential factors, ONLY when reliable data exists:
+
+• cycling infrastructure
+• protected cycle lanes
+• road classification
+• speed limits
+• junction complexity
+• collision history
+• recent community incidents
+• construction
+• temporary closures
+• lighting information
+• road surface reports
+• traffic conditions
+• route complexity
+• time of day
+
+Never invent missing factors.
+
+==================================================
+9. EXPLAIN MY ROUTE
+==================================================
+
+Every Risk Score must be explainable.
+
+Example:
+
+WHY THIS ROUTE SCORED 31
+
+Positive factors:
+
+✓ 62% uses separated/protected cycling infrastructure
+✓ avoids two complex junctions
+✓ fewer recent rider hazard reports
+
+Things to know:
+
+• roadworks reported near Bridge Street
+• short mixed-traffic section
+
+Then:
+
+“Compared with fastest route”
+
++4 minutes
+
+−3 complex junctions
+
++1.2 miles of protected cycle infrastructure
+
+Do not create false precision when data does not support it.
+
+==================================================
+10. ROUTE COMPARISON
+==================================================
+
+Create side-by-side comparison.
+
+LOWER RISK
+28 min
+
+FASTEST
+24 min
+
+Compare:
+
+Distance
+Estimated time
+Protected cycling infrastructure
+Major roads
+Complex junctions
+Recent reports
+Elevation
+Surface reports
+Traffic context
+
+Highlight:
+
+“4 minutes longer”
+
+but:
+
+“Uses substantially more protected cycling infrastructure.”
+
+Only make that statement if underlying data supports it.
+
+==================================================
+11. MAP
+==================================================
+
+Build a premium MapKit experience.
+
+Map layers:
+
+Cycle infrastructure
+Community reports
+Roadworks
+Closures
+Incidents
+Poor surface reports
+Lighting concerns where data exists
+
+Map must remain visually clean.
+
+Use clustering.
+
+Do not overwhelm the cyclist with pins.
+
+==================================================
+12. INCIDENT REPORTING
+==================================================
+
+Create:
+
+REPORT A HAZARD
+
+Categories:
+
+Pothole
+
+Roadworks
+
+Debris
+
+Blocked Cycle Lane
+
+Broken Glass
+
+Poor Road Surface
+
+Flooding
+
+Poor Lighting
+
+Dangerous Junction
+
+Temporary Closure
+
+Vehicle Obstruction
+
+Other
+
+User can add:
+
+Location
+Description
+Photo
+Severity
+Direction
+Time observed
+
+==================================================
+13. ULTRA-FAST REPORTING
+==================================================
+
+Reporting while cycling must not encourage unsafe phone interaction.
+
+Create:
+
+QUICK REPORT
+
+Designed primarily for when stationary or through safe hands-free/Watch interactions.
+
+Possible Apple Watch actions:
+
+“Pothole”
+
+“Blocked Lane”
+
+“Debris”
+
+“Roadworks”
+
+Do not create interactions requiring complex input while actively cycling.
+
+==================================================
+14. REPORT CONFIRMATION
+==================================================
+
+Other riders can confirm:
+
+“Still there”
+
+“Cleared”
+
+“Incorrect”
+
+Reports should display:
+
+Reported 18 min ago
+
+Confirmed by 4 riders
+
+Never display fake confirmation counts.
+
+Implement confidence logic.
+
+Old reports should decay in relevance.
+
+==================================================
+15. INCIDENT FEED
+==================================================
+
+Create:
+
+NEARBY REPORTS
+
+Example:
+
+Blocked cycle lane
+0.4 miles away
+12 min ago
+
+Pothole
+0.7 miles away
+Confirmed by 3 riders
+
+Roadworks
+1.2 miles away
+Yesterday
+
+Filters:
+
+Recent
+On My Route
+Infrastructure
+Road Surface
+Closures
+Lighting
+
+==================================================
+16. LIVE RIDE
+==================================================
+
+Flagship feature:
+
+LIVE RIDE
+
+Before starting:
+
+Destination:
+Home
+
+Estimated arrival:
+18:42
+
+Trusted contact:
+Sarah
+
+Sharing:
+Until ride ends
+
+CTA:
+
+START LIVE RIDE
+
+==================================================
+17. TRUSTED CONTACT EXPERIENCE
+==================================================
+
+Trusted contacts should receive only necessary information.
+
+Possible Live Ride status:
+
+Ride started
+
+Current location if explicitly shared
+
+Estimated arrival
+
+Last update
+
+Ride completed
+
+Check-in
+
+If the architecture supports secure web-based ride sharing,
+generate a time-limited secure link.
+
+Never expose permanent location URLs.
+
+==================================================
+18. AUTOMATIC CHECK-IN
+==================================================
+
+When destination is reached:
+
+“Looks like you’ve arrived.”
+
+Then:
+
+“Send check-in?”
+
+Optionally allow previously configured automatic check-in.
+
+Example message:
+
+“Lanre completed their RideGuard ride and arrived at approximately 18:41.”
+
+Do not share more information than authorised.
+
+==================================================
+19. OVERDUE RIDE
+==================================================
+
+Create configurable:
+
+RIDE OVERDUE
+
+Example:
+
+Expected arrival:
+18:42
+
+Current:
+18:57
+
+RideGuard asks:
+
+“Everything okay?”
+
+Buttons:
+
+I’m OK
+
+Need More Time
+
+End Ride
+
+Emergency
+
+Do not immediately infer an accident.
+
+==================================================
+20. ESCALATION LOGIC
+==================================================
+
+Allow users to configure an overdue workflow.
+
+Example:
+
+After 10 minutes:
+Notify rider.
+
+After user-configured additional delay:
+Optionally notify trusted contact.
+
+Message:
+
+“RideGuard expected this ride to finish around 18:42 and has not yet received a completed check-in.”
+
+Never say:
+
+“They have crashed.”
+
+Never create panic-inducing language.
+
+==================================================
+21. EMERGENCY SCREEN
+==================================================
+
+Create an easily accessible emergency interface.
+
+Options can include:
+
+Call local emergency services
+
+Contact trusted person
+
+Share current location
+
+Medical ID shortcut where supported
+
+End ride
+
+IMPORTANT:
+
+Do not pretend RideGuard itself is an emergency-response service.
+
+Use native system emergency capabilities where appropriate.
+
+==================================================
+22. CRASH DETECTION
+==================================================
+
+Do NOT claim reliable automatic crash detection unless technically implemented,
+tested and appropriate for the available device sensors/APIs.
+
+If experimental detection is implemented:
+
+• clearly label limitations
+• minimise false positives
+• require user confirmation where possible
+• never guarantee accident detection
+
+==================================================
+23. HAZARD ALERTS DURING RIDES
+==================================================
+
+Provide minimal distraction.
+
+Example:
+
+“Reported roadworks ahead — 300 m”
+
+“Blocked cycle lane reported ahead”
+
+Prefer:
+
+Audio
+Haptic
+Apple Watch
+
+over requiring riders to look at the phone.
+
+==================================================
+24. APPLE WATCH APP
+==================================================
+
+Build a premium Apple Watch companion.
+
+During ride show:
+
+Destination
+
+ETA
+
+Next turn
+
+Ride status
+
+Risk indicator where useful
+
+Quick Report
+
+Check-in
+
+End Ride
+
+Emergency
+
+Keep UI extremely simple.
+
+==================================================
+25. LIVE ACTIVITY
+==================================================
+
+Where supported, create Live Activity.
+
+Lock Screen / Dynamic Island:
+
+RideGuard
+
+Home
+18 min
+
+ETA 18:42
+
+Live Ride Active
+
+Keep interaction minimal.
+
+==================================================
+26. NIGHT RIDING
+==================================================
+
+Create contextual night mode.
+
+If riding after dark:
+
+“Evening ride”
+
+Potential route factors may include lighting data where reliable.
+
+Do not infer that a road is dangerous merely because it is dark.
+
+Provide:
+
+High-contrast navigation
+
+Reduced visual clutter
+
+Audio alerts
+
+==================================================
+27. PERSONAL SAFETY INSIGHTS
+==================================================
+
+After sufficient rides:
+
+YOUR RIDING INSIGHTS
+
+Example:
+
+This month:
+
+18 rides
+
+76 miles
+
+Most common route:
+Work → Home
+
+Reported hazards encountered:
+6
+
+Routes using protected infrastructure:
+64%
+
+Only calculate metrics supported by actual data.
+
+==================================================
+28. POST-RIDE SUMMARY
+==================================================
+
+After ride:
+
+RIDE COMPLETE
+
+32 min
+
+6.2 miles
+
+Then:
+
+ROUTE SUMMARY
+
+Protected cycling infrastructure:
+3.8 miles
+
+Community reports passed:
+2
+
+Reports submitted:
+1
+
+Check-in:
+Sent
+
+Optional:
+
+“How did this route feel?”
+
+Very comfortable
+Comfortable
+Mixed
+Uncomfortable
+
+==================================================
+29. PERSONAL ROUTE FEEDBACK
+==================================================
+
+Allow riders to rate segments.
+
+Questions:
+
+“How did this section feel?”
+
+“What was the issue?”
+
+Options:
+
+Fast traffic
+
+Narrow road
+
+Poor surface
+
+Complex junction
+
+Poor lighting
+
+Vehicle obstruction
+
+Other
+
+Use feedback carefully.
+
+Subjective rider comfort should be distinguished from objective safety data.
+
+==================================================
+30. COMMUNITY SAFETY MAP
+==================================================
+
+Create:
+
+COMMUNITY MAP
+
+Aggregate anonymised reports.
+
+Display patterns such as:
+
+Frequently reported potholes
+
+Blocked cycle lane areas
+
+Road surface concerns
+
+Junction concerns
+
+Never reveal individual rider travel histories.
+
+==================================================
+31. DATA SOURCES
+==================================================
+
+Architect integrations for legitimate sources.
+
+Potential examples:
+
+Apple MapKit
+
+OpenStreetMap where licensing permits
+
+Local government open-data portals
+
+Roadworks/open-road datasets
+
+Verified collision datasets
+
+Weather APIs
+
+Traffic sources
+
+Community reports
+
+Every data provider must be documented.
+
+Respect licences and attribution requirements.
+
+Never scrape prohibited sources.
+
+==================================================
+32. WEATHER CONTEXT
+==================================================
+
+Optional premium feature:
+
+RIDE CONDITIONS
+
+Show:
+
+Temperature
+
+Rain
+
+Wind
+
+Visibility where available
+
+Example:
+
+“Strong crosswinds may affect exposed sections of this route.”
+
+Use a legitimate current weather provider.
+
+Do not fabricate weather information.
+
+==================================================
+33. ROUTE RE-RANKING
+==================================================
+
+Allow preferences:
+
+Prioritise:
+
+Protected cycle lanes
+
+Quieter roads
+
+Fewer major junctions
+
+Less elevation
+
+Shorter distance
+
+Faster route
+
+Avoid:
+
+Major roads
+
+Unpaved routes
+
+Recently reported hazards
+
+Users control priorities.
+
+==================================================
+34. COMMUTER MODE
+==================================================
+
+Users can save:
+
+Home
+
+Work
+
+University
+
+Gym
+
+Frequent destinations
+
+Morning card:
+
+“Work — 27 min”
+
+“2 recent reports on your usual route.”
+
+Alternative:
+
+“+3 minutes, fewer reported hazards.”
+
+==================================================
+35. PRIVACY
+==================================================
+
+Privacy must be exceptional.
+
+Explain:
+
+Location while planning
+
+Location during active rides
+
+Location sharing
+
+Community reports
+
+Ride history
+
+Analytics
+
+Users can:
+
+Delete ride
+
+Delete report
+
+Delete history
+
+Delete account
+
+Export data
+
+Disable analytics
+
+Stop location sharing
+
+==================================================
+36. LOCATION PERMISSIONS
+==================================================
+
+Never request Always Location immediately without context.
+
+Use progressive permission requests.
+
+Explain why each permission is required.
+
+Example:
+
+“RideGuard needs your location during a ride to provide navigation, hazard alerts and Live Ride updates.”
+
+Follow current Apple location-permission requirements.
+
+==================================================
+37. AUTHENTICATION
+==================================================
+
+Support:
+
+Sign in with Apple
+
+Optional guest/local mode where practical
+
+Do not force account creation before users can understand the product unless required for a specific cloud feature.
+
+==================================================
+38. SECURITY
+==================================================
+
+Location data is sensitive.
+
+Use:
+
+Keychain
+
+Secure networking
+
+Encrypted backend storage where appropriate
+
+Short-lived sharing tokens
+
+Access control
+
+Server-side authorisation
+
+No hardcoded secrets
+
+Do not log precise location unnecessarily.
+
+==================================================
+39. BACKEND
+==================================================
+
+Design for a backend such as Supabase.
+
+Potential tables:
+
+users
+
+rides
+
+ride_segments
+
+hazard_reports
+
+hazard_confirmations
+
+trusted_contacts
+
+live_rides
+
+route_scores
+
+route_factors
+
+check_ins
+
+notification_preferences
+
+subscriptions
+
+Implement appropriate Row Level Security.
+
+==================================================
+40. ROUTE RISK ENGINE
+==================================================
+
+Create a modular engine:
+
+RouteRiskEngine
+
+Potential components:
+
+InfrastructureScore
+
+RoadTypeScore
+
+JunctionScore
+
+IncidentScore
+
+CommunityReportScore
+
+ConstructionScore
+
+LightingContextScore
+
+TrafficContextScore
+
+SurfaceScore
+
+TimeContextScore
+
+The engine should produce:
+
+overallRiskScore
+
+confidence
+
+factors
+
+dataFreshness
+
+missingData
+
+explanation
+
+Do not hide uncertainty.
+
+Example:
+
+Risk Score
+31
+
+Confidence
+Moderate
+
+Why moderate?
+
+“Recent traffic information was unavailable for part of this route.”
+
+This transparency is important.
+
+==================================================
+41. AI LAYER
+==================================================
+
+AI can help explain route information.
+
+Create:
+
+CyclingSafetyAIService
+
+Functions:
+
+explainRouteRisk()
+
+compareRoutes()
+
+summariseIncidents()
+
+summarisePostRide()
+
+classifyCommunityReport()
+
+explainAlternativeRoute()
+
+AI must not invent safety data.
+
+Architecture:
+
+Verified Data
+↓
+Risk Engine
+↓
+Structured Result
+↓
+AI Explanation
+↓
+User
+
+AI explains.
+
+Deterministic/geospatial systems calculate.
+
+==================================================
+42. STOREKIT 2
+==================================================
+
+Implement subscriptions.
+
+FREE:
+
+Basic route planning
+
+Basic incident map
+
+Limited community reports
+
+Basic ride tracking
+
+PRO:
+
+Advanced route risk analysis
+
+Unlimited route comparisons
+
+Live Ride
+
+Multiple trusted contacts
+
+Advanced hazard alerts
+
+Apple Watch features
+
+Personal safety insights
+
+Route history
+
+Advanced commuter mode
+
+Weather context
+
+Premium reporting
+
+Do not artificially paywall critical emergency functionality.
+
+==================================================
+43. PAYWALL
+==================================================
+
+Create premium paywall.
+
+Headline:
+
+“Ride with more information.”
+
+Supporting text:
+
+Compare route risk factors, stay connected with people you trust,
+and understand what riders are reporting ahead.
+
+Benefits:
+
+✓ Route Risk Analysis
+✓ Live Ride
+✓ Trusted Contacts
+✓ Smart Hazard Alerts
+✓ Apple Watch
+✓ Riding Insights
+
+Monthly and annual plans.
+
+Use StoreKit 2 pricing dynamically.
+
+Never hardcode production prices.
+
+Include:
+
+Restore Purchases
+
+Terms
+
+Privacy
+
+==================================================
+44. PREMIUM VISUAL DESIGN
+==================================================
+
+This app MUST NOT look like a generic cycling tracker.
+
+Aim for:
+
+Apple Maps
++
+premium urban mobility
++
+modern safety product
++
+warm human storytelling
+
+Use:
+
+Strong typography
+
+Generous spacing
+
+Premium maps
+
+Clear route lines
+
+Beautiful route cards
+
+Subtle gradients
+
+SF Symbols
+
+Smooth animations
+
+Contextual haptics
+
+Excellent dark mode
+
+High-contrast navigation
+
+Avoid excessive:
+
+Neon
+
+Glass effects
+
+Tiny text
+
+Dense maps
+
+Overly technical GIS interfaces
+
+Red danger screens everywhere
+
+Fear-based visual design
