@@ -27,7 +27,7 @@ jobs:
           set -o pipefail
           mkdir -p build
           KEY_PATH="$RUNNER_TEMP/AuthKey_$ASC_KEY_ID.p8"
-          xcodebuild -project RideGuard.xcodeproj -scheme RideGuard -configuration Release -destination 'generic/platform=iOS' -archivePath build/RideGuard.xcarchive DEVELOPMENT_TEAM="$APPLE_TEAM_ID" CURRENT_PROJECT_VERSION="$((100 + GITHUB_RUN_NUMBER))" -allowProvisioningUpdates -authenticationKeyPath "$KEY_PATH" -authenticationKeyID "$ASC_KEY_ID" -authenticationKeyIssuerID "$ASC_ISSUER_ID" archive 2>&1 | tee build/archive.log
+          xcodebuild -project RideGuard.xcodeproj -scheme RideGuard -configuration Release -destination 'generic/platform=iOS' -archivePath build/RideGuard.xcarchive DEVELOPMENT_TEAM="$APPLE_TEAM_ID" CURRENT_PROJECT_VERSION="$((100 + GITHUB_RUN_NUMBER))" CODE_SIGNING_ALLOWED=NO -allowProvisioningUpdates -authenticationKeyPath "$KEY_PATH" -authenticationKeyID "$ASC_KEY_ID" -authenticationKeyIssuerID "$ASC_ISSUER_ID" archive 2>&1 | tee build/archive.log
           xcodebuild -exportArchive -archivePath build/RideGuard.xcarchive -exportOptionsPlist "$RUNNER_TEMP/ExportOptions.plist" -exportPath build/export -allowProvisioningUpdates -authenticationKeyPath "$KEY_PATH" -authenticationKeyID "$ASC_KEY_ID" -authenticationKeyIssuerID "$ASC_ISSUER_ID" 2>&1 | tee build/upload.log
       - name: Remove signing key
         if: always()
