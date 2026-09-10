@@ -45,8 +45,9 @@ targets:
         NSLocationAlwaysAndWhenInUseUsageDescription: During a ride you start, location can keep ride progress updated while the screen is locked. Sharing requires a separate choice.
         UIBackgroundModes: [location]
         NSSupportsLiveActivities: true
+        ITSAppUsesNonExemptEncryption: false
         UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
-        UISupportedInterfaceOrientations~ipad: [UIInterfaceOrientationPortrait, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight]
+        UISupportedInterfaceOrientations~ipad: [UIInterfaceOrientationPortrait, UIInterfaceOrientationPortraitUpsideDown, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight]
   RideGuardWatch:
     type: application
     platform: watchOS
@@ -57,11 +58,13 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.RideGuardAI.app.watchkitapp
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
     info:
       path: Configuration/Watch-Info.plist
       properties:
         CFBundleDisplayName: RideGuard
         WKApplication: true
+        ITSAppUsesNonExemptEncryption: false
         WKCompanionAppBundleIdentifier: com.RideGuardAI.app
   RideGuardActivity:
     type: app-extension

@@ -32,3 +32,10 @@ for name, light, dark in [
         entries.append(color)
     write(CATALOG / f"{name}.colorset/Contents.json", {"colors": entries, "info": info})
 print("Asset catalog metadata created.")
+watch = ROOT / "Watch/Assets.xcassets"
+write(watch / "Contents.json", {"info": info})
+write(watch / "AppIcon.appiconset/Contents.json", {
+    "images": [{"filename": "AppIcon.png", "idiom": "universal", "platform": "watchos", "size": "1024x1024"}], "info": info
+})
+import shutil
+shutil.copyfile(CATALOG / "AppIcon.appiconset/AppIcon.png", watch / "AppIcon.appiconset/AppIcon.png")
