@@ -1,0 +1,35 @@
+name: Upload App Store listing
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  listing:
+    runs-on: macos-26
+    env:
+      APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+      ASC_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+      ASC_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}
+      ASC_PRIVATE_KEY: ${{ secrets.APP_STORE_CONNECT_API_PRIVATE_KEY }}
+      APP_REVIEW_PHONE: ${{ secrets.APP_REVIEW_PHONE }}
+      APP_REVIEW_EMAIL: ${{ secrets.APP_REVIEW_EMAIL }}
+      FASTLANE_SKIP_UPDATE_CHECK: '1'
+      FASTLANE_HIDE_CHANGELOG: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare Apple API authentication
+        run: python3 scripts/prepare-signing.py
+      - name: Install fastlane
+        run: brew install fastlane
+      - name: Upload screenshots and listing metadata
+        run: fastlane store_listing
+      - name: Remove signing key
+        if: always()
+        run: rm -f "$RUNNER_TEMP/AuthKey_$ASC_KEY_ID.p8"
+      - name: Save listing verification
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: App-Store-listing-status
+          path: build/listing-status.json
+          if-no-files-found: ignore
