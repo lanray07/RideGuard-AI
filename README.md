@@ -45,7 +45,7 @@ npm test
 
 **15 Swift tests passed. 15 PostgreSQL schema checks passed.** iPhone Swift files passed syntax parsing. The Windows SwiftPM default path failed on an I/O error; the scratch path above worked. Swift emitted a nonfatal debug-symlink warning.
 
-Apple SDK type checking, XcodeGen execution, simulator rendering, hardware background behaviour, Siri metadata extraction, StoreKit sandbox purchases and actual Watch pairing have **not** been verified here. A macOS CI workflow and local build script are included, but have not run on a Mac in this session. See [verification](docs/VERIFICATION.md).
+GitHub macOS CI has now passed XcodeGen generation, Apple SDK compilation, core tests, iPhone and Watch simulator builds, and real iPhone/iPad screenshot capture. A signed version 1.0 build 102 was successfully uploaded to App Store Connect on 10 September 2026. Hardware background behaviour, StoreKit sandbox purchases, Siri interaction and actual Watch pairing remain unverified. See [verification](docs/VERIFICATION.md).
 
 ## Architecture
 

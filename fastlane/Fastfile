@@ -41,12 +41,12 @@ lane :store_listing do
   UI.user_error!('Build 102 is not processed and valid') unless build
   version.select_build(build_id: build.id)
   review = version.fetch_app_store_review_detail
-  review.update(attributes: {demoAccountRequired: false})
+  review.update(attributes: {demo_account_required: false})
   localizations = version.get_app_store_version_localizations
   status = {app_id: app.id, version: version.version_string, state: version.app_store_state,
             selected_build: version.get_build.version,
             review_contact_present: !review.contact_email.to_s.empty? && !review.contact_phone.to_s.empty?,
-            localizations: localizations.map { |loc| {locale: loc.locale, screenshots: loc.get_app_screenshot_sets.map { |set| {display_type: set.screenshot_display_type, count: set.get_app_screenshots.length} } } }}
+            localizations: localizations.map { |loc| {locale: loc.locale, screenshots: loc.get_app_screenshot_sets(includes: 'appScreenshots').map { |set| {display_type: set.screenshot_display_type, count: set.app_screenshots.length} } } }}
   FileUtils.mkdir_p('../build')
   File.write('../build/listing-status.json', JSON.pretty_generate(status))
   UI.success('Listing and screenshots uploaded; build selected. No review submission was made.')

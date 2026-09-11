@@ -1,6 +1,13 @@
 # Verification record
 
-Environment: Windows, Swift 6.3.1; no Xcode, Apple SDK, iOS simulator or paired Apple Watch available.
+Local environment: Windows, Swift 6.3.1. Apple validation was subsequently run on GitHub's macOS 26 runner with Xcode 26.6.
+
+## GitHub Apple platform results
+
+- [Apple platform run 34449589018](https://github.com/lanray07/RideGuard-AI/actions/runs/34449589018): passed core tests, iPhone simulator build, Watch simulator build and actual iPhone/iPad screen capture.
+- [Signed upload 34449589975](https://github.com/lanray07/RideGuard-AI/actions/runs/34449589975): archive succeeded and App Store Connect upload succeeded for version 1.0 build 102. The archive is unsigned, then Xcode uses automatic cloud signing during App Store export. No development device registration is required.
+- Sixteen original simulator screenshots are stored in `fastlane/screenshots/en-GB`: iPhone 1320 × 2868 and iPad 2064 × 2752. The capture entry point is compiled only for the simulator and opens existing app views with labelled demo data.
+- Native App Intents metadata extraction compiled; one deprecated confirmation API warning remains. Runtime Siri interactions and hardware pairing still need validation.
 
 ## Executed
 
@@ -11,7 +18,7 @@ Environment: Windows, Swift 6.3.1; no Xcode, Apple SDK, iOS simulator or paired 
 
 ## Still required on Apple platforms
 
-- Execute `scripts/build-macos.sh`; resolve SDK type-check or metadata extraction issues. Inspect generated target embedding and signing for Watch and activity extension.
+- Inspect physical-device behaviour of the signed iPhone, embedded Watch and activity extension targets.
 - iPhone small/large, iPad portrait/landscape, Watch sizes; light/dark, accessibility text sizes, VoiceOver, reduced motion, minimum touch size.
 - Onboarding completion and six page flow; sample labels on every fixture; no fabricated community counts.
 - Real search with location denied, restricted, approximate, expired, unavailable and network offline; cycling coverage absent; cancelling and quickly replacing searches.
