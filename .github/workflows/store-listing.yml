@@ -1,6 +1,11 @@
 name: Upload App Store listing
 on:
   workflow_dispatch:
+    inputs:
+      verify_only:
+        description: Read existing listing without changing it
+        type: boolean
+        default: false
 permissions:
   contents: read
 jobs:
@@ -15,6 +20,7 @@ jobs:
       APP_REVIEW_EMAIL: ${{ secrets.APP_REVIEW_EMAIL }}
       FASTLANE_SKIP_UPDATE_CHECK: '1'
       FASTLANE_HIDE_CHANGELOG: '1'
+      VERIFY_ONLY: ${{ inputs.verify_only }}
     steps:
       - uses: actions/checkout@v4
       - name: Prepare Apple API authentication
@@ -22,7 +28,7 @@ jobs:
       - name: Install fastlane
         run: brew install fastlane
       - name: Upload screenshots and listing metadata
-        run: fastlane store_listing
+        run: fastlane store_listing verify_only:"$VERIFY_ONLY"
       - name: Remove signing key
         if: always()
         run: rm -f "$RUNNER_TEMP/AuthKey_$ASC_KEY_ID.p8"

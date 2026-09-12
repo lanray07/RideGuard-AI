@@ -39,6 +39,8 @@ targets:
       path: Configuration/Info.plist
       properties:
         CFBundleDisplayName: RideGuard AI
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        CFBundleShortVersionString: $(MARKETING_VERSION)
         UILaunchScreen: {}
         NSLocationWhenInUseUsageDescription: Your location helps plan a ride, record hazards, and track a ride you start.
         NSFaceIDUsageDescription: Confirm it is you before exporting sensitive ride history and saved locations.
@@ -63,6 +65,8 @@ targets:
       path: Configuration/Watch-Info.plist
       properties:
         CFBundleDisplayName: RideGuard
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        CFBundleShortVersionString: $(MARKETING_VERSION)
         WKApplication: true
         ITSAppUsesNonExemptEncryption: false
         WKCompanionAppBundleIdentifier: com.RideGuardAI.app
@@ -79,6 +83,8 @@ targets:
       path: Configuration/Activity-Info.plist
       properties:
         CFBundleDisplayName: RideGuard Ride
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        CFBundleShortVersionString: $(MARKETING_VERSION)
         NSExtension:
           NSExtensionPointIdentifier: com.apple.widgetkit-extension
 schemes:

@@ -2,13 +2,14 @@ require 'json'
 require 'fileutils'
 
 desc 'Upload current app assets and metadata without submitting for review'
-lane :store_listing do
+lane :store_listing do |options|
   key = app_store_connect_api_key(
     key_id: ENV.fetch('ASC_KEY_ID'),
     issuer_id: ENV.fetch('ASC_ISSUER_ID'),
     key_filepath: File.join(ENV.fetch('RUNNER_TEMP'), "AuthKey_#{ENV.fetch('ASC_KEY_ID')}.p8"),
     duration: 1200
   )
+  unless options[:verify_only]
   deliver(
     api_key: key,
     app_identifier: 'com.RideGuardAI.app',
@@ -34,14 +35,15 @@ lane :store_listing do
       notes: 'No account or sign-in is required. The app opens with onboarding and visibly labelled demo data. For real cycling routes on iOS 26+, end any demo ride, switch off demo mode in You, then use Explore > Use my location and enter a destination. Demo scores and reports are illustrative. Community publication, live location sharing, automatic contact messaging and paid purchases are not enabled. Manual sharing uses the system share sheet and does not claim verified delivery. RideGuard is not an emergency-response or crash-detection service.'
     }
   )
+  end
   app = Spaceship::ConnectAPI::App.find('com.RideGuardAI.app')
   version = app.get_edit_app_store_version(platform: 'IOS')
   UI.user_error!('Expected editable version 1.0') unless version.version_string == '1.0'
-  build = Spaceship::ConnectAPI::Build.all(app_id: app.id, version: '1.0', build_number: '102', processing_states: 'VALID').first
-  UI.user_error!('Build 102 is not processed and valid') unless build
-  version.select_build(build_id: build.id)
+  build = Spaceship::ConnectAPI::Build.all(app_id: app.id, version: '1.0', build_number: '1', processing_states: 'VALID').first
+  UI.user_error!('Build 1 is not processed and valid') unless build
+  version.select_build(build_id: build.id) unless options[:verify_only]
   review = version.fetch_app_store_review_detail
-  review.update(attributes: {demo_account_required: false})
+  review.update(attributes: {demo_account_required: false}) unless options[:verify_only]
   localizations = version.get_app_store_version_localizations
   status = {app_id: app.id, version: version.version_string, state: version.app_store_state,
             selected_build: version.get_build.version,
@@ -49,5 +51,5 @@ lane :store_listing do
             localizations: localizations.map { |loc| {locale: loc.locale, description_present: !loc.description.to_s.empty?, keywords_present: !loc.keywords.to_s.empty?, screenshots: loc.get_app_screenshot_sets(includes: 'appScreenshots').map { |set| {display_type: set.screenshot_display_type, count: set.app_screenshots.length, complete: set.app_screenshots.all?(&:complete?)} } } }}
   FileUtils.mkdir_p('../build')
   File.write('../build/listing-status.json', JSON.pretty_generate(status))
-  UI.success('Listing and screenshots uploaded; build selected. No review submission was made.')
+  UI.success('Listing verification saved. No review submission was made.')
 end
