@@ -25,6 +25,9 @@ Local environment: Windows, Swift 6.3.1. Apple validation was subsequently run o
   succeeded. App Store Connect returned selected build `103`, matching review
   contact details, descriptions and keywords for all four locales, and all 68
   screenshot uploads complete. No final review submission was performed.
+- App Store Connect's **Add for Review** validation succeeded on 19 September.
+  The draft shows **Item Ready to Submit**, version **1.0 (103)**. The final
+  **Submit for Review** button was left untouched.
 - [Watch capture](https://github.com/lanray07/RideGuard-AI/actions/runs/35451365771)
   produced a genuine 422 × 514 companion screenshot. It was uploaded to the
   English App Store listing, which displayed one Watch screenshot.
