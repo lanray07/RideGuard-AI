@@ -42,7 +42,7 @@ struct SettingsView: View {
             Section("About") {
                 NavigationLink("Data sources & limitations") { PolicyView(kind: .sources) }
                 NavigationLink("Terms") { PolicyView(kind: .terms) }
-                Text("RideGuard AI · Development preview 0.1").font(.caption).foregroundStyle(.secondary)
+                Text("RideGuard AI · Version 1.0").font(.caption).foregroundStyle(.secondary)
             }
         }.navigationTitle("Made for your ride").confirmationDialog("Delete all local data?", isPresented: $deleteConfirmation, titleVisibility: .visible) {
             Button("Delete history, reports and contacts", role: .destructive) {
@@ -59,7 +59,7 @@ struct VoiceSettingsView: View {
         @Bindable var store = store
         Form {
             Section {
-                Text("Eyes on the road.\nHands on the bike.").font(.title.bold())
+                Text("Cycling voice shortcuts.").font(.title.bold())
                 Text("Enable RideGuard actions in the Shortcuts app, then invoke them with Siri. Supported wording and locked-device behaviour depend on Siri and your device settings.").font(.subheadline)
             }
             Section("Audio") {
@@ -92,7 +92,7 @@ struct ContactsView: View {
         List {
             Section {
                 Text("Saved on this device for quick access. Adding someone does not send an invitation or enable location sharing.").font(.subheadline)
-                ForEach(store.snapshot.contacts) { contact in InfoRow(symbol: "person.circle", title: contact.name, subtitle: contact.phone) }
+                ForEach(store.snapshot.contacts) { contact in InfoRow(symbol: "person.circle", title: contact.name, subtitle: contact.phone, verbatimTitle: true, verbatimSubtitle: true) }
                     .onDelete { store.snapshot.contacts.remove(atOffsets: $0); store.persist() }
             }
             Section("Add a trusted person") {
@@ -113,10 +113,10 @@ struct SavedPlacesView: View {
     @State private var query = ""
     var body: some View {
         List {
-            ForEach(store.snapshot.destinations) { destination in InfoRow(symbol: "mappin", title: destination.label, subtitle: destination.query) }
+            ForEach(store.snapshot.destinations) { destination in InfoRow(symbol: "mappin", title: destination.label, subtitle: destination.query, verbatimSubtitle: true) }
                 .onDelete { store.snapshot.destinations.remove(atOffsets: $0); store.persist() }
             Section("Save a place") {
-                Picker("Shortcut", selection: $label) { ForEach(["Home", "Work", "Saved"], id: \.self) { Text($0) } }
+                Picker("Shortcut", selection: $label) { ForEach(["Home", "Work", "Saved"], id: \.self) { Text(LocalizedStringKey($0)) } }
                 TextField("Address or place", text: $query)
                 Button("Save place") {
                     store.snapshot.destinations.removeAll { $0.label == label }
@@ -133,16 +133,16 @@ struct PolicyView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
-                Text(title).font(.largeTitle.bold())
-                Text(copy).font(.body).textSelection(.enabled)
+                Text(LocalizedStringKey(title)).font(.largeTitle.bold())
+                Text(LocalizedStringKey(copy)).font(.body).textSelection(.enabled)
             }.padding(24).frame(maxWidth: 720)
-        }.navigationTitle(title).navigationBarTitleDisplayMode(.inline)
+        }.navigationTitle(LocalizedStringKey(title)).navigationBarTitleDisplayMode(.inline)
     }
     private var title: String { switch kind { case .privacy: "Your location is personal."; case .terms: "Development terms"; case .sources: "Behind the information" } }
     private var copy: String {
         switch kind {
         case .privacy:
-            "Planning requests use a location you authorise. Map search and directions communicate with Apple. Active ride tracking runs until you end the ride, including background updates. No trusted contact receives your location automatically.\n\nRide history, reports, contacts and preferences stay in SwiftData on this device. This development build has no account, analytics, remote AI, community upload or live sharing service. RideGuard does not retain audio or transcripts. Siri is governed by Apple’s settings and policies.\n\nYou can delete individual rides or reports, export your records, or delete all local data. Records are retained until deletion; system backups and exported copies are outside these controls. Exports contain sensitive locations. A system share sheet sends only the content you choose.\n\nA production privacy policy and operator contact details must be supplied before release."
+            "Planning requests use a location you authorise. Map search and directions communicate with Apple. Active ride tracking runs until you end the ride, including background updates. No trusted contact receives your location automatically.\n\nRide history, reports, contacts and preferences stay in SwiftData on this device. This development build has no account, analytics, remote AI, community upload or live sharing service. RideGuard does not retain audio or transcripts. Siri is governed by Apple’s settings and policies.\n\nYou can delete individual rides or reports, export your records, or delete all local data. Records are retained until deletion; system backups and exported copies are outside these controls. Exports contain sensitive locations. A system share sheet sends only the content you choose.\n\nOperator: O. Bankole. Privacy policy: https://github.com/lanray07/RideGuard-AI/blob/main/docs/privacy.md. Support: https://github.com/lanray07/RideGuard-AI/issues."
         case .terms:
             "RideGuard provides contextual information, not a guarantee of safety, crash detection or emergency response. Risk indicators are experimental, not calibrated collision probabilities. Reports may be incomplete, stale or inaccurate. Follow applicable road rules and use your judgement.\n\nDo not use demo routes for navigation. Interact with detailed screens only when stationary. Configure voice actions before riding.\n\nThis is a development preview. Cloud sharing, automated contact escalation and community publication are unavailable. No message is described as delivered without provider confirmation.\n\nProduction subscription terms, operator identity, support contact and privacy URLs must be configured before sale."
         case .sources:

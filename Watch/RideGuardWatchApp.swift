@@ -59,11 +59,11 @@ struct WatchRideView: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 12) {
-                    Label(bridge.isDemo ? "DEMO RIDE" : "RIDEGUARD", systemImage: "bicycle").font(.caption2).foregroundStyle(.mint)
-                    Text(bridge.destination).font(.title3.bold())
+                    Label(LocalizedStringKey(bridge.isDemo ? "DEMO RIDE" : "RIDEGUARD"), systemImage: "bicycle").font(.caption2).foregroundStyle(.mint)
+                    Text(L10n.text(bridge.destination)).font(.title3.bold())
                     if let eta = bridge.eta { Text(eta, style: .time).font(.system(.largeTitle, design: .rounded, weight: .bold)) }
                     TimelineView(.periodic(from: .now, by: 30)) { timeline in
-                        Text(bridge.updated.map { timeline.date.timeIntervalSince($0) > 120 ? "Update stale · check iPhone" : "Status: \(bridge.status)" } ?? "Waiting for iPhone").font(.caption2).foregroundStyle(.secondary)
+                        Text(bridge.updated.map { timeline.date.timeIntervalSince($0) > 120 ? L10n.text("Update stale · check iPhone") : L10n.format("Status: %@", L10n.text(bridge.status)) } ?? L10n.text("Waiting for iPhone")).font(.caption2).foregroundStyle(.secondary)
                     }
                     Button("What’s ahead?", systemImage: "waveform") { send("ahead") }
                     Button("I’m OK", systemImage: "checkmark.circle") { send("okay") }
@@ -73,11 +73,11 @@ struct WatchRideView: View {
                             Button("Blocked lane") { send("blockedCycleLane") }
                             Button("Debris") { send("debris") }
                             Button("Roadworks") { send("roadworks") }
-                            Text(bridge.response).font(.caption2)
+                            Text(L10n.text(bridge.response)).font(.caption2)
                         }.disabled(busy)
                     }
                     Button("End ride") { ending = true }
-                    Text(bridge.response).font(.caption2)
+                    Text(L10n.text(bridge.response)).font(.caption2)
                     Text("For urgent help, use Apple Watch Emergency SOS. RideGuard does not dispatch help.").font(.caption2).foregroundStyle(.secondary)
                 }.disabled(busy)
             }.confirmationDialog("End ride on iPhone?", isPresented: $ending) { Button("End ride") { send("end") } }

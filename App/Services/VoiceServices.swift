@@ -30,9 +30,10 @@ final class RideVoiceService: NSObject, AVSpeechSynthesizerDelegate {
     func say(_ message: String, enabled: Bool = true) {
         guard enabled else { return }
         do { try audio.activate() } catch { return }
-        lastMessage = message
+        lastMessage = L10n.text(message)
         synthesizer.stopSpeaking(at: .immediate)
-        let utterance = AVSpeechUtterance(string: message)
+        let utterance = AVSpeechUtterance(string: L10n.text(message))
+        utterance.voice = AVSpeechSynthesisVoice(language: Bundle.main.preferredLocalizations.first ?? "en")
         utterance.rate = AVSpeechUtteranceDefaultSpeechRate
         synthesizer.speak(utterance)
     }
@@ -55,7 +56,7 @@ final class SpokenAlertManager {
         }.sorted { lhs, rhs in lhs.0.severity == rhs.0.severity ? lhs.1 < rhs.1 : lhs.0.severity > rhs.0.severity }
         for (report, distance) in candidates {
             if gate.shouldAnnounce(id: report.id, at: now, distanceAhead: distance, relevance: report.relevance(at: now)) {
-                return "\(report.isDemo ? "Demo. " : "")Reported \(report.category.title.lowercased()) ahead in approximately \(Int(distance / 50) * 50) metres."
+                return L10n.format(report.isDemo ? "Demo. Reported %@ approximately %lld metres ahead." : "Reported %@ approximately %lld metres ahead.", L10n.text(report.category.title), Int(distance / 50) * 50)
             }
         }
         return nil

@@ -1,0 +1,1188 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "Your ride was restored. Tap Resume updates to continue location tracking.": {
+      "extractionState": "manual"
+    },
+    "Open RideGuard on iPhone.": {
+      "extractionState": "manual"
+    },
+    "Local storage is unavailable. Changes cannot be saved.": {
+      "extractionState": "manual"
+    },
+    "A recent location is required. Tap Use my location and try again.": {
+      "extractionState": "manual"
+    },
+    "Ride started. The check-in reminder could not be scheduled.": {
+      "extractionState": "manual"
+    },
+    "Ride updates resumed.": {
+      "extractionState": "manual"
+    },
+    "The check-in reminder could not be updated.": {
+      "extractionState": "manual"
+    },
+    "Your ride is taking longer than expected. Are you okay?": {
+      "extractionState": "manual"
+    },
+    "Your observation was saved locally.": {
+      "extractionState": "manual"
+    },
+    "Start a ride to check reports on your route.": {
+      "extractionState": "manual"
+    },
+    "Your current location is unavailable.": {
+      "extractionState": "manual"
+    },
+    "No current reports in the next kilometre of available route data. Conditions may be unreported.": {
+      "extractionState": "manual"
+    },
+    "Local history, reports, contacts and preferences deleted.": {
+      "extractionState": "manual"
+    },
+    "RideGuardExport": {
+      "extractionState": "manual"
+    },
+    "Looks like you've arrived. Check in when you're ready.": {
+      "extractionState": "manual"
+    },
+    "No active ride.": {
+      "extractionState": "manual"
+    },
+    "Okay. Your check-in window has been updated.": {
+      "extractionState": "manual"
+    },
+    "Ride ended. No contact message was sent.": {
+      "extractionState": "manual"
+    },
+    "Open a ride on iPhone first.": {
+      "extractionState": "manual"
+    },
+    ")report saved on iPhone.": {
+      "extractionState": "manual"
+    },
+    "No active ride": {
+      "extractionState": "manual"
+    },
+    "No recent location is available. Open RideGuard and enable location before reporting.": {
+      "extractionState": "manual"
+    },
+    "There is no active RideGuard ride.": {
+      "extractionState": "manual"
+    },
+    "The report could not be saved to this device. Please try again when local storage is available.": {
+      "extractionState": "manual"
+    },
+    "Explore": {
+      "extractionState": "manual"
+    },
+    "Reports": {
+      "extractionState": "manual"
+    },
+    "Ride": {
+      "extractionState": "manual"
+    },
+    "Insights": {
+      "extractionState": "manual"
+    },
+    "You": {
+      "extractionState": "manual"
+    },
+    "RideGuard": {
+      "extractionState": "manual"
+    },
+    "OK": {
+      "extractionState": "manual"
+    },
+    "Evergreen": {
+      "extractionState": "manual"
+    },
+    "Canvas": {
+      "extractionState": "manual"
+    },
+    "DEMO · SAMPLE DATA": {
+      "extractionState": "manual"
+    },
+    "Demo. All routes and reports shown are illustrative sample data.": {
+      "extractionState": "manual"
+    },
+    "OnGreen": {
+      "extractionState": "manual"
+    },
+    "%.1f mi": {
+      "extractionState": "manual"
+    },
+    "Explore · light": {
+      "extractionState": "manual"
+    },
+    "Explore · dark": {
+      "extractionState": "manual"
+    },
+    "Onboarding · large type": {
+      "extractionState": "manual"
+    },
+    "Location is off. You can enable it in iPhone Settings, or explore the demo.": {
+      "extractionState": "manual"
+    },
+    "Cycling directions require iOS 26 or later. Explore the labelled demo on this device.": {
+      "extractionState": "manual"
+    },
+    "No cycling routes are available for this destination. Try a nearby destination.": {
+      "extractionState": "manual"
+    },
+    "Fastest available": {
+      "extractionState": "manual"
+    },
+    "Destination": {
+      "extractionState": "manual"
+    },
+    "Standard": {
+      "extractionState": "manual"
+    },
+    "Demo. Reported %@ approximately %lld metres ahead.": {
+      "extractionState": "manual"
+    },
+    "Reported %@ approximately %lld metres ahead.": {
+      "extractionState": "manual"
+    },
+    "The purchase could not be verified. No access was changed.": {
+      "extractionState": "manual"
+    },
+    "Purchase pending approval.": {
+      "extractionState": "manual"
+    },
+    "Purchase status unavailable. Please restore purchases.": {
+      "extractionState": "manual"
+    },
+    "Demo ride check-in": {
+      "extractionState": "manual"
+    },
+    "Everything okay?": {
+      "extractionState": "manual"
+    },
+    "Your expected arrival has passed. Open RideGuard to check in or add more time.": {
+      "extractionState": "manual"
+    },
+    "Set a device passcode to export sensitive ride data.": {
+      "extractionState": "manual"
+    },
+    "Export your RideGuard history and saved locations.": {
+      "extractionState": "manual"
+    },
+    "RIDEGUARD": {
+      "extractionState": "manual"
+    },
+    "Plan your cycling route.": {
+      "extractionState": "manual"
+    },
+    "A little more confidence.\nEvery time you ride.": {
+      "extractionState": "manual"
+    },
+    "Where are you riding?": {
+      "extractionState": "manual"
+    },
+    "Enter a destination": {
+      "extractionState": "manual"
+    },
+    "Search destination": {
+      "extractionState": "manual"
+    },
+    "Home": {
+      "extractionState": "manual"
+    },
+    "Work": {
+      "extractionState": "manual"
+    },
+    "Saved": {
+      "extractionState": "manual"
+    },
+    "Shoreditch": {
+      "extractionState": "manual"
+    },
+    "London Fields": {
+      "extractionState": "manual"
+    },
+    "Add a destination in You → Saved places.": {
+      "extractionState": "manual"
+    },
+    "Use my location": {
+      "extractionState": "manual"
+    },
+    "Location is used to plan your route. Ride tracking begins only when you start.": {
+      "extractionState": "manual"
+    },
+    "Your route, your choice": {
+      "extractionState": "manual"
+    },
+    "Compare": {
+      "extractionState": "manual"
+    },
+    "Prepare my ride": {
+      "extractionState": "manual"
+    },
+    "Illustrative routes and scores. Do not use the demo to navigate.": {
+      "extractionState": "manual"
+    },
+    "Route information cannot guarantee safety. Conditions and data coverage can change.": {
+      "extractionState": "manual"
+    },
+    "A look around · demo": {
+      "extractionState": "manual"
+    },
+    "Your local observations": {
+      "extractionState": "manual"
+    },
+    "View all": {
+      "extractionState": "manual"
+    },
+    "Sample reports: %lld": {
+      "extractionState": "manual"
+    },
+    "Saved reports: %lld": {
+      "extractionState": "manual"
+    },
+    "Explore how rider reports appear along a route.": {
+      "extractionState": "manual"
+    },
+    "Reports are stored on this device. Community syncing is not connected.": {
+      "extractionState": "manual"
+    },
+    "CyclistHero": {
+      "extractionState": "manual"
+    },
+    "Eyes on the road.\nHands on the bike.": {
+      "extractionState": "manual"
+    },
+    "Discover voice shortcuts in your ride settings.": {
+      "extractionState": "manual"
+    },
+    "Good morning.": {
+      "extractionState": "manual"
+    },
+    "Good afternoon.": {
+      "extractionState": "manual"
+    },
+    "Good evening.": {
+      "extractionState": "manual"
+    },
+    "Demo uses an illustrative London Fields journey. Switch off demo in You for real destination search.": {
+      "extractionState": "manual"
+    },
+    "No destinations found. Try a street or postcode.": {
+      "extractionState": "manual"
+    },
+    "Tap Use my location, then choose a destination.": {
+      "extractionState": "manual"
+    },
+    "Demo risk score": {
+      "extractionState": "manual"
+    },
+    "Risk score": {
+      "extractionState": "manual"
+    },
+    "Why this route?": {
+      "extractionState": "manual"
+    },
+    "Understand cycling route risk.": {
+      "extractionState": "manual"
+    },
+    "RideGuard risk indicator": {
+      "extractionState": "manual"
+    },
+    "Not available": {
+      "extractionState": "manual"
+    },
+    "This experimental indicator is not a probability of a collision. A lower score cannot guarantee safety.": {
+      "extractionState": "manual"
+    },
+    "What we don’t know": {
+      "extractionState": "manual"
+    },
+    "Unknown factors are excluded, never treated as zero risk. At least three current factors and 25% total coverage are needed. Available factors are weighted by coverage.": {
+      "extractionState": "manual"
+    },
+    "Why this route": {
+      "extractionState": "manual"
+    },
+    "Done": {
+      "extractionState": "manual"
+    },
+    "Compare cycling routes.": {
+      "extractionState": "manual"
+    },
+    "Estimated time": {
+      "extractionState": "manual"
+    },
+    "Distance": {
+      "extractionState": "manual"
+    },
+    "Risk indicator": {
+      "extractionState": "manual"
+    },
+    "Unavailable": {
+      "extractionState": "manual"
+    },
+    "Estimated time: %lld min. Difference from fastest: %lld min.": {
+      "extractionState": "manual"
+    },
+    "Measured protected-lane coverage, major-road distance, junction counts, elevation and traffic are not available in this build.": {
+      "extractionState": "manual"
+    },
+    "Compare routes": {
+      "extractionState": "manual"
+    },
+    "Every ride deserves a little more confidence.": {
+      "extractionState": "manual"
+    },
+    "Fastest isn’t always your only option.": {
+      "extractionState": "manual"
+    },
+    "Know what riders ahead are seeing.": {
+      "extractionState": "manual"
+    },
+    "Someone can know you’re on your way.": {
+      "extractionState": "manual"
+    },
+    "Check in without having to remember.": {
+      "extractionState": "manual"
+    },
+    "Your location is personal.": {
+      "extractionState": "manual"
+    },
+    "Compare cycling route factors, understand rider reports and prepare for your everyday journey.": {
+      "extractionState": "manual"
+    },
+    "Explore explainable route comparisons. Demo scores are illustrative, never a promise of safety.": {
+      "extractionState": "manual"
+    },
+    "Mark potholes, roadworks and blocked lanes. Reports in this build stay on your device.": {
+      "extractionState": "manual"
+    },
+    "Prepare a ride and keep an eye on your ETA. Secure live sharing needs a connected service and is unavailable in this build.": {
+      "extractionState": "manual"
+    },
+    "Set a reminder for an overdue ride. You choose whether to send a check-in using your phone’s sharing options.": {
+      "extractionState": "manual"
+    },
+    "Planning uses location on request. Tracking runs only during rides you start. No location is shared automatically. Delete or export local records at any time.": {
+      "extractionState": "manual"
+    },
+    "RIDEGUARD AI": {
+      "extractionState": "manual"
+    },
+    "Get started": {
+      "extractionState": "manual"
+    },
+    "Explore RideGuard": {
+      "extractionState": "manual"
+    },
+    "Continue": {
+      "extractionState": "manual"
+    },
+    "Skip introduction": {
+      "extractionState": "manual"
+    },
+    "Road hazard reports.": {
+      "extractionState": "manual"
+    },
+    "Explore sample rider observations.": {
+      "extractionState": "manual"
+    },
+    "Your observations, saved on this device.": {
+      "extractionState": "manual"
+    },
+    "Filter reports": {
+      "extractionState": "manual"
+    },
+    "All reports": {
+      "extractionState": "manual"
+    },
+    "No reports yet": {
+      "extractionState": "manual"
+    },
+    "Unreported conditions may still exist. Add an observation when stationary.": {
+      "extractionState": "manual"
+    },
+    "%@ · %@\nLocal confirmations: %lld": {
+      "extractionState": "manual"
+    },
+    "Sample": {
+      "extractionState": "manual"
+    },
+    "Local": {
+      "extractionState": "manual"
+    },
+    "Report a hazard": {
+      "extractionState": "manual"
+    },
+    "Stop before using the report form. Use a configured Siri shortcut for a brief hands-free report.": {
+      "extractionState": "manual"
+    },
+    "Report when stationary, or use a configured voice shortcut. No report is automatically published.": {
+      "extractionState": "manual"
+    },
+    "Category": {
+      "extractionState": "manual"
+    },
+    "What did you observe?": {
+      "extractionState": "manual"
+    },
+    "Impact": {
+      "extractionState": "manual"
+    },
+    "Minor": {
+      "extractionState": "manual"
+    },
+    "Significant": {
+      "extractionState": "manual"
+    },
+    "Obstructed": {
+      "extractionState": "manual"
+    },
+    "Add an optional photo": {
+      "extractionState": "manual"
+    },
+    "Preparing photo…": {
+      "extractionState": "manual"
+    },
+    "Remove photo": {
+      "extractionState": "manual"
+    },
+    "Your observation": {
+      "extractionState": "manual"
+    },
+    "Saved at your current location and time. Describe road conditions, not identifiable people or vehicles.": {
+      "extractionState": "manual"
+    },
+    "Sample location · Shoreditch": {
+      "extractionState": "manual"
+    },
+    "Location needed": {
+      "extractionState": "manual"
+    },
+    "Current location available": {
+      "extractionState": "manual"
+    },
+    "Get current location": {
+      "extractionState": "manual"
+    },
+    "Save report on this device": {
+      "extractionState": "manual"
+    },
+    "Cancel": {
+      "extractionState": "manual"
+    },
+    "Choose a photo smaller than 12 MB.": {
+      "extractionState": "manual"
+    },
+    "The photo could not be loaded.": {
+      "extractionState": "manual"
+    },
+    "Photo attached to this hazard report": {
+      "extractionState": "manual"
+    },
+    "Observed": {
+      "extractionState": "manual"
+    },
+    "Local confirmations": {
+      "extractionState": "manual"
+    },
+    "Observations lose relevance with age. Confirmations represent local test interactions, not verified community consensus.": {
+      "extractionState": "manual"
+    },
+    "What do you see?": {
+      "extractionState": "manual"
+    },
+    "Still there": {
+      "extractionState": "manual"
+    },
+    "Cleared": {
+      "extractionState": "manual"
+    },
+    "Incorrect": {
+      "extractionState": "manual"
+    },
+    "Delete my report": {
+      "extractionState": "manual"
+    },
+    "Report details": {
+      "extractionState": "manual"
+    },
+    "Emergency options": {
+      "extractionState": "manual"
+    },
+    "Your ride": {
+      "extractionState": "manual"
+    },
+    "End this ride?": {
+      "extractionState": "manual"
+    },
+    "End ride": {
+      "extractionState": "manual"
+    },
+    "Keep riding": {
+      "extractionState": "manual"
+    },
+    "Location tracking and ride reminders will stop. No contact message is sent automatically.": {
+      "extractionState": "manual"
+    },
+    "Prepare your bike ride.": {
+      "extractionState": "manual"
+    },
+    "Only you can see this ride": {
+      "extractionState": "manual"
+    },
+    "Live location sharing is not connected. No trusted contact is being notified.": {
+      "extractionState": "manual"
+    },
+    "Sharing & check-in options": {
+      "extractionState": "manual"
+    },
+    "Eyes on the road. Hands on the bike.": {
+      "extractionState": "manual"
+    },
+    "Set up Siri shortcuts before riding. Alerts use short spoken updates.": {
+      "extractionState": "manual"
+    },
+    "Voice & audio settings": {
+      "extractionState": "manual"
+    },
+    "Start demo ride": {
+      "extractionState": "manual"
+    },
+    "Start ride": {
+      "extractionState": "manual"
+    },
+    "A simulation for exploring the controls. It does not guide a real journey.": {
+      "extractionState": "manual"
+    },
+    "Location tracking continues during this ride, including while the screen is locked. End the ride to stop it. Turn-by-turn guidance is not available in this build.": {
+      "extractionState": "manual"
+    },
+    "Choose a destination": {
+      "extractionState": "manual"
+    },
+    "Plan a cycling route in Explore before starting.": {
+      "extractionState": "manual"
+    },
+    "Plan a ride": {
+      "extractionState": "manual"
+    },
+    "CHECK-IN DUE": {
+      "extractionState": "manual"
+    },
+    "NEAR DESTINATION": {
+      "extractionState": "manual"
+    },
+    "RIDE IN PROGRESS": {
+      "extractionState": "manual"
+    },
+    "Estimated arrival": {
+      "extractionState": "manual"
+    },
+    "Sharing off": {
+      "extractionState": "manual"
+    },
+    "Your ride is taking longer than expected. No accident is inferred and no contact has been notified.": {
+      "extractionState": "manual"
+    },
+    "Looks like you’ve arrived.": {
+      "extractionState": "manual"
+    },
+    "Check in or end your ride when you’re ready.": {
+      "extractionState": "manual"
+    },
+    "What’s ahead?": {
+      "extractionState": "manual"
+    },
+    "I’m OK": {
+      "extractionState": "manual"
+    },
+    "+15 minutes": {
+      "extractionState": "manual"
+    },
+    "Check-in options": {
+      "extractionState": "manual"
+    },
+    "Resume updates": {
+      "extractionState": "manual"
+    },
+    "Use voice shortcuts or stop before interacting with the screen.": {
+      "extractionState": "manual"
+    },
+    "One more journey.\nA little more insight.": {
+      "extractionState": "manual"
+    },
+    "Ride duration": {
+      "extractionState": "manual"
+    },
+    "Recorded distance": {
+      "extractionState": "manual"
+    },
+    "Reports saved": {
+      "extractionState": "manual"
+    },
+    "Check-in delivery": {
+      "extractionState": "manual"
+    },
+    "Not verified": {
+      "extractionState": "manual"
+    },
+    "How did this route feel?": {
+      "extractionState": "manual"
+    },
+    "Very comfortable": {
+      "extractionState": "manual"
+    },
+    "Comfortable": {
+      "extractionState": "manual"
+    },
+    "Mixed": {
+      "extractionState": "manual"
+    },
+    "Uncomfortable": {
+      "extractionState": "manual"
+    },
+    "Comfort is your personal experience, separate from measured route factors.": {
+      "extractionState": "manual"
+    },
+    "Plan another ride": {
+      "extractionState": "manual"
+    },
+    "You control what leaves your phone": {
+      "extractionState": "manual"
+    },
+    "Secure live location links and automatic contact messages are not connected. No one can follow this ride through RideGuard.": {
+      "extractionState": "manual"
+    },
+    "Send a status yourself": {
+      "extractionState": "manual"
+    },
+    "Review the recipient and message in the system share sheet. RideGuard cannot verify delivery.": {
+      "extractionState": "manual"
+    },
+    "Share ride status…": {
+      "extractionState": "manual"
+    },
+    "Share a check-in…": {
+      "extractionState": "manual"
+    },
+    "Trusted people · saved locally": {
+      "extractionState": "manual"
+    },
+    "Add a trusted person in You → Trusted contacts.": {
+      "extractionState": "manual"
+    },
+    "No automatic messages enabled": {
+      "extractionState": "manual"
+    },
+    "Stay connected": {
+      "extractionState": "manual"
+    },
+    "If you need urgent help": {
+      "extractionState": "manual"
+    },
+    "Use your iPhone’s Emergency SOS or the Phone app to call your local emergency number. RideGuard is not an emergency-response service.": {
+      "extractionState": "manual"
+    },
+    "On supported iPhones, hold the side button and a volume button to access Emergency SOS and Medical ID. Device settings may change this behaviour.": {
+      "extractionState": "manual"
+    },
+    "Trusted people": {
+      "extractionState": "manual"
+    },
+    "No trusted contacts saved.": {
+      "extractionState": "manual"
+    },
+    "Share current location…": {
+      "extractionState": "manual"
+    },
+    "This message contains a precise location. Choose the recipient in the share sheet.": {
+      "extractionState": "manual"
+    },
+    "Your everyday ride.": {
+      "extractionState": "manual"
+    },
+    "Guest · on this device": {
+      "extractionState": "manual"
+    },
+    "Explore with demo data": {
+      "extractionState": "manual"
+    },
+    "Demo routes, scores and reports are illustrative. End your ride before switching modes.": {
+      "extractionState": "manual"
+    },
+    "Voice & audio": {
+      "extractionState": "manual"
+    },
+    "Trusted contacts": {
+      "extractionState": "manual"
+    },
+    "Saved places": {
+      "extractionState": "manual"
+    },
+    "Applies to new rides. A local reminder asks you to check in; it does not notify a trusted person.": {
+      "extractionState": "manual"
+    },
+    "RideGuard Pro": {
+      "extractionState": "manual"
+    },
+    "More information for your everyday journeys": {
+      "extractionState": "manual"
+    },
+    "Privacy & data": {
+      "extractionState": "manual"
+    },
+    "Privacy details": {
+      "extractionState": "manual"
+    },
+    "Prepare data export": {
+      "extractionState": "manual"
+    },
+    "Share export…": {
+      "extractionState": "manual"
+    },
+    "Delete all local data": {
+      "extractionState": "manual"
+    },
+    "No analytics, cloud account, microphone capture or third-party AI service is enabled. Local records remain until you delete them. System backups may retain copies according to your device settings.": {
+      "extractionState": "manual"
+    },
+    "About": {
+      "extractionState": "manual"
+    },
+    "Data sources & limitations": {
+      "extractionState": "manual"
+    },
+    "Terms": {
+      "extractionState": "manual"
+    },
+    "RideGuard AI · Version 1.0": {
+      "extractionState": "manual"
+    },
+    "Made for your ride": {
+      "extractionState": "manual"
+    },
+    "Delete all local data?": {
+      "extractionState": "manual"
+    },
+    "Delete history, reports and contacts": {
+      "extractionState": "manual"
+    },
+    "This ends an active ride and removes local records. Copies you exported or sent to others cannot be recalled.": {
+      "extractionState": "manual"
+    },
+    "Cycling voice shortcuts.": {
+      "extractionState": "manual"
+    },
+    "Enable RideGuard actions in the Shortcuts app, then invoke them with Siri. Supported wording and locked-device behaviour depend on Siri and your device settings.": {
+      "extractionState": "manual"
+    },
+    "Audio": {
+      "extractionState": "manual"
+    },
+    "Voice guidance": {
+      "extractionState": "manual"
+    },
+    "Hazard alerts": {
+      "extractionState": "manual"
+    },
+    "Check-in prompts": {
+      "extractionState": "manual"
+    },
+    "Report confirmation": {
+      "extractionState": "manual"
+    },
+    "Volume is controlled by your iPhone. Turn-by-turn navigation speech is not available yet.": {
+      "extractionState": "manual"
+    },
+    "Test spoken guidance": {
+      "extractionState": "manual"
+    },
+    "Reported roadworks ahead. This is an audio test.": {
+      "extractionState": "manual"
+    },
+    "Available shortcuts": {
+      "extractionState": "manual"
+    },
+    "What’s my ETA?": {
+      "extractionState": "manual"
+    },
+    "I’m okay": {
+      "extractionState": "manual"
+    },
+    "End my ride · confirmation required": {
+      "extractionState": "manual"
+    },
+    "Voice privacy": {
+      "extractionState": "manual"
+    },
+    "RideGuard synthesises spoken responses on your device. It does not record raw audio, save transcripts or send language to an AI service. Siri’s own processing and privacy settings are managed by Apple.": {
+      "extractionState": "manual"
+    },
+    "Saved on this device for quick access. Adding someone does not send an invitation or enable location sharing.": {
+      "extractionState": "manual"
+    },
+    "Add a trusted person": {
+      "extractionState": "manual"
+    },
+    "Name": {
+      "extractionState": "manual"
+    },
+    "Phone number": {
+      "extractionState": "manual"
+    },
+    "Save contact": {
+      "extractionState": "manual"
+    },
+    "Save a place": {
+      "extractionState": "manual"
+    },
+    "Shortcut": {
+      "extractionState": "manual"
+    },
+    "Address or place": {
+      "extractionState": "manual"
+    },
+    "Save place": {
+      "extractionState": "manual"
+    },
+    "Development terms": {
+      "extractionState": "manual"
+    },
+    "Behind the information": {
+      "extractionState": "manual"
+    },
+    "Planning requests use a location you authorise. Map search and directions communicate with Apple. Active ride tracking runs until you end the ride, including background updates. No trusted contact receives your location automatically.\n\nRide history, reports, contacts and preferences stay in SwiftData on this device. This development build has no account, analytics, remote AI, community upload or live sharing service. RideGuard does not retain audio or transcripts. Siri is governed by Apple’s settings and policies.\n\nYou can delete individual rides or reports, export your records, or delete all local data. Records are retained until deletion; system backups and exported copies are outside these controls. Exports contain sensitive locations. A system share sheet sends only the content you choose.\n\nOperator: O. Bankole. Privacy policy: https://github.com/lanray07/RideGuard-AI/blob/main/docs/privacy.md. Support: https://github.com/lanray07/RideGuard-AI/issues.": {
+      "extractionState": "manual"
+    },
+    "RideGuard provides contextual information, not a guarantee of safety, crash detection or emergency response. Risk indicators are experimental, not calibrated collision probabilities. Reports may be incomplete, stale or inaccurate. Follow applicable road rules and use your judgement.\n\nDo not use demo routes for navigation. Interact with detailed screens only when stationary. Configure voice actions before riding.\n\nThis is a development preview. Cloud sharing, automated contact escalation and community publication are unavailable. No message is described as delivered without provider confirmation.\n\nProduction subscription terms, operator identity, support contact and privacy URLs must be configured before sale.": {
+      "extractionState": "manual"
+    },
+    "Apple MapKit: destination search, cycling route geometry and estimated travel time where supported. Attribution stays visible on the map. Cycling route requests require iOS 26 and service coverage. Apple route data alone is not used to calculate a RideGuard risk score.\n\nRideGuard demo fixtures: synthetic routes and reports, visibly labelled and excluded from non-demo risk calculations. They describe no verified street conditions.\n\nLocal rider observations: supplied by the user and saved on the device. Confirmation totals count local interactions only. No community statistics are fabricated.\n\nInfrastructure, collision, lighting, weather, traffic, closure and road-surface feeds have not been connected. Missing factors remain unknown. The risk engine averages current valid factors by coverage and requires a minimum evidence threshold; its model requires calibration and independent validation before production.": {
+      "extractionState": "manual"
+    },
+    "Your everyday\njourneys, understood.": {
+      "extractionState": "manual"
+    },
+    "Your story starts with a ride": {
+      "extractionState": "manual"
+    },
+    "Complete a ride to see your recorded distance, reports and personal route feedback.": {
+      "extractionState": "manual"
+    },
+    "Recorded on this device": {
+      "extractionState": "manual"
+    },
+    "Completed rides": {
+      "extractionState": "manual"
+    },
+    "Reports saved during rides": {
+      "extractionState": "manual"
+    },
+    "Infrastructure coverage and encountered hazards are not calculated without supporting data.": {
+      "extractionState": "manual"
+    },
+    "Ride history": {
+      "extractionState": "manual"
+    },
+    "Delete": {
+      "extractionState": "manual"
+    },
+    "Riding insights": {
+      "extractionState": "manual"
+    },
+    "Ride with more\ninformation.": {
+      "extractionState": "manual"
+    },
+    "A premium home for route insights, connected rides and the people you trust.": {
+      "extractionState": "manual"
+    },
+    "Understand route factors": {
+      "extractionState": "manual"
+    },
+    "Explainable scores with visible data confidence": {
+      "extractionState": "manual"
+    },
+    "Planned: secure Live Ride and trusted contact updates": {
+      "extractionState": "manual"
+    },
+    "Hear what’s ahead": {
+      "extractionState": "manual"
+    },
+    "Brief alerts and supported Siri shortcuts": {
+      "extractionState": "manual"
+    },
+    "Glance at your ride": {
+      "extractionState": "manual"
+    },
+    "Companion status and quick actions": {
+      "extractionState": "manual"
+    },
+    "Development preview: subscriptions are not offered for sale until the advertised services and production terms are ready.": {
+      "extractionState": "manual"
+    },
+    "Loading StoreKit products…": {
+      "extractionState": "manual"
+    },
+    "StoreKit plans are not configured. No production prices are assumed.": {
+      "extractionState": "manual"
+    },
+    "Verified Pro entitlement": {
+      "extractionState": "manual"
+    },
+    "Restore purchases": {
+      "extractionState": "manual"
+    },
+    "Privacy": {
+      "extractionState": "manual"
+    },
+    "Hazard": {
+      "extractionState": "manual"
+    },
+    "Pothole": {
+      "extractionState": "manual"
+    },
+    "Roadworks": {
+      "extractionState": "manual"
+    },
+    "Debris": {
+      "extractionState": "manual"
+    },
+    "Blocked cycle lane": {
+      "extractionState": "manual"
+    },
+    "Broken glass": {
+      "extractionState": "manual"
+    },
+    "Flooding": {
+      "extractionState": "manual"
+    },
+    "Poor lighting": {
+      "extractionState": "manual"
+    },
+    "Junction concern": {
+      "extractionState": "manual"
+    },
+    "Save a brief hazard observation during an active RideGuard ride. Reports stay on your device.": {
+      "extractionState": "manual"
+    },
+    "What’s my ride ETA?": {
+      "extractionState": "manual"
+    },
+    "Your check-in window has been updated. No contact message was sent.": {
+      "extractionState": "manual"
+    },
+    "End my ride": {
+      "extractionState": "manual"
+    },
+    "End this ride and stop its location updates?": {
+      "extractionState": "manual"
+    },
+    "Ride ETA": {
+      "extractionState": "manual"
+    },
+    "Open RideGuard on iPhone": {
+      "extractionState": "manual"
+    },
+    "iPhone is unavailable. Nothing was sent.": {
+      "extractionState": "manual"
+    },
+    "No confirmation received.": {
+      "extractionState": "manual"
+    },
+    "No confirmation received. Check iPhone before retrying.": {
+      "extractionState": "manual"
+    },
+    "DEMO RIDE": {
+      "extractionState": "manual"
+    },
+    "Update stale · check iPhone": {
+      "extractionState": "manual"
+    },
+    "Status: %@": {
+      "extractionState": "manual"
+    },
+    "Waiting for iPhone": {
+      "extractionState": "manual"
+    },
+    "Quick report": {
+      "extractionState": "manual"
+    },
+    "Blocked lane": {
+      "extractionState": "manual"
+    },
+    "For urgent help, use Apple Watch Emergency SOS. RideGuard does not dispatch help.": {
+      "extractionState": "manual"
+    },
+    "End ride on iPhone?": {
+      "extractionState": "manual"
+    },
+    "What’s ahead on my ride?": {
+      "extractionState": "manual"
+    },
+    "I’m okay on my ride": {
+      "extractionState": "manual"
+    },
+    "RIDEGUARD · DEMO": {
+      "extractionState": "manual"
+    },
+    "Update stale · open RideGuard": {
+      "extractionState": "manual"
+    },
+    "ETA": {
+      "extractionState": "manual"
+    },
+    " : context.state.status)": {
+      "extractionState": "manual"
+    },
+    "Poor road surface": {
+      "extractionState": "manual"
+    },
+    "Temporary closure": {
+      "extractionState": "manual"
+    },
+    "Vehicle obstruction": {
+      "extractionState": "manual"
+    },
+    "Other": {
+      "extractionState": "manual"
+    },
+    "Cycling infrastructure": {
+      "extractionState": "manual"
+    },
+    "Road classification": {
+      "extractionState": "manual"
+    },
+    "Junction complexity": {
+      "extractionState": "manual"
+    },
+    "Verified collision history": {
+      "extractionState": "manual"
+    },
+    "Community reports": {
+      "extractionState": "manual"
+    },
+    "Construction and closures": {
+      "extractionState": "manual"
+    },
+    "Lighting information": {
+      "extractionState": "manual"
+    },
+    "Current traffic": {
+      "extractionState": "manual"
+    },
+    "Road surface": {
+      "extractionState": "manual"
+    },
+    "Time-of-day context": {
+      "extractionState": "manual"
+    },
+    "Insufficient data": {
+      "extractionState": "manual"
+    },
+    "Lower observed risk": {
+      "extractionState": "manual"
+    },
+    "Relatively lower risk": {
+      "extractionState": "manual"
+    },
+    "Moderate indicators": {
+      "extractionState": "manual"
+    },
+    "Elevated indicators": {
+      "extractionState": "manual"
+    },
+    "Higher observed risk": {
+      "extractionState": "manual"
+    },
+    "There is not enough current, verified information to calculate a risk score. Missing information does not mean low risk.": {
+      "extractionState": "manual"
+    },
+    " A lower score cannot guarantee safety.": {
+      "extractionState": "manual"
+    },
+    "No current reports in the available data. Conditions may be unreported.": {
+      "extractionState": "manual"
+    },
+    "pot hole": {
+      "extractionState": "manual"
+    },
+    "road works": {
+      "extractionState": "manual"
+    },
+    "blocked cycle lane": {
+      "extractionState": "manual"
+    },
+    "blocking the bike lane": {
+      "extractionState": "manual"
+    },
+    "blocked lane": {
+      "extractionState": "manual"
+    },
+    "broken glass": {
+      "extractionState": "manual"
+    },
+    "poor lighting": {
+      "extractionState": "manual"
+    },
+    "dangerous junction": {
+      "extractionState": "manual"
+    },
+    "junction concern": {
+      "extractionState": "manual"
+    },
+    "Lower risk": {
+      "extractionState": "manual"
+    },
+    "Fastest": {
+      "extractionState": "manual"
+    },
+    "Quieter": {
+      "extractionState": "manual"
+    },
+    "Illustrative infrastructure indicator; no measured lane coverage.": {
+      "extractionState": "manual"
+    },
+    "Illustrative road classification indicator.": {
+      "extractionState": "manual"
+    },
+    "Illustrative junction indicator.": {
+      "extractionState": "manual"
+    },
+    "Illustrative surface indicator.": {
+      "extractionState": "manual"
+    },
+    "Illustrative construction indicator.": {
+      "extractionState": "manual"
+    },
+    "RideGuard sample fixture": {
+      "extractionState": "manual"
+    },
+    "Home · London Fields": {
+      "extractionState": "manual"
+    },
+    "Sample roadworks report. Not a current street observation.": {
+      "extractionState": "manual"
+    },
+    "Sample lane obstruction. Not a current street observation.": {
+      "extractionState": "manual"
+    },
+    "Sample surface report. Not a current street observation.": {
+      "extractionState": "manual"
+    },
+    "Demo: %@ saved on this device.": {
+      "extractionState": "manual"
+    },
+    "%@ saved on this device.": {
+      "extractionState": "manual"
+    },
+    "Demo. Estimated arrival: %@.": {
+      "extractionState": "manual"
+    },
+    "Estimated arrival: %@.": {
+      "extractionState": "manual"
+    }
+  },
+  "version": "1.0"
+}

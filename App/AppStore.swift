@@ -145,7 +145,7 @@ final class RideStore {
         if let photo { snapshot.reportPhotos[report.id.uuidString] = photo }
         if snapshot.activeRide != nil { snapshot.activeRide?.reportCount += 1 }
         guard persist() else { snapshot = before; throw RideCommandError.storageUnavailable }
-        notice = "\(demoMode ? "Demo: " : "")\(category.title) saved on this device."
+        notice = L10n.format(demoMode ? "Demo: %@ saved on this device." : "%@ saved on this device.", L10n.text(category.title))
         if snapshot.voice.confirmations { voice.say(notice!, enabled: voiceEnabled) }
     }
     func confirm(_ report: HazardReport, as vote: Confirmation) {
@@ -167,7 +167,7 @@ final class RideStore {
             return (report, metres)
         }.sorted { $0.1 < $1.1 }
         guard let first = nearby.first else { return "No current reports in the next kilometre of available route data. Conditions may be unreported." }
-        return "\(ride.route.isDemo ? "Demo. " : "")Reported \(first.0.category.title.lowercased()) approximately \(max(50, Int(first.1 / 50) * 50)) metres ahead."
+        return L10n.format(ride.route.isDemo ? "Demo. Reported %@ approximately %lld metres ahead." : "Reported %@ approximately %lld metres ahead.", L10n.text(first.0.category.title), max(50, Int(first.1 / 50) * 50))
     }
     func deleteAll() {
         if activeRide != nil { apply(.end) }

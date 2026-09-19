@@ -15,9 +15,9 @@ struct OnboardingView: View {
                         Label("RIDEGUARD AI", systemImage: "bicycle").font(.headline).tracking(3).foregroundStyle(.white).padding(24)
                     }.clipShape(RoundedRectangle(cornerRadius: 30))
                     HStack { ForEach(0..<6) { index in Capsule().fill(index == page ? RG.green : RG.green.opacity(0.15)).frame(width: index == page ? 28 : 8, height: 5) }; Spacer(); Text("\(page + 1) / 6").font(.caption).foregroundStyle(.secondary) }
-                    Text(titles[page]).font(.system(.largeTitle, design: .rounded, weight: .bold)).fixedSize(horizontal: false, vertical: true)
-                    Text(messages[page]).font(.body).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
-                    Button { if page < 5 { page += 1 } else { complete() } } label: { Text(page == 0 ? "Get started" : page == 5 ? "Explore RideGuard" : "Continue") }.buttonStyle(PrimaryButtonStyle())
+                    Text(LocalizedStringKey(titles[page])).font(.system(.largeTitle, design: .rounded, weight: .bold)).fixedSize(horizontal: false, vertical: true)
+                    Text(LocalizedStringKey(messages[page])).font(.body).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
+                    Button { if page < 5 { page += 1 } else { complete() } } label: { Text(LocalizedStringKey(page == 0 ? "Get started" : page == 5 ? "Explore RideGuard" : "Continue")) }.buttonStyle(PrimaryButtonStyle())
                     if page < 5 { Button("Skip introduction", action: complete).frame(maxWidth: .infinity).font(.subheadline) }
                 }.padding(24).frame(maxWidth: 600)
             }.frame(maxWidth: .infinity).background(RG.canvas)

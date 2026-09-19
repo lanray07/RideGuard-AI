@@ -20,7 +20,7 @@ struct HomeView: View {
                     if store.demoMode { DemoBadge() }
                 }.foregroundStyle(RG.green)
                 VStack(alignment: .leading, spacing: 8) {
-                    Text(greeting).font(.system(.largeTitle, design: .rounded, weight: .bold))
+                    Text("Plan your cycling route.").font(.system(.largeTitle, design: .rounded, weight: .bold))
                     Text("A little more confidence.\nEvery time you ride.").font(.title3).foregroundStyle(.secondary)
                 }
                 Panel {
@@ -38,7 +38,7 @@ struct HomeView: View {
                                     else if let saved = store.snapshot.destinations.first(where: { $0.label == label }) { query = saved.query; search() }
                                     else { store.notice = "Add a destination in You → Saved places." }
                                 } label: {
-                                    Label(label, systemImage: label == "Home" ? "house" : label == "Work" ? "briefcase" : "bookmark")
+                                    Label(LocalizedStringKey(label), systemImage: label == "Home" ? "house" : label == "Work" ? "briefcase" : "bookmark")
                                         .font(.subheadline.weight(.medium)).padding(10).background(RG.canvas, in: Capsule())
                                 }
                             }
@@ -46,16 +46,16 @@ struct HomeView: View {
                         if !store.demoMode {
                             Button("Use my location", systemImage: "location") { store.location.requestForPlanning() }
                             Text("Location is used to plan your route. Ride tracking begins only when you start.").font(.caption).foregroundStyle(.secondary)
-                            if let error = store.location.error { Text(error).font(.caption).foregroundStyle(RG.amber) }
+                            if let error = store.location.error { Text(L10n.text(error)).font(.caption).foregroundStyle(RG.amber) }
                         }
-                        if let planningError { Text(planningError).font(.subheadline).foregroundStyle(RG.amber) }
+                        if let planningError { Text(L10n.text(planningError)).font(.subheadline).foregroundStyle(RG.amber) }
                     }
                 }
                 if !results.isEmpty {
                     Panel {
                         VStack(spacing: 16) {
                             ForEach(Array(results.enumerated()), id: \.offset) { _, item in
-                                Button { calculate(item) } label: { InfoRow(symbol: "mappin", title: item.name ?? "Destination", subtitle: item.placemark.title ?? "") }
+                                Button { calculate(item) } label: { InfoRow(symbol: "mappin", title: item.name ?? "Destination", subtitle: item.placemark.title ?? "", verbatimTitle: true, verbatimSubtitle: true) }
                             }
                         }
                     }
@@ -71,12 +71,12 @@ struct HomeView: View {
                         }
                     }
                     Button { store.selectedTab = 2 } label: { Label("Prepare my ride", systemImage: "arrow.up.right") }.buttonStyle(PrimaryButtonStyle())
-                    Text(store.demoMode ? "Illustrative routes and scores. Do not use the demo to navigate." : "Route information cannot guarantee safety. Conditions and data coverage can change.")
+                    Text(LocalizedStringKey(store.demoMode ? "Illustrative routes and scores. Do not use the demo to navigate." : "Route information cannot guarantee safety. Conditions and data coverage can change."))
                         .font(.caption).foregroundStyle(.secondary)
                 }
                 HStack { Eyebrow(text: store.demoMode ? "A look around · demo" : "Your local observations"); Spacer(); Button("View all") { store.selectedTab = 1 } }
                 Panel {
-                    InfoRow(symbol: "mappin.and.ellipse", title: "\(store.reports.count) \(store.demoMode ? "sample" : "saved") reports",
+                    InfoRow(symbol: "mappin.and.ellipse", title: L10n.format(store.demoMode ? "Sample reports: %lld" : "Saved reports: %lld", store.reports.count),
                             subtitle: store.demoMode ? "Explore how rider reports appear along a route." : "Reports are stored on this device. Community syncing is not connected.")
                 }
                 HStack(spacing: 16) {
@@ -87,7 +87,7 @@ struct HomeView: View {
                     }
                     Spacer(minLength: 0)
                 }.padding(16).background(RG.green.opacity(0.08), in: RoundedRectangle(cornerRadius: 24))
-                if let notice = store.notice { Text(notice).font(.subheadline).foregroundStyle(RG.green) }
+                if let notice = store.notice { Text(L10n.text(notice)).font(.subheadline).foregroundStyle(RG.green) }
             }.padding(22).frame(maxWidth: 760)
         }.frame(maxWidth: .infinity).background(RG.canvas).toolbar(.hidden, for: .navigationBar)
             .sheet(isPresented: $comparing) { NavigationStack { ComparisonView(routes: store.routes) } }
@@ -164,7 +164,7 @@ struct RouteCard: View {
                 HStack(alignment: .top) {
                     Image(systemName: selected ? "checkmark.circle.fill" : "circle").font(.title2)
                     VStack(alignment: .leading, spacing: 8) {
-                        Text(route.name.uppercased()).font(.caption.weight(.bold)).tracking(1.5)
+                        Text(L10n.text(route.name).localizedUppercase).font(.caption.weight(.bold)).tracking(1.5)
                         HStack(alignment: .firstTextBaseline, spacing: 5) {
                             Text("\(Int(route.duration / 60))").font(.system(size: 32, weight: .bold, design: .rounded))
                             Text("min").font(.subheadline)
@@ -174,12 +174,12 @@ struct RouteCard: View {
                     Spacer()
                     VStack(alignment: .trailing, spacing: 4) {
                         Text(assessment.overallRiskScore.map(String.init) ?? "—").font(.system(size: 30, weight: .bold, design: .rounded))
-                        Text(route.isDemo ? "Demo risk score" : "Risk score").font(.caption2)
+                        Text(LocalizedStringKey(route.isDemo ? "Demo risk score" : "Risk score")).font(.caption2)
                     }
                 }.contentShape(Rectangle())
             }.buttonStyle(.plain)
             HStack {
-                Text(assessment.label).font(.caption).foregroundStyle(.secondary)
+                Text(L10n.text(assessment.label)).font(.caption).foregroundStyle(.secondary)
                 Spacer()
                 Button("Why this route?", action: explain).font(.caption.weight(.semibold))
             }

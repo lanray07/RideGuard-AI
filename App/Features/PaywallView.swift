@@ -26,7 +26,7 @@ struct PaywallView: View {
                 if store.subscriptions.products.isEmpty { Text("StoreKit plans are not configured. No production prices are assumed.").font(.caption).foregroundStyle(.secondary) }
                 if store.subscriptions.hasPro { Label("Verified Pro entitlement", systemImage: "checkmark.seal") }
                 Button("Restore purchases") { Task { await store.subscriptions.restore() } }
-                if let error = store.subscriptions.error { Text(error).font(.caption).foregroundStyle(RG.amber) }
+                if let error = store.subscriptions.error { Text(L10n.text(error)).font(.caption).foregroundStyle(RG.amber) }
                 HStack { NavigationLink("Terms") { PolicyView(kind: .terms) }; Spacer(); NavigationLink("Privacy") { PolicyView(kind: .privacy) } }.font(.caption)
             }.padding(24).frame(maxWidth: 700)
         }.navigationTitle("RideGuard Pro").navigationBarTitleDisplayMode(.inline).background(RG.canvas)

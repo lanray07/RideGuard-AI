@@ -8,7 +8,7 @@ enum RG {
 }
 struct Eyebrow: View {
     let text: String
-    var body: some View { Text(text.uppercased()).font(.caption.weight(.bold)).tracking(2).foregroundStyle(.secondary) }
+    var body: some View { Text(L10n.text(text).localizedUppercase).font(.caption.weight(.bold)).tracking(2).foregroundStyle(.secondary) }
 }
 struct DemoBadge: View {
     var body: some View { Label("DEMO · SAMPLE DATA", systemImage: "sparkle").font(.caption2.weight(.bold)).tracking(1).padding(.horizontal, 10).padding(.vertical, 7).background(.regularMaterial, in: Capsule()).accessibilityLabel("Demo. All routes and reports shown are illustrative sample data.") }
@@ -28,10 +28,12 @@ struct InfoRow: View {
     let symbol: String
     let title: String
     var subtitle: String = ""
+    var verbatimTitle = false
+    var verbatimSubtitle = false
     var body: some View {
         HStack(alignment: .top, spacing: 14) {
             Image(systemName: symbol).font(.title3).foregroundStyle(RG.green).frame(width: 26, height: 28)
-            VStack(alignment: .leading, spacing: 5) { Text(title).font(.headline); if !subtitle.isEmpty { Text(subtitle).font(.subheadline).foregroundStyle(.secondary) } }
+            VStack(alignment: .leading, spacing: 5) { Text(verbatimTitle ? title : L10n.text(title)).font(.headline); if !subtitle.isEmpty { Text(verbatimSubtitle ? subtitle : L10n.text(subtitle)).font(.subheadline).foregroundStyle(.secondary) } }
             Spacer(minLength: 0)
         }
     }

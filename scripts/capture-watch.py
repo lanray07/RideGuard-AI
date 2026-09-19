@@ -20,9 +20,11 @@ print('Capturing ' + device['name'], flush=True)
 run('xcrun', 'simctl', 'boot', udid)
 run('xcrun', 'simctl', 'bootstatus', udid, '-b')
 run('xcrun', 'simctl', 'install', udid, str(apps[0]))
-run('xcrun', 'simctl', 'launch', udid, 'com.RideGuardAI.app.watchkitapp')
-time.sleep(12)
-output = Path('build/screenshots/Watch')
-output.mkdir(parents=True, exist_ok=True)
-run('xcrun', 'simctl', 'io', udid, 'screenshot', str(output / 'Watch-01-companion.png'))
+for language, locale, store_locale in [('en', 'en_GB', 'en-GB'), ('fr', 'fr_FR', 'fr-FR'), ('es', 'es_ES', 'es-ES'), ('de', 'de_DE', 'de-DE')]:
+    run('xcrun', 'simctl', 'launch', '--terminate-running-process', udid, 'com.RideGuardAI.app.watchkitapp',
+        '-AppleLanguages', f'({language})', '-AppleLocale', locale)
+    time.sleep(12)
+    output = Path('build/screenshots') / store_locale / 'Watch'
+    output.mkdir(parents=True, exist_ok=True)
+    run('xcrun', 'simctl', 'io', udid, 'screenshot', str(output / 'Watch-01-companion.png'))
 run('xcrun', 'simctl', 'shutdown', udid)

@@ -19,14 +19,14 @@ struct ReportHazardIntent: AppIntent {
         guard store.activeRide != nil, store.repository != nil else { throw RideCommandError.noRide }
         guard let category = HazardCategory(rawValue: hazard.rawValue) else { throw RideCommandError.noRide }
         try store.report(category)
-        let text = "\(store.demoMode ? "Demo: " : "")\(category.title) saved on this device."
+        let text = L10n.format(store.demoMode ? "Demo: %@ saved on this device." : "%@ saved on this device.", L10n.text(category.title))
         return .result(dialog: "\(text)")
     }
 }
 struct WhatsAheadIntent: AppIntent {
     static var title: LocalizedStringResource = "What’s ahead?"
     @MainActor func perform() async throws -> some IntentResult & ProvidesDialog {
-        let text = RideStore.shared.whatsAhead()
+        let text = L10n.text(RideStore.shared.whatsAhead())
         return .result(dialog: "\(text)")
     }
 }
@@ -34,7 +34,7 @@ struct RideETAIntent: AppIntent {
     static var title: LocalizedStringResource = "What’s my ride ETA?"
     @MainActor func perform() async throws -> some IntentResult & ProvidesDialog {
         guard let ride = RideStore.shared.activeRide else { throw RideCommandError.noRide }
-        let text = "\(ride.route.isDemo ? "Demo. " : "")Estimated arrival: \(ride.expectedArrival.formatted(date: .omitted, time: .shortened))."
+        let text = L10n.format(ride.route.isDemo ? "Demo. Estimated arrival: %@." : "Estimated arrival: %@.", ride.expectedArrival.formatted(date: .omitted, time: .shortened))
         return .result(dialog: "\(text)")
     }
 }

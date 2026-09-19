@@ -26,11 +26,13 @@ for family, predicate in [
     run("xcrun", "simctl", "bootstatus", udid, "-b")
     run("xcrun", "simctl", "status_bar", udid, "override", "--time", "9:41", "--batteryState", "charged", "--batteryLevel", "100")
     run("xcrun", "simctl", "install", udid, str(app))
-    output = Path("build/screenshots") / family
-    output.mkdir(parents=True, exist_ok=True)
-    for index, screen in enumerate(screens, 1):
-        env = dict(os.environ, SIMCTL_CHILD_RIDEGUARD_SCREENSHOT_SCREEN=screen)
-        run("xcrun", "simctl", "launch", "--terminate-running-process", udid, "com.RideGuardAI.app", env=env)
-        time.sleep(8 if index == 1 else 3)
-        run("xcrun", "simctl", "io", udid, "screenshot", str(output / f"{index:02}-{screen}.png"))
+    for language, locale, store_locale in [('en', 'en_GB', 'en-GB'), ('fr', 'fr_FR', 'fr-FR'), ('es', 'es_ES', 'es-ES'), ('de', 'de_DE', 'de-DE')]:
+        output = Path("build/screenshots") / store_locale / family
+        output.mkdir(parents=True, exist_ok=True)
+        for index, screen in enumerate(screens, 1):
+            env = dict(os.environ, SIMCTL_CHILD_RIDEGUARD_SCREENSHOT_SCREEN=screen)
+            run("xcrun", "simctl", "launch", "--terminate-running-process", udid, "com.RideGuardAI.app",
+                '-AppleLanguages', f'({language})', '-AppleLocale', locale, env=env)
+            time.sleep(8 if index == 1 else 3)
+            run("xcrun", "simctl", "io", udid, "screenshot", str(output / f"{family}-{index:02}-{screen}.png"))
     run("xcrun", "simctl", "shutdown", udid)

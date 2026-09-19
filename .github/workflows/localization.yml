@@ -1,0 +1,21 @@
+name: Refresh offline translations
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install offline translator
+        run: pip install argostranslate==1.11.0
+      - name: Translate new app-owned copy and validate placeholders
+        run: python scripts/localize.py --extract --translate --check
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Reviewed-before-release-translations
+          path: Localization/Localizable.xcstrings

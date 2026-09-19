@@ -18,7 +18,7 @@ struct RideView: View {
                     preparation
                 }
                 Button { emergency = true } label: { Label("Emergency options", systemImage: "cross.case") }.frame(maxWidth: .infinity).padding(12)
-                if let notice = store.notice { Text(notice).font(.subheadline).foregroundStyle(.secondary) }
+                if let notice = store.notice { Text(L10n.text(notice)).font(.subheadline).foregroundStyle(.secondary) }
             }.padding(22).frame(maxWidth: 760)
         }.frame(maxWidth: .infinity).background(RG.canvas).navigationTitle("Your ride").navigationBarTitleDisplayMode(.inline)
             .sheet(isPresented: $emergency) { NavigationStack { EmergencyView() } }
@@ -37,13 +37,13 @@ struct RideView: View {
     }
     private var preparation: some View {
         VStack(alignment: .leading, spacing: 24) {
-            Text("Ready when\nyou are.").font(.largeTitle.bold())
+            Text("Prepare your bike ride.").font(.largeTitle.bold())
             if let route = store.selectedRoute {
                 if route.isDemo { DemoBadge() }
                 RouteMap(routes: [route], reports: store.reports).frame(height: 240).clipShape(RoundedRectangle(cornerRadius: 24))
                 Panel {
                     VStack(alignment: .leading, spacing: 16) {
-                        InfoRow(symbol: "flag.checkered", title: route.destination, subtitle: "\(Int(route.duration / 60)) min · \(route.distance.milesText)")
+                        InfoRow(symbol: "flag.checkered", title: route.destination, subtitle: "\(Int(route.duration / 60)) min · \(route.distance.milesText)", verbatimTitle: true)
                         Divider()
                         InfoRow(symbol: "person.crop.circle.badge.checkmark", title: "Only you can see this ride", subtitle: "Live location sharing is not connected. No trusted contact is being notified.")
                         Button("Sharing & check-in options") { sharing = true }
@@ -51,8 +51,8 @@ struct RideView: View {
                 }
                 Panel { InfoRow(symbol: "waveform", title: "Eyes on the road. Hands on the bike.", subtitle: "Set up Siri shortcuts before riding. Alerts use short spoken updates.") }
                 Button("Voice & audio settings") { showVoice = true }
-                Button { store.startRide() } label: { Label(route.isDemo ? "Start demo ride" : "Start ride", systemImage: "bicycle") }.buttonStyle(PrimaryButtonStyle())
-                Text(route.isDemo ? "A simulation for exploring the controls. It does not guide a real journey." : "Location tracking continues during this ride, including while the screen is locked. End the ride to stop it. Turn-by-turn guidance is not available in this build.").font(.caption).foregroundStyle(.secondary)
+                Button { store.startRide() } label: { Label(LocalizedStringKey(route.isDemo ? "Start demo ride" : "Start ride"), systemImage: "bicycle") }.buttonStyle(PrimaryButtonStyle())
+                Text(LocalizedStringKey(route.isDemo ? "A simulation for exploring the controls. It does not guide a real journey." : "Location tracking continues during this ride, including while the screen is locked. End the ride to stop it. Turn-by-turn guidance is not available in this build.")).font(.caption).foregroundStyle(.secondary)
             } else {
                 ContentUnavailableView("Choose a destination", systemImage: "map", description: Text("Plan a cycling route in Explore before starting."))
                 Button("Plan a ride") { store.selectedTab = 0 }.buttonStyle(PrimaryButtonStyle())
@@ -61,7 +61,7 @@ struct RideView: View {
     }
     @ViewBuilder private func active(_ ride: RideSession) -> some View {
         if ride.route.isDemo { DemoBadge() }
-        HStack { Label(ride.status == .overdue ? "CHECK-IN DUE" : ride.status == .arrived ? "NEAR DESTINATION" : "RIDE IN PROGRESS", systemImage: "circle.fill").font(.caption.weight(.bold)).tracking(1).foregroundStyle(RG.green); Spacer(); Image(systemName: "waveform").foregroundStyle(RG.green) }
+        HStack { Label(LocalizedStringKey(ride.status == .overdue ? "CHECK-IN DUE" : ride.status == .arrived ? "NEAR DESTINATION" : "RIDE IN PROGRESS"), systemImage: "circle.fill").font(.caption.weight(.bold)).tracking(1).foregroundStyle(RG.green); Spacer(); Image(systemName: "waveform").foregroundStyle(RG.green) }
         Text(ride.route.destination).font(.largeTitle.bold())
         Panel {
             VStack(alignment: .leading, spacing: 16) {
@@ -96,13 +96,13 @@ struct RideView: View {
                 LabeledContent("Ride duration", value: "\(max(0, Int((ride.endedAt ?? .now).timeIntervalSince(ride.startedAt) / 60))) min")
                 LabeledContent("Recorded distance", value: ride.travelledMetres.milesText)
                 LabeledContent("Reports saved", value: String(ride.reportCount))
-                LabeledContent("Check-in delivery", value: "Not verified")
+                LabeledContent("Check-in delivery", value: L10n.text("Not verified"))
             }
         }
         Text("How did this route feel?").font(.headline)
         ForEach(["Very comfortable", "Comfortable", "Mixed", "Uncomfortable"], id: \.self) { response in
             Button { store.snapshot.feedback[ride.id.uuidString] = response; store.persist() } label: {
-                HStack { Text(response); Spacer(); if store.snapshot.feedback[ride.id.uuidString] == response { Image(systemName: "checkmark") } }.padding(12)
+                HStack { Text(L10n.text(response)); Spacer(); if store.snapshot.feedback[ride.id.uuidString] == response { Image(systemName: "checkmark") } }.padding(12)
             }.buttonStyle(.bordered)
         }
         Text("Comfort is your personal experience, separate from measured route factors.").font(.caption).foregroundStyle(.secondary)
@@ -127,7 +127,7 @@ struct SharingView: View {
             }
             Section("Trusted people · saved locally") {
                 if store.snapshot.contacts.isEmpty { Text("Add a trusted person in You → Trusted contacts.") }
-                ForEach(store.snapshot.contacts) { contact in InfoRow(symbol: "person.circle", title: contact.name, subtitle: "No automatic messages enabled") }
+                ForEach(store.snapshot.contacts) { contact in InfoRow(symbol: "person.circle", title: contact.name, subtitle: "No automatic messages enabled", verbatimTitle: true) }
             }
         }.navigationTitle("Stay connected").toolbar { Button("Done") { dismiss() } }
     }

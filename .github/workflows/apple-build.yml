@@ -11,6 +11,11 @@ jobs:
         run: brew install xcodegen
       - name: Build and test
         run: bash scripts/build-macos.sh
+      - name: Save compiler-extracted localization catalog
+        uses: actions/upload-artifact@v4
+        with:
+          name: RideGuard-localization-catalog
+          path: Localization/Localizable.xcstrings
       - name: Capture real iPhone and iPad screenshots
         run: python3 scripts/capture-simulators.py
       - name: Capture Apple Watch companion
