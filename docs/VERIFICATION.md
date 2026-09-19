@@ -21,6 +21,10 @@ Local environment: Windows, Swift 6.3.1. Apple validation was subsequently run o
   [targeted recaptures](https://github.com/lanray07/RideGuard-AI/actions/runs/35454505913).
   All five replacements were visually inspected. The final archive contains
   eight iPhone, eight iPad and one Watch image for each of the four locales.
+- [Store upload and verification](https://github.com/lanray07/RideGuard-AI/actions/runs/35455047074)
+  succeeded. App Store Connect returned selected build `103`, matching review
+  contact details, descriptions and keywords for all four locales, and all 68
+  screenshot uploads complete. No final review submission was performed.
 - [Watch capture](https://github.com/lanray07/RideGuard-AI/actions/runs/35451365771)
   produced a genuine 422 × 514 companion screenshot. It was uploaded to the
   English App Store listing, which displayed one Watch screenshot.
