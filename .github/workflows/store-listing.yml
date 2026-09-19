@@ -31,7 +31,10 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate localized listing and screenshot archive
         if: ${{ !inputs.verify_only }}
-        run: python3 scripts/check-store-assets.py
+        run: |
+          python3 -m venv build/asset-check-env
+          build/asset-check-env/bin/pip install Pillow==11.3.0
+          build/asset-check-env/bin/python scripts/check-store-assets.py
       - name: Prepare Apple API authentication
         run: python3 scripts/prepare-signing.py
       - name: Install fastlane

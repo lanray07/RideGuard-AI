@@ -11,6 +11,10 @@ Activity targets. Xcode emits SwiftUI localization data with
 handles parameterized messages. User-supplied names, addresses and report text
 must remain verbatim. Permission descriptions have separate InfoPlist resources.
 
+Siri action titles and app responses are localized. The predefined spoken
+App Shortcut invocation phrases remain English; localized invocation phrases and
+physical-device Siri behavior are not validated by the interface translation checks.
+
 ## Updating copy
 
 1. Run `python scripts/localize.py --extract` after adding app-owned text.

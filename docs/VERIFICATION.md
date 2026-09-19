@@ -4,6 +4,31 @@ Local environment: Windows, Swift 6.3.1. Apple validation was subsequently run o
 
 ## GitHub Apple platform results
 
+### Localization update — 19 September 2026
+
+- English, French, Spanish and German use bundled localization resources. The
+  translation validator passes for 426 keys in each translated language.
+- Main screenshot headings use natural cycling-route, hazard-report and voice
+  shortcut terms. The four App Store descriptions describe the available local
+  features and their limitations; metadata fields pass length checks.
+- [Signed build 103](https://github.com/lanray07/RideGuard-AI/actions/runs/35453029397)
+  archived and uploaded successfully from source commit `452f1a2`.
+- [Localized native run](https://github.com/lanray07/RideGuard-AI/actions/runs/35453003291)
+  passed 15 core tests and built the iPhone, Watch and Live Activity targets.
+  Bundle checks confirmed French, Spanish and German resources in all three.
+  The capture run produced 68 images; visual inspection identified five blank
+  iPhone launch frames, which were excluded and replaced by successful
+  [targeted recaptures](https://github.com/lanray07/RideGuard-AI/actions/runs/35454505913).
+  All five replacements were visually inspected. The final archive contains
+  eight iPhone, eight iPad and one Watch image for each of the four locales.
+- [Watch capture](https://github.com/lanray07/RideGuard-AI/actions/runs/35451365771)
+  produced a genuine 422 × 514 companion screenshot. It was uploaded to the
+  English App Store listing, which displayed one Watch screenshot.
+- Runtime speech, physical-device background tracking and iPhone/Watch pairing
+  still require the hardware checks listed below.
+
+### Initial build
+
 - [Apple platform run 34449589018](https://github.com/lanray07/RideGuard-AI/actions/runs/34449589018): passed core tests, iPhone simulator build, Watch simulator build and actual iPhone/iPad screen capture.
 - [Signed upload 34449589975](https://github.com/lanray07/RideGuard-AI/actions/runs/34449589975): archive succeeded and App Store Connect upload succeeded for version 1.0 build 1. The archive is unsigned, then Xcode uses automatic cloud signing during App Store export. No development device registration is required.
 - Sixteen original simulator screenshots are stored in `fastlane/screenshots/en-GB`: iPhone 1320 × 2868 and iPad 2064 × 2752. The capture entry point is compiled only for the simulator and opens existing app views with labelled demo data.
