@@ -1,5 +1,13 @@
 name: Apple platform build
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      capture_filter:
+        description: Optional comma-separated locale/device/screen recapture paths
+        type: string
+        default: ''
 permissions:
   contents: read
 jobs:
@@ -23,8 +31,14 @@ jobs:
           name: RideGuard-localization-catalog
           path: Localization/Localizable.xcstrings
       - name: Capture real iPhone and iPad screenshots
-        run: python3 scripts/capture-simulators.py
+        env:
+          CAPTURE_FILTER: ${{ inputs.capture_filter }}
+        run: |
+          python3 -m venv build/capture-env
+          build/capture-env/bin/pip install Pillow==11.3.0
+          build/capture-env/bin/python scripts/capture-simulators.py
       - name: Capture Apple Watch companion
+        if: ${{ !inputs.capture_filter }}
         run: python3 scripts/capture-watch.py
       - name: Upload build results and artwork
         if: always()
