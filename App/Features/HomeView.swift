@@ -141,14 +141,14 @@ struct RouteMap: View {
                     .stroke(route.id == (selected ?? routes.first?.id) ? RG.green : .secondary.opacity(0.4), style: StrokeStyle(lineWidth: route.id == (selected ?? routes.first?.id) ? 6 : 3, lineCap: .round, lineJoin: .round))
             }
             ForEach(Array(reports.prefix(30))) { report in
-                Annotation(report.category.title, coordinate: report.coordinate.cl) {
+                Annotation(L10n.text(report.category.title), coordinate: report.coordinate.cl) {
                     Image(systemName: report.category.symbol).font(.caption).foregroundStyle(.white).padding(9).background(RG.amber, in: Circle())
                 }
             }
             if let end = routes.first?.coordinates.last { Marker("Destination", systemImage: "flag.checkered", coordinate: end.cl).tint(RG.green) }
         }.mapStyle(.standard(elevation: .flat, pointsOfInterest: .excludingAll, showsTraffic: false))
             .overlay(alignment: .topLeading) { if routes.contains(where: \.isDemo) { DemoBadge().padding(12) } }
-            .accessibilityLabel("Route overview with \(reports.count) available reports")
+            .accessibilityLabel(L10n.format("Route overview with %lld available reports", reports.count))
     }
 }
 

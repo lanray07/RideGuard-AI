@@ -10,6 +10,9 @@ lane :store_listing do |options|
     duration: 1200
   )
   unless options[:verify_only]
+  listing = JSON.parse(File.read(File.join(__dir__, 'listing.json')))
+  localized = ->(field) { listing.transform_values { |copy| copy.fetch(field) } }
+  urls = ->(url) { listing.transform_values { url } }
   deliver(
     api_key: key,
     app_identifier: 'com.RideGuardAI.app',
@@ -20,16 +23,19 @@ lane :store_listing do |options|
     force: true,
     run_precheck_before_submit: false,
     screenshots_path: './fastlane/screenshots',
-    overwrite_screenshots: false,
-    name: {'en-GB' => 'RideGuard AI'},
-    subtitle: {'en-GB' => 'Cycling routes & road reports'},
+    overwrite_screenshots: true,
+    name: urls.call('RideGuard AI'),
+    subtitle: localized.call('subtitle'),
+    description: localized.call('description'),
+    keywords: localized.call('keywords'),
+    promotional_text: localized.call('promotional_text'),
     primary_category: 'NAVIGATION',
     copyright: '2026 O. Bankole',
-    support_url: {'en-GB' => 'https://github.com/lanray07/RideGuard-AI/issues'},
-    marketing_url: {'en-GB' => 'https://github.com/lanray07/RideGuard-AI'},
-    privacy_url: {'en-GB' => 'https://github.com/lanray07/RideGuard-AI/blob/main/docs/privacy.md'},
+    support_url: urls.call('https://github.com/lanray07/RideGuard-AI/issues'),
+    marketing_url: urls.call('https://github.com/lanray07/RideGuard-AI'),
+    privacy_url: urls.call('https://github.com/lanray07/RideGuard-AI/blob/main/docs/privacy.md'),
     app_review_information: {
-      first_name: 'O.', last_name: 'Bankole',
+      first_name: 'Olanrewaju', last_name: 'Bankole',
       phone_number: ENV.fetch('APP_REVIEW_PHONE'),
       email_address: ENV.fetch('APP_REVIEW_EMAIL'),
       notes: 'No account or sign-in is required. The app opens with onboarding and visibly labelled demo data. For real cycling routes on iOS 26+, end any demo ride, switch off demo mode in You, then use Explore > Use my location and enter a destination. Demo scores and reports are illustrative. Community publication, live location sharing, automatic contact messaging and paid purchases are not enabled. Manual sharing uses the system share sheet and does not claim verified delivery. RideGuard is not an emergency-response or crash-detection service.'
@@ -39,8 +45,9 @@ lane :store_listing do |options|
   app = Spaceship::ConnectAPI::App.find('com.RideGuardAI.app')
   version = app.get_edit_app_store_version(platform: 'IOS')
   UI.user_error!('Expected editable version 1.0') unless version.version_string == '1.0'
-  build = Spaceship::ConnectAPI::Build.all(app_id: app.id, version: '1.0', build_number: '1', processing_states: 'VALID').first
-  UI.user_error!('Build 1 is not processed and valid') unless build
+  build_number = ENV.fetch('APP_STORE_BUILD_NUMBER', '1')
+  build = Spaceship::ConnectAPI::Build.all(app_id: app.id, version: '1.0', build_number: build_number, processing_states: 'VALID').first
+  UI.user_error!("Build #{build_number} is not processed and valid") unless build
   version.select_build(build_id: build.id) unless options[:verify_only]
   review = version.fetch_app_store_review_detail
   review.update(attributes: {demo_account_required: false}) unless options[:verify_only]

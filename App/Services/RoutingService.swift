@@ -35,7 +35,7 @@ final class RoutingService {
                 return Coordinate(c.latitude, c.longitude)
             }
             // MapKit route geometry and ETA do not establish the requested risk factors.
-            return RouteCandidate(name: index == 0 ? "Fastest available" : "Alternative \(index)",
+            return RouteCandidate(name: index == 0 ? L10n.text("Fastest available") : L10n.format("Alternative %lld", index),
                                   destination: destination.name ?? "Destination", duration: route.expectedTravelTime,
                                   distance: route.distance, coordinates: coordinates)
         }

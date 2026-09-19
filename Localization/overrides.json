@@ -1,44 +1,317 @@
 {
-  "RideGuard AI": {"fr":"RideGuard AI","es":"RideGuard AI","de":"RideGuard AI"},
-  "RIDEGUARD": {"fr":"RIDEGUARD","es":"RIDEGUARD","de":"RIDEGUARD"},
-  "RIDEGUARD AI": {"fr":"RIDEGUARD AI","es":"RIDEGUARD AI","de":"RIDEGUARD AI"},
-  "Plan your cycling route.": {"fr":"Planifiez votre trajet à vélo.","es":"Planifica tu ruta en bici.","de":"Plane deine Fahrradroute."},
-  "Compare cycling routes.": {"fr":"Comparez les itinéraires à vélo.","es":"Compara rutas en bicicleta.","de":"Vergleiche Fahrradrouten."},
-  "Understand cycling route risk.": {"fr":"Comprenez les risques du trajet.","es":"Comprende los riesgos de la ruta.","de":"Verstehe die Risiken der Route."},
-  "Road hazard reports.": {"fr":"Signalements sur la route.","es":"Avisos de peligros en la vía.","de":"Gefahren auf der Straße melden."},
-  "Prepare your bike ride.": {"fr":"Préparez votre sortie à vélo.","es":"Prepara tu salida en bici.","de":"Bereite deine Radtour vor."},
-  "Cycling voice shortcuts.": {"fr":"Raccourcis vocaux à vélo.","es":"Atajos de voz para ciclistas.","de":"Sprachkurzbefehle beim Radfahren."},
-  "Explore": {"fr":"Explorer","es":"Explorar","de":"Entdecken"},
-  "Reports": {"fr":"Signalements","es":"Avisos","de":"Meldungen"},
-  "Ride": {"fr":"Trajet","es":"Trayecto","de":"Fahrt"},
-  "Insights": {"fr":"Bilan","es":"Resumen","de":"Übersicht"},
-  "You": {"fr":"Vous","es":"Tú","de":"Du"},
-  "Home": {"fr":"Domicile","es":"Casa","de":"Zuhause"},
-  "Work": {"fr":"Travail","es":"Trabajo","de":"Arbeit"},
-  "Saved": {"fr":"Enregistrés","es":"Guardados","de":"Gespeichert"},
-  "DEMO · SAMPLE DATA": {"fr":"DÉMO · DONNÉES FICTIVES","es":"DEMO · DATOS DE EJEMPLO","de":"DEMO · BEISPIELDATEN"},
-  "DEMO RIDE": {"fr":"TRAJET DÉMO","es":"TRAYECTO DEMO","de":"DEMOFAHRT"},
-  "Demo risk score": {"fr":"Indice fictif de risque","es":"Índice de riesgo de ejemplo","de":"Demo-Risikoindikator"},
-  "Insufficient data": {"fr":"Données insuffisantes","es":"Datos insuficientes","de":"Unzureichende Daten"},
-  "Lower risk": {"fr":"Risque moindre","es":"Menor riesgo","de":"Geringeres Risiko"},
-  "Fastest": {"fr":"Le plus rapide","es":"Más rápida","de":"Schnellste"},
-  "Quieter": {"fr":"Plus calme","es":"Más tranquila","de":"Ruhigere"},
-  "Pothole": {"fr":"Nid-de-poule","es":"Bache","de":"Schlagloch"},
-  "Roadworks": {"fr":"Travaux","es":"Obras","de":"Baustelle"},
-  "Blocked cycle lane": {"fr":"Piste cyclable obstruée","es":"Carril bici bloqueado","de":"Blockierter Radweg"},
-  "Debris": {"fr":"Débris","es":"Restos en la vía","de":"Hindernisse"},
-  "What’s ahead?": {"fr":"Que se passe-t-il devant ?","es":"¿Qué hay por delante?","de":"Was liegt vor mir?"},
-  "I’m OK": {"fr":"Tout va bien","es":"Estoy bien","de":"Mir geht es gut"},
-  "Quick report": {"fr":"Signalement rapide","es":"Aviso rápido","de":"Schnellmeldung"},
-  "End ride": {"fr":"Terminer le trajet","es":"Finalizar trayecto","de":"Fahrt beenden"},
-  "Waiting for iPhone": {"fr":"En attente de l’iPhone","es":"Esperando al iPhone","de":"Warten auf das iPhone"},
-  "Open RideGuard on iPhone": {"fr":"Ouvrez RideGuard sur l’iPhone","es":"Abre RideGuard en el iPhone","de":"Öffne RideGuard auf dem iPhone"},
-  "For urgent help, use Apple Watch Emergency SOS. RideGuard does not dispatch help.": {"fr":"En cas d’urgence, utilisez Appel d’urgence sur l’Apple Watch. RideGuard n’envoie pas de secours.","es":"Si necesitas ayuda urgente, usa Emergencia SOS del Apple Watch. RideGuard no envía ayuda.","de":"Nutze im Notfall Notruf SOS auf der Apple Watch. RideGuard alarmiert keine Rettungskräfte."},
-  "This experimental indicator is not a probability of a collision. A lower score cannot guarantee safety.": {"fr":"Cet indicateur expérimental ne représente pas une probabilité de collision. Un score plus faible ne garantit pas la sécurité.","es":"Este indicador experimental no representa la probabilidad de una colisión. Una puntuación menor no garantiza la seguridad.","de":"Dieser experimentelle Indikator ist keine Unfallwahrscheinlichkeit. Ein niedrigerer Wert garantiert keine Sicherheit."},
-  "Illustrative routes and scores. Do not use the demo to navigate.": {"fr":"Itinéraires et scores fictifs. N’utilisez pas la démo pour vous orienter.","es":"Rutas y puntuaciones de ejemplo. No uses la demo para navegar.","de":"Beispielrouten und Demo-Werte. Nutze die Demo nicht zur Navigation."},
-  "Demo. Reported %@ approximately %lld metres ahead.": {"fr":"Démo. Signalement : %@ à environ %lld mètres.","es":"Demo. Aviso: %@ a unos %lld metros.","de":"Demo. Meldung: %@ in etwa %lld Metern."},
-  "Reported %@ approximately %lld metres ahead.": {"fr":"Signalement : %@ à environ %lld mètres.","es":"Aviso: %@ a unos %lld metros.","de":"Meldung: %@ in etwa %lld Metern."},
-  "Sample reports: %lld": {"fr":"Signalements fictifs : %lld","es":"Avisos de ejemplo: %lld","de":"Beispielmeldungen: %lld"},
-  "Saved reports: %lld": {"fr":"Signalements enregistrés : %lld","es":"Avisos guardados: %lld","de":"Gespeicherte Meldungen: %lld"},
-  "Estimated time: %lld min. Difference from fastest: %lld min.": {"fr":"Durée estimée : %lld min. Écart avec le plus rapide : %lld min.","es":"Duración estimada: %lld min. Diferencia con la más rápida: %lld min.","de":"Geschätzte Dauer: %lld Min. Unterschied zur schnellsten Route: %lld Min."}
+  "Your observation was saved locally.": {
+    "fr": "Votre observation a été enregistrée sur cet appareil.",
+    "es": "Tu observación se ha guardado en este dispositivo.",
+    "de": "Deine Beobachtung wurde auf diesem Gerät gespeichert."
+  },
+  "There is no active RideGuard ride.": {
+    "fr": "Aucun trajet RideGuard n’est en cours.",
+    "es": "No hay ningún trayecto de RideGuard en curso.",
+    "de": "Es läuft keine RideGuard-Fahrt."
+  },
+  "Demo. All routes and reports shown are illustrative sample data.": {
+    "fr": "Démo. Tous les itinéraires et signalements affichés sont des exemples fictifs.",
+    "es": "Demo. Todas las rutas y los avisos mostrados son datos de ejemplo.",
+    "de": "Demo. Alle angezeigten Routen und Meldungen sind fiktive Beispieldaten."
+  },
+  "Unknown factors are excluded, never treated as zero risk. At least three current factors and 25% total coverage are needed. Available factors are weighted by coverage.": {
+    "fr": "Les facteurs inconnus sont exclus et ne sont jamais considérés comme sans risque. Il faut au moins trois facteurs à jour et une couverture totale de 25 %. Les facteurs disponibles sont pondérés selon leur couverture.",
+    "es": "Los factores desconocidos se excluyen; nunca se consideran de riesgo cero. Se necesitan al menos tres factores actuales y una cobertura total del 25 %. Los factores disponibles se ponderan según su cobertura.",
+    "de": "Unbekannte Faktoren werden ausgeschlossen und niemals als risikofrei gewertet. Mindestens drei aktuelle Faktoren und 25 % Gesamtabdeckung sind erforderlich. Verfügbare Faktoren werden nach ihrer Abdeckung gewichtet."
+  },
+  "Use your iPhone’s Emergency SOS or the Phone app to call your local emergency number. RideGuard is not an emergency-response service.": {
+    "fr": "Utilisez Appel d’urgence sur votre iPhone ou l’app Téléphone pour appeler le numéro d’urgence local. RideGuard n’est pas un service de secours.",
+    "es": "Usa Emergencia SOS del iPhone o la app Teléfono para llamar al número de emergencias local. RideGuard no es un servicio de emergencias.",
+    "de": "Nutze Notruf SOS auf deinem iPhone oder die Telefon-App, um die örtliche Notrufnummer anzurufen. RideGuard ist kein Notfalldienst."
+  },
+  "No current reports in the next kilometre of available route data. Conditions may be unreported.": {
+    "fr": "Aucun signalement à jour sur le prochain kilomètre de l’itinéraire disponible. Certains dangers peuvent ne pas avoir été signalés.",
+    "es": "No hay avisos actuales en el próximo kilómetro de los datos de ruta disponibles. Puede haber condiciones que no se hayan comunicado.",
+    "de": "Keine aktuellen Meldungen für den nächsten Kilometer der verfügbaren Route. Mögliche Gefahren wurden eventuell nicht gemeldet."
+  },
+  "Ride ended. No contact message was sent.": {
+    "fr": "Trajet terminé. Aucun message n’a été envoyé à vos contacts.",
+    "es": "Trayecto finalizado. No se ha enviado ningún mensaje a tus contactos.",
+    "de": "Fahrt beendet. Es wurde keine Nachricht an Kontakte gesendet."
+  },
+  "Your ride is taking longer than expected. No accident is inferred and no contact has been notified.": {
+    "fr": "Votre trajet dure plus longtemps que prévu. Cela ne signifie pas qu’un accident a eu lieu et aucun contact n’a été averti.",
+    "es": "Tu trayecto está durando más de lo previsto. Esto no implica que haya ocurrido un accidente y no se ha avisado a ningún contacto.",
+    "de": "Deine Fahrt dauert länger als erwartet. Daraus wird kein Unfall abgeleitet, und kein Kontakt wurde benachrichtigt."
+  },
+  "Location tracking and ride reminders will stop. No contact message is sent automatically.": {
+    "fr": "Le suivi de position et les rappels du trajet s’arrêteront. Aucun message n’est envoyé automatiquement à vos contacts.",
+    "es": "Se detendrán el seguimiento de ubicación y los recordatorios del trayecto. No se enviará ningún mensaje automático a tus contactos.",
+    "de": "Standortaufzeichnung und Fahrterinnerungen werden beendet. Es wird keine automatische Nachricht an Kontakte gesendet."
+  },
+  "idle": {
+    "fr": "en attente",
+    "es": "en espera",
+    "de": "inaktiv"
+  },
+  "riding": {
+    "fr": "en cours",
+    "es": "en curso",
+    "de": "unterwegs"
+  },
+  "overdue": {
+    "fr": "en retard",
+    "es": "con retraso",
+    "de": "überfällig"
+  },
+  "arrived": {
+    "fr": "arrivé",
+    "es": "llegada",
+    "de": "angekommen"
+  },
+  "completed": {
+    "fr": "terminé",
+    "es": "finalizado",
+    "de": "abgeschlossen"
+  },
+  "unavailable": {
+    "fr": "indisponible",
+    "es": "no disponible",
+    "de": "nicht verfügbar"
+  },
+  "low": {
+    "fr": "faible",
+    "es": "baja",
+    "de": "gering"
+  },
+  "moderate": {
+    "fr": "modérée",
+    "es": "moderada",
+    "de": "mäßig"
+  },
+  "high": {
+    "fr": "élevée",
+    "es": "alta",
+    "de": "hoch"
+  },
+  "RideGuard AI": {
+    "fr": "RideGuard AI",
+    "es": "RideGuard AI",
+    "de": "RideGuard AI"
+  },
+  "RIDEGUARD": {
+    "fr": "RIDEGUARD",
+    "es": "RIDEGUARD",
+    "de": "RIDEGUARD"
+  },
+  "RIDEGUARD AI": {
+    "fr": "RIDEGUARD AI",
+    "es": "RIDEGUARD AI",
+    "de": "RIDEGUARD AI"
+  },
+  "Plan your cycling route.": {
+    "fr": "Planifiez votre trajet à vélo.",
+    "es": "Planifica tu ruta en bici.",
+    "de": "Plane deine Fahrradroute."
+  },
+  "Compare cycling routes.": {
+    "fr": "Comparez les itinéraires à vélo.",
+    "es": "Compara rutas en bicicleta.",
+    "de": "Vergleiche Fahrradrouten."
+  },
+  "Understand cycling route risk.": {
+    "fr": "Comprenez les risques du trajet.",
+    "es": "Comprende los riesgos de la ruta.",
+    "de": "Verstehe die Risiken der Route."
+  },
+  "Road hazard reports.": {
+    "fr": "Signalements sur la route.",
+    "es": "Avisos de peligros en la vía.",
+    "de": "Gefahren auf der Straße melden."
+  },
+  "Prepare your bike ride.": {
+    "fr": "Préparez votre sortie à vélo.",
+    "es": "Prepara tu salida en bici.",
+    "de": "Bereite deine Radtour vor."
+  },
+  "Cycling voice shortcuts.": {
+    "fr": "Raccourcis vocaux à vélo.",
+    "es": "Atajos de voz para ciclistas.",
+    "de": "Sprachkurzbefehle beim Radfahren."
+  },
+  "Explore": {
+    "fr": "Explorer",
+    "es": "Explorar",
+    "de": "Entdecken"
+  },
+  "Reports": {
+    "fr": "Signalements",
+    "es": "Avisos",
+    "de": "Meldungen"
+  },
+  "Ride": {
+    "fr": "Trajet",
+    "es": "Trayecto",
+    "de": "Fahrt"
+  },
+  "Insights": {
+    "fr": "Bilan",
+    "es": "Resumen",
+    "de": "Übersicht"
+  },
+  "You": {
+    "fr": "Vous",
+    "es": "Tú",
+    "de": "Du"
+  },
+  "Home": {
+    "fr": "Domicile",
+    "es": "Casa",
+    "de": "Zuhause"
+  },
+  "Work": {
+    "fr": "Travail",
+    "es": "Trabajo",
+    "de": "Arbeit"
+  },
+  "Saved": {
+    "fr": "Enregistrés",
+    "es": "Guardados",
+    "de": "Gespeichert"
+  },
+  "DEMO · SAMPLE DATA": {
+    "fr": "DÉMO · DONNÉES FICTIVES",
+    "es": "DEMO · DATOS DE EJEMPLO",
+    "de": "DEMO · BEISPIELDATEN"
+  },
+  "DEMO RIDE": {
+    "fr": "TRAJET DÉMO",
+    "es": "TRAYECTO DEMO",
+    "de": "DEMOFAHRT"
+  },
+  "Demo risk score": {
+    "fr": "Indice fictif de risque",
+    "es": "Índice de riesgo de ejemplo",
+    "de": "Demo-Risikoindikator"
+  },
+  "Insufficient data": {
+    "fr": "Données insuffisantes",
+    "es": "Datos insuficientes",
+    "de": "Unzureichende Daten"
+  },
+  "Lower risk": {
+    "fr": "Risque moindre",
+    "es": "Menor riesgo",
+    "de": "Geringeres Risiko"
+  },
+  "Fastest": {
+    "fr": "Le plus rapide",
+    "es": "Más rápida",
+    "de": "Schnellste"
+  },
+  "Quieter": {
+    "fr": "Plus calme",
+    "es": "Más tranquila",
+    "de": "Ruhigere"
+  },
+  "Pothole": {
+    "fr": "Nid-de-poule",
+    "es": "Bache",
+    "de": "Schlagloch"
+  },
+  "Roadworks": {
+    "fr": "Travaux",
+    "es": "Obras",
+    "de": "Baustelle"
+  },
+  "Blocked cycle lane": {
+    "fr": "Piste cyclable obstruée",
+    "es": "Carril bici bloqueado",
+    "de": "Blockierter Radweg"
+  },
+  "Debris": {
+    "fr": "Débris",
+    "es": "Restos en la vía",
+    "de": "Hindernisse"
+  },
+  "What’s ahead?": {
+    "fr": "Que se passe-t-il devant ?",
+    "es": "¿Qué hay por delante?",
+    "de": "Was liegt vor mir?"
+  },
+  "I’m OK": {
+    "fr": "Tout va bien",
+    "es": "Estoy bien",
+    "de": "Mir geht es gut"
+  },
+  "Quick report": {
+    "fr": "Signalement rapide",
+    "es": "Aviso rápido",
+    "de": "Schnellmeldung"
+  },
+  "End ride": {
+    "fr": "Terminer le trajet",
+    "es": "Finalizar trayecto",
+    "de": "Fahrt beenden"
+  },
+  "Waiting for iPhone": {
+    "fr": "En attente de l’iPhone",
+    "es": "Esperando al iPhone",
+    "de": "Warten auf das iPhone"
+  },
+  "Open RideGuard on iPhone": {
+    "fr": "Ouvrez RideGuard sur l’iPhone",
+    "es": "Abre RideGuard en el iPhone",
+    "de": "Öffne RideGuard auf dem iPhone"
+  },
+  "For urgent help, use Apple Watch Emergency SOS. RideGuard does not dispatch help.": {
+    "fr": "En cas d’urgence, utilisez Appel d’urgence sur l’Apple Watch. RideGuard n’envoie pas de secours.",
+    "es": "Si necesitas ayuda urgente, usa Emergencia SOS del Apple Watch. RideGuard no envía ayuda.",
+    "de": "Nutze im Notfall Notruf SOS auf der Apple Watch. RideGuard alarmiert keine Rettungskräfte."
+  },
+  "This experimental indicator is not a probability of a collision. A lower score cannot guarantee safety.": {
+    "fr": "Cet indicateur expérimental ne représente pas une probabilité de collision. Un score plus faible ne garantit pas la sécurité.",
+    "es": "Este indicador experimental no representa la probabilidad de una colisión. Una puntuación menor no garantiza la seguridad.",
+    "de": "Dieser experimentelle Indikator ist keine Unfallwahrscheinlichkeit. Ein niedrigerer Wert garantiert keine Sicherheit."
+  },
+  "Illustrative routes and scores. Do not use the demo to navigate.": {
+    "fr": "Itinéraires et scores fictifs. N’utilisez pas la démo pour vous orienter.",
+    "es": "Rutas y puntuaciones de ejemplo. No uses la demo para navegar.",
+    "de": "Beispielrouten und Demo-Werte. Nutze die Demo nicht zur Navigation."
+  },
+  "Demo. Reported %@ approximately %lld metres ahead.": {
+    "fr": "Démo. Signalement : %@ à environ %lld mètres.",
+    "es": "Demo. Aviso: %@ a unos %lld metros.",
+    "de": "Demo. Meldung: %@ in etwa %lld Metern."
+  },
+  "Reported %@ approximately %lld metres ahead.": {
+    "fr": "Signalement : %@ à environ %lld mètres.",
+    "es": "Aviso: %@ a unos %lld metros.",
+    "de": "Meldung: %@ in etwa %lld Metern."
+  },
+  "Sample reports: %lld": {
+    "fr": "Signalements fictifs : %lld",
+    "es": "Avisos de ejemplo: %lld",
+    "de": "Beispielmeldungen: %lld"
+  },
+  "Saved reports: %lld": {
+    "fr": "Signalements enregistrés : %lld",
+    "es": "Avisos guardados: %lld",
+    "de": "Gespeicherte Meldungen: %lld"
+  },
+  "Estimated time: %lld min. Difference from fastest: %lld min.": {
+    "fr": "Durée estimée : %lld min. Écart avec le plus rapide : %lld min.",
+    "es": "Duración estimada: %lld min. Diferencia con la más rápida: %lld min.",
+    "de": "Geschätzte Dauer: %lld Min. Unterschied zur schnellsten Route: %lld Min."
+  },
+  "Planning requests use a location you authorise. Map search and directions communicate with Apple. Active ride tracking runs until you end the ride, including background updates. No trusted contact receives your location automatically.\n\nRide history, reports, contacts and preferences stay in SwiftData on this device. This development build has no account, analytics, remote AI, community upload or live sharing service. RideGuard does not retain audio or transcripts. Siri is governed by Apple’s settings and policies.\n\nYou can delete individual rides or reports, export your records, or delete all local data. Records are retained until deletion; system backups and exported copies are outside these controls. Exports contain sensitive locations. A system share sheet sends only the content you choose.\n\nOperator: O. Bankole. Privacy policy: https://github.com/lanray07/RideGuard-AI/blob/main/docs/privacy.md. Support: https://github.com/lanray07/RideGuard-AI/issues.": {
+    "fr": "La planification utilise une position que vous autorisez. La recherche de lieux et les itinéraires communiquent avec Apple. Le suivi d’un trajet reste actif jusqu’à ce que vous le terminiez, y compris en arrière-plan. Aucun contact de confiance ne reçoit automatiquement votre position.\n\nL’historique, les signalements, les contacts et les préférences restent dans SwiftData sur cet appareil. Cette version de développement ne comporte aucun compte, outil d’analyse, service d’IA distant, publication communautaire ni partage en direct. RideGuard ne conserve aucun enregistrement audio ni transcription. Siri dépend des réglages et des politiques d’Apple.\n\nVous pouvez supprimer des trajets ou signalements, exporter vos données ou supprimer toutes les données locales. Elles sont conservées jusqu’à leur suppression ; les sauvegardes du système et les copies exportées échappent à ces commandes. Les exports contiennent des positions sensibles. Les options de partage du système n’envoient que le contenu choisi.\n\nExploitant : O. Bankole. Confidentialité : https://github.com/lanray07/RideGuard-AI/blob/main/docs/privacy.md. Assistance : https://github.com/lanray07/RideGuard-AI/issues.",
+    "es": "La planificación utiliza una ubicación que autorizas. La búsqueda de lugares y las rutas se comunican con Apple. El seguimiento de un trayecto permanece activo hasta que lo terminas, también en segundo plano. Ningún contacto de confianza recibe tu ubicación automáticamente.\n\nEl historial, los avisos, los contactos y las preferencias se guardan en SwiftData en este dispositivo. Esta versión de desarrollo no incluye cuentas, análisis, IA remota, publicación comunitaria ni servicios para compartir en directo. RideGuard no conserva audio ni transcripciones. Siri se rige por los ajustes y las políticas de Apple.\n\nPuedes eliminar trayectos o avisos individuales, exportar tus registros o borrar todos los datos locales. Los registros se conservan hasta que los eliminas; las copias de seguridad del sistema y las copias exportadas quedan fuera de estos controles. Los archivos exportados contienen ubicaciones sensibles. Las opciones de compartir del sistema solo envían el contenido que eliges.\n\nResponsable: O. Bankole. Privacidad: https://github.com/lanray07/RideGuard-AI/blob/main/docs/privacy.md. Soporte: https://github.com/lanray07/RideGuard-AI/issues.",
+    "de": "Die Planung verwendet einen von dir freigegebenen Standort. Ortssuche und Routenanfragen kommunizieren mit Apple. Die Standortaufzeichnung einer Fahrt läuft bis zum Beenden der Fahrt, auch im Hintergrund. Keine Vertrauensperson erhält deinen Standort automatisch.\n\nFahrtverlauf, Meldungen, Kontakte und Einstellungen bleiben in SwiftData auf diesem Gerät. Diese Entwicklungsversion enthält keine Konten, Analysefunktionen, entfernte KI-Dienste, Community-Veröffentlichung oder Live-Freigabe. RideGuard speichert weder Audioaufnahmen noch Transkripte. Für Siri gelten die Einstellungen und Richtlinien von Apple.\n\nDu kannst einzelne Fahrten oder Meldungen löschen, deine Daten exportieren oder alle lokalen Daten löschen. Daten bleiben bis zur Löschung gespeichert; Systemsicherungen und exportierte Kopien werden davon nicht erfasst. Exporte enthalten sensible Standorte. Die Teilen-Funktion des Systems sendet nur die von dir gewählten Inhalte.\n\nBetreiber: O. Bankole. Datenschutz: https://github.com/lanray07/RideGuard-AI/blob/main/docs/privacy.md. Support: https://github.com/lanray07/RideGuard-AI/issues."
+  },
+  "RideGuard provides contextual information, not a guarantee of safety, crash detection or emergency response. Risk indicators are experimental, not calibrated collision probabilities. Reports may be incomplete, stale or inaccurate. Follow applicable road rules and use your judgement.\n\nDo not use demo routes for navigation. Interact with detailed screens only when stationary. Configure voice actions before riding.\n\nThis is a development preview. Cloud sharing, automated contact escalation and community publication are unavailable. No message is described as delivered without provider confirmation.\n\nProduction subscription terms, operator identity, support contact and privacy URLs must be configured before sale.": {
+    "fr": "RideGuard fournit des informations contextuelles et ne garantit ni la sécurité, ni la détection d’accidents, ni une intervention d’urgence. Les indicateurs de risque sont expérimentaux ; ils ne sont pas des probabilités de collision étalonnées. Les signalements peuvent être incomplets, périmés ou inexacts. Respectez le code de la route et faites preuve de discernement.\n\nN’utilisez pas les itinéraires de démonstration pour vous orienter. Utilisez les écrans détaillés uniquement à l’arrêt. Configurez les actions vocales avant de partir.\n\nIl s’agit d’une version de développement. Le partage dans le cloud, l’alerte automatique des contacts et la publication communautaire sont indisponibles. Aucun message n’est présenté comme remis sans confirmation du fournisseur.\n\nLes conditions d’abonnement définitives, l’identité de l’exploitant, les coordonnées d’assistance et les liens de confidentialité doivent être configurés avant toute vente.",
+    "es": "RideGuard proporciona información contextual; no garantiza la seguridad, no detecta accidentes ni ofrece respuesta a emergencias. Los indicadores de riesgo son experimentales, no probabilidades de colisión calibradas. Los avisos pueden estar incompletos, desactualizados o ser inexactos. Respeta las normas de circulación y utiliza tu criterio.\n\nNo uses las rutas de demostración para navegar. Utiliza las pantallas detalladas únicamente cuando estés parado. Configura las acciones de voz antes de salir.\n\nEsta es una versión de desarrollo. No están disponibles el uso compartido en la nube, los avisos automáticos a contactos ni la publicación comunitaria. Ningún mensaje se presenta como entregado sin confirmación del proveedor.\n\nAntes de vender suscripciones, deben configurarse las condiciones definitivas, la identidad del responsable, el contacto de soporte y los enlaces de privacidad.",
+    "de": "RideGuard bietet Kontextinformationen, garantiert jedoch keine Sicherheit, erkennt keine Unfälle und leistet keine Nothilfe. Risikoindikatoren sind experimentell und keine kalibrierten Unfallwahrscheinlichkeiten. Meldungen können unvollständig, veraltet oder ungenau sein. Beachte die Verkehrsregeln und nutze dein eigenes Urteilsvermögen.\n\nNutze Demo-Routen nicht zur Navigation. Bediene detaillierte Ansichten nur im Stillstand. Richte Sprachaktionen vor der Fahrt ein.\n\nDies ist eine Entwicklungsversion. Cloud-Freigabe, automatische Alarmierung von Kontakten und Community-Veröffentlichung sind nicht verfügbar. Ohne Bestätigung des Anbieters wird keine Nachricht als zugestellt bezeichnet.\n\nVor einem Verkauf müssen die endgültigen Abonnementbedingungen, Betreiberidentität, Supportkontakte und Datenschutzlinks eingerichtet sein."
+  },
+  "Apple MapKit: destination search, cycling route geometry and estimated travel time where supported. Attribution stays visible on the map. Cycling route requests require iOS 26 and service coverage. Apple route data alone is not used to calculate a RideGuard risk score.\n\nRideGuard demo fixtures: synthetic routes and reports, visibly labelled and excluded from non-demo risk calculations. They describe no verified street conditions.\n\nLocal rider observations: supplied by the user and saved on the device. Confirmation totals count local interactions only. No community statistics are fabricated.\n\nInfrastructure, collision, lighting, weather, traffic, closure and road-surface feeds have not been connected. Missing factors remain unknown. The risk engine averages current valid factors by coverage and requires a minimum evidence threshold; its model requires calibration and independent validation before production.": {
+    "fr": "Apple MapKit : recherche de destinations, tracé des itinéraires à vélo et durée estimée lorsque le service est disponible. L’attribution reste visible sur la carte. Les itinéraires à vélo nécessitent iOS 26 et la couverture du service. Les seules données d’Apple ne suffisent pas à calculer un indice de risque RideGuard.\n\nDonnées de démonstration RideGuard : itinéraires et signalements fictifs, clairement identifiés et exclus des calculs de risque hors démo. Ils ne décrivent aucun état de la route vérifié.\n\nObservations locales : fournies par l’utilisateur et enregistrées sur l’appareil. Les confirmations comptent uniquement les interactions locales. Aucune statistique communautaire n’est inventée.\n\nLes sources sur les infrastructures, collisions, éclairage, météo, circulation, fermetures et revêtements ne sont pas connectées. Les facteurs manquants restent inconnus. Le calcul utilise la moyenne des facteurs valides et actuels, pondérée par leur couverture, et exige un seuil minimal de données. Le modèle doit être étalonné et validé indépendamment avant un usage en production.",
+    "es": "Apple MapKit: búsqueda de destinos, trazado de rutas en bicicleta y duración estimada donde el servicio esté disponible. La atribución permanece visible en el mapa. Las rutas ciclistas requieren iOS 26 y cobertura del servicio. Los datos de Apple por sí solos no se utilizan para calcular un índice de riesgo RideGuard.\n\nDatos de demostración de RideGuard: rutas y avisos ficticios, claramente identificados y excluidos de los cálculos de riesgo fuera de la demo. No describen condiciones verificadas de la vía.\n\nObservaciones locales: las aporta el usuario y se guardan en el dispositivo. Las confirmaciones solo cuentan interacciones locales. No se inventan estadísticas comunitarias.\n\nNo se han conectado fuentes sobre infraestructuras, colisiones, iluminación, tiempo, tráfico, cierres ni pavimento. Los factores que faltan siguen siendo desconocidos. El cálculo promedia los factores actuales y válidos según su cobertura y exige un umbral mínimo de datos. El modelo necesita calibración y validación independiente antes de su uso en producción.",
+    "de": "Apple MapKit: Zielsuche, Verlauf von Fahrradrouten und geschätzte Fahrzeit, sofern unterstützt. Die Quellenangabe bleibt auf der Karte sichtbar. Fahrradrouten benötigen iOS 26 und regionale Dienstabdeckung. Apple-Routendaten allein werden nicht zur Berechnung eines RideGuard-Risikoindikators verwendet.\n\nRideGuard-Demodaten: fiktive Routen und Meldungen, sichtbar gekennzeichnet und von Risikoberechnungen außerhalb der Demo ausgeschlossen. Sie beschreiben keine verifizierten Straßenverhältnisse.\n\nLokale Beobachtungen: von Nutzenden eingegeben und auf dem Gerät gespeichert. Bestätigungen zählen ausschließlich lokale Interaktionen. Es werden keine Community-Statistiken erfunden.\n\nDatenquellen für Infrastruktur, Unfälle, Beleuchtung, Wetter, Verkehr, Sperrungen und Straßenbelag sind nicht angeschlossen. Fehlende Faktoren bleiben unbekannt. Die Berechnung mittelt aktuelle, gültige Faktoren, gewichtet nach ihrer Abdeckung, und erfordert eine Mindestdatengrundlage. Vor dem Produktiveinsatz benötigt das Modell eine Kalibrierung und unabhängige Validierung."
+  }
 }

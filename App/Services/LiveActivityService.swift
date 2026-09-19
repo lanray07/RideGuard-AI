@@ -18,6 +18,6 @@ final class LiveActivityService {
         activity = nil
     }
     private func content(_ ride: RideSession) -> ActivityContent<RideActivityAttributes.ContentState> {
-        .init(state: .init(arrival: ride.expectedArrival, status: ride.status.rawValue.capitalized, lastUpdate: ride.lastUpdate), staleDate: .now.addingTimeInterval(120))
+        .init(state: .init(arrival: ride.expectedArrival, status: ride.status.rawValue, lastUpdate: ride.lastUpdate), staleDate: .now.addingTimeInterval(120))
     }
 }

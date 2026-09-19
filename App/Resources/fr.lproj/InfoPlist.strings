@@ -1,0 +1,3 @@
+"NSLocationWhenInUseUsageDescription" = "Votre position permet de planifier un trajet, de noter les dangers et de suivre un trajet que vous démarrez.";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Pendant un trajet que vous démarrez, la position permet de mettre à jour votre progression même lorsque l’écran est verrouillé. Le partage nécessite un choix distinct.";
+"NSFaceIDUsageDescription" = "Confirmez votre identité avant d’exporter l’historique des trajets et les lieux enregistrés, qui sont des données sensibles.";

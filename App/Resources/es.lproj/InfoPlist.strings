@@ -1,0 +1,3 @@
+"NSLocationWhenInUseUsageDescription" = "Tu ubicación permite planificar un trayecto, registrar peligros y seguir un trayecto que inicies.";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Durante un trayecto que inicies, la ubicación permite actualizar tu progreso con la pantalla bloqueada. Compartirla requiere una elección por separado.";
+"NSFaceIDUsageDescription" = "Confirma tu identidad antes de exportar el historial de trayectos y los lugares guardados, que contienen datos sensibles.";

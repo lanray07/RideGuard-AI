@@ -20,7 +20,7 @@ struct SettingsView: View {
                 NavigationLink { VoiceSettingsView() } label: { Label("Voice & audio", systemImage: "waveform") }
                 NavigationLink { ContactsView() } label: { Label("Trusted contacts", systemImage: "person.2") }
                 NavigationLink { SavedPlacesView() } label: { Label("Saved places", systemImage: "bookmark") }
-                Stepper("Check-in grace: \(store.snapshot.graceMinutes) min", value: $store.snapshot.graceMinutes, in: 5...60, step: 5)
+                Stepper(L10n.format("Check-in grace: %lld min", store.snapshot.graceMinutes), value: $store.snapshot.graceMinutes, in: 5...60, step: 5)
                     .onChange(of: store.snapshot.graceMinutes) { _, _ in store.persist() }
                 Text("Applies to new rides. A local reminder asks you to check in; it does not notify a trusted person.").font(.caption).foregroundStyle(.secondary)
             }

@@ -43,7 +43,7 @@ enum PrivacyUnlock {
         guard context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) else {
             throw error ?? NSError(domain: "RideGuard", code: 1, userInfo: [NSLocalizedDescriptionKey: "Set a device passcode to export sensitive ride data."])
         }
-        let approved = try await context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: "Export your RideGuard history and saved locations.")
+        let approved = try await context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: L10n.text("Export your RideGuard history and saved locations."))
         guard approved else { throw CancellationError() }
     }
 }

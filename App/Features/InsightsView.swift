@@ -24,7 +24,7 @@ struct InsightsView: View {
                         VStack(alignment: .leading, spacing: 8) {
                             Text(ride.route.destination).font(.headline)
                             Text("\(ride.startedAt.formatted(date: .abbreviated, time: .shortened)) · \(ride.travelledMetres.milesText)").font(.subheadline).foregroundStyle(.secondary)
-                            if let feedback = store.snapshot.feedback[ride.id.uuidString] { Text("Your comfort: \(feedback)").font(.caption) }
+                            if let feedback = store.snapshot.feedback[ride.id.uuidString] { Text(L10n.format("Your comfort: %@", L10n.text(feedback))).font(.caption) }
                         }.padding(.vertical, 4).swipeActions { Button("Delete", role: .destructive) { store.snapshot.history.removeAll { $0.id == ride.id }; store.snapshot.feedback.removeValue(forKey: ride.id.uuidString); store.persist() } }
                     }
                 }

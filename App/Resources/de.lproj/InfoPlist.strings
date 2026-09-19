@@ -1,0 +1,3 @@
+"NSLocationWhenInUseUsageDescription" = "Dein Standort hilft dabei, eine Fahrt zu planen, Gefahren zu erfassen und eine von dir gestartete Fahrt aufzuzeichnen.";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Während einer von dir gestarteten Fahrt kann der Standort den Fortschritt auch bei gesperrtem Bildschirm aktualisieren. Die Freigabe erfordert eine gesonderte Entscheidung.";
+"NSFaceIDUsageDescription" = "Bestätige deine Identität, bevor du sensible Fahrtdaten und gespeicherte Orte exportierst.";

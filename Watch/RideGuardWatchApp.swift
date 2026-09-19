@@ -60,7 +60,7 @@ struct WatchRideView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 12) {
                     Label(LocalizedStringKey(bridge.isDemo ? "DEMO RIDE" : "RIDEGUARD"), systemImage: "bicycle").font(.caption2).foregroundStyle(.mint)
-                    Text(L10n.text(bridge.destination)).font(.title3.bold())
+                    Text(bridge.status == "idle" ? L10n.text(bridge.destination) : bridge.destination).font(.title3.bold())
                     if let eta = bridge.eta { Text(eta, style: .time).font(.system(.largeTitle, design: .rounded, weight: .bold)) }
                     TimelineView(.periodic(from: .now, by: 30)) { timeline in
                         Text(bridge.updated.map { timeline.date.timeIntervalSince($0) > 120 ? L10n.text("Update stale · check iPhone") : L10n.format("Status: %@", L10n.text(bridge.status)) } ?? L10n.text("Waiting for iPhone")).font(.caption2).foregroundStyle(.secondary)

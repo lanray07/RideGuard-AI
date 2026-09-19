@@ -67,7 +67,7 @@ struct RideView: View {
             VStack(alignment: .leading, spacing: 16) {
                 Eyebrow(text: "Estimated arrival")
                 Text(ride.expectedArrival, style: .time).font(.system(size: 58, weight: .bold, design: .rounded)).minimumScaleFactor(0.6)
-                Text("Last update \(ride.lastUpdate.formatted(date: .omitted, time: .shortened))").font(.caption).foregroundStyle(.secondary)
+                Text(L10n.format("Last update %@", ride.lastUpdate.formatted(date: .omitted, time: .shortened))).font(.caption).foregroundStyle(.secondary)
                 Label("Sharing off", systemImage: "lock.shield").font(.subheadline)
             }
         }
@@ -121,8 +121,8 @@ struct SharingView: View {
             if let ride = store.activeRide {
                 Section("Send a status yourself") {
                     Text("Review the recipient and message in the system share sheet. RideGuard cannot verify delivery.").font(.subheadline)
-                    ShareLink(item: "\(ride.route.isDemo ? "RideGuard demo: " : "")I’m riding to \(ride.route.destination). My estimated arrival is \(ride.expectedArrival.formatted(date: .omitted, time: .shortened)). This is a status message, not live tracking.") { Label("Share ride status…", systemImage: "square.and.arrow.up") }
-                    ShareLink(item: "\(ride.route.isDemo ? "RideGuard demo: " : "")I’m checking in at \(Date.now.formatted(date: .omitted, time: .shortened)).") { Label("Share a check-in…", systemImage: "checkmark.message") }
+                    ShareLink(item: L10n.format(ride.route.isDemo ? "RideGuard demo: I’m riding to %@. Estimated arrival: %@. This is a status message, not live tracking." : "I’m riding to %@. Estimated arrival: %@. This is a status message, not live tracking.", ride.route.destination, ride.expectedArrival.formatted(date: .omitted, time: .shortened))) { Label("Share ride status…", systemImage: "square.and.arrow.up") }
+                    ShareLink(item: L10n.format(ride.route.isDemo ? "RideGuard demo: I’m checking in at %@." : "I’m checking in at %@.", Date.now.formatted(date: .omitted, time: .shortened))) { Label("Share a check-in…", systemImage: "checkmark.message") }
                 }
             }
             Section("Trusted people · saved locally") {
@@ -146,13 +146,13 @@ struct EmergencyView: View {
             Section("Trusted people") {
                 ForEach(store.snapshot.contacts) { contact in
                     if let url = URL(string: "tel:\(contact.phone.filter { $0.isNumber || $0 == "+" })") {
-                        Link(destination: url) { Label("Call \(contact.name)", systemImage: "phone.fill") }
+                        Link(destination: url) { Label(L10n.format("Call %@", contact.name), systemImage: "phone.fill") }
                     }
                 }
                 if store.snapshot.contacts.isEmpty { Text("No trusted contacts saved.") }
             }
             if let coordinate = store.location.recentCoordinate {
-                ShareLink(item: "My current location: https://maps.apple.com/?ll=\(coordinate.latitude),\(coordinate.longitude)") { Label("Share current location…", systemImage: "location.fill") }
+                ShareLink(item: L10n.format("My current location: %@", "https://maps.apple.com/?ll=\(coordinate.latitude),\(coordinate.longitude)")) { Label("Share current location…", systemImage: "location.fill") }
                 Text("This message contains a precise location. Choose the recipient in the share sheet.").font(.caption)
             }
         }.navigationTitle("Emergency options").toolbar { Button("Done") { dismiss() } }

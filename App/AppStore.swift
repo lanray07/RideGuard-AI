@@ -63,7 +63,7 @@ final class RideStore {
         let repo = LocalRepository(context: context)
         repository = repo
         do { snapshot = try repo.load(AppSnapshot.self, key: "snapshot") ?? AppSnapshot() }
-        catch { self.error = "Local data could not be read. Nothing has been overwritten. \(error.localizedDescription)"; repository = nil }
+        catch { self.error = L10n.format("Local data could not be read. Nothing has been overwritten. %@", error.localizedDescription); repository = nil }
         if let ride = activeRide {
             demoMode = ride.route.isDemo
             routes = [ride.route]
@@ -79,7 +79,7 @@ final class RideStore {
     @discardableResult func persist() -> Bool {
         guard let repository else { error = "Local storage is unavailable. Changes cannot be saved."; return false }
         do { try repository.save(snapshot, key: "snapshot"); return true }
-        catch { self.error = "Changes could not be saved: \(error.localizedDescription)"; return false }
+        catch { self.error = L10n.format("Changes could not be saved: %@", error.localizedDescription); return false }
     }
     func changeMode(_ demo: Bool) {
         guard activeRide == nil else { return }
@@ -176,7 +176,7 @@ final class RideStore {
             try repository.deleteAll()
             snapshot = AppSnapshot(); lastCompleted = nil; notice = "Local history, reports, contacts and preferences deleted."
             publishWatch()
-        } catch { self.error = "Deletion failed: \(error.localizedDescription)" }
+        } catch { self.error = L10n.format("Deletion failed: %@", error.localizedDescription) }
     }
     func exportData() throws -> URL {
         let encoder = JSONEncoder(); encoder.outputFormatting = [.prettyPrinted, .sortedKeys]; encoder.dateEncodingStrategy = .iso8601
@@ -215,7 +215,7 @@ final class RideStore {
         case "end": guard activeRide != nil else { return "No active ride." }; apply(.end); return "Ride ended. No contact message was sent."
         default:
             guard let category = HazardCategory(rawValue: action), activeRide != nil else { return "Open a ride on iPhone first." }
-            do { try report(category); return "\(demoMode ? "Demo " : "")report saved on iPhone." }
+            do { try report(category); return L10n.text(demoMode ? "Demo report saved on iPhone." : "Report saved on iPhone.") }
             catch { return error.localizedDescription }
         }
     }
@@ -228,9 +228,9 @@ enum RideCommandError: LocalizedError {
     case locationUnavailable, noRide, storageUnavailable
     var errorDescription: String? {
         switch self {
-        case .locationUnavailable: "No recent location is available. Open RideGuard and enable location before reporting."
-        case .noRide: "There is no active RideGuard ride."
-        case .storageUnavailable: "The report could not be saved to this device. Please try again when local storage is available."
+        case .locationUnavailable: L10n.text("No recent location is available. Open RideGuard and enable location before reporting.")
+        case .noRide: L10n.text("There is no active RideGuard ride.")
+        case .storageUnavailable: L10n.text("The report could not be saved to this device. Please try again when local storage is available.")
         }
     }
 }

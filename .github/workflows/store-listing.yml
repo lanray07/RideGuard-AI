@@ -2,6 +2,11 @@ name: Upload App Store listing
 on:
   workflow_dispatch:
     inputs:
+      build_number:
+        description: Validated App Store build to select
+        type: string
+        required: true
+        default: '1'
       verify_only:
         description: Read existing listing without changing it
         type: boolean
@@ -21,8 +26,12 @@ jobs:
       FASTLANE_SKIP_UPDATE_CHECK: '1'
       FASTLANE_HIDE_CHANGELOG: '1'
       VERIFY_ONLY: ${{ inputs.verify_only }}
+      APP_STORE_BUILD_NUMBER: ${{ inputs.build_number }}
     steps:
       - uses: actions/checkout@v4
+      - name: Validate localized listing and screenshot archive
+        if: ${{ !inputs.verify_only }}
+        run: python3 scripts/check-store-assets.py
       - name: Prepare Apple API authentication
         run: python3 scripts/prepare-signing.py
       - name: Install fastlane

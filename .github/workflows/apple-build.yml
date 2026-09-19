@@ -9,8 +9,14 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install XcodeGen
         run: brew install xcodegen
+      - name: Warm screenshot simulator
+        run: python3 scripts/warm-simulator.py
       - name: Build and test
         run: bash scripts/build-macos.sh
+      - name: Verify bundled localization
+        run: |
+          python3 scripts/localize.py --check
+          python3 scripts/check-native-localizations.py
       - name: Save compiler-extracted localization catalog
         uses: actions/upload-artifact@v4
         with:

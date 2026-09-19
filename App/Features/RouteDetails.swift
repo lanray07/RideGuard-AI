@@ -13,9 +13,9 @@ struct ExplanationView: View {
                 Panel {
                     VStack(alignment: .leading, spacing: 12) {
                         Eyebrow(text: "RideGuard risk indicator")
-                        Text(assessment.overallRiskScore.map { "\($0) / 100" } ?? "Not available").font(.system(.largeTitle, design: .rounded, weight: .bold)).foregroundStyle(RG.green)
+                        Text(assessment.overallRiskScore.map { "\($0) / 100" } ?? L10n.text("Not available")).font(.system(.largeTitle, design: .rounded, weight: .bold)).foregroundStyle(RG.green)
                         Text(L10n.text(assessment.label)).font(.headline)
-                        Text("Data confidence: \(L10n.text(assessment.confidence.rawValue))").font(.subheadline)
+                        Text(L10n.format("Data confidence: %@", L10n.text(assessment.confidence.rawValue))).font(.subheadline)
                         Text("This experimental indicator is not a probability of a collision. A lower score cannot guarantee safety.").font(.caption).foregroundStyle(.secondary)
                     }
                 }
@@ -23,8 +23,8 @@ struct ExplanationView: View {
                     Panel {
                         VStack(alignment: .leading, spacing: 10) {
                             InfoRow(symbol: "chart.bar.doc.horizontal", title: factor.kind.title, subtitle: factor.explanation)
-                            Text("Source: \(L10n.text(factor.source))").font(.caption).foregroundStyle(.secondary)
-                            Text("Observed \(factor.observedAt.formatted(date: .abbreviated, time: .shortened)) · coverage \(Int(factor.coverage * 100))%").font(.caption).foregroundStyle(.secondary)
+                            Text(L10n.format("Source: %@", L10n.text(factor.source))).font(.caption).foregroundStyle(.secondary)
+                            Text(L10n.format("Observed %@ · coverage %lld%%", factor.observedAt.formatted(date: .abbreviated, time: .shortened), Int(factor.coverage * 100))).font(.caption).foregroundStyle(.secondary)
                         }
                     }
                 }
@@ -54,7 +54,7 @@ struct ComparisonView: View {
                             Text(L10n.text(route.name)).font(.title2.bold()).foregroundStyle(RG.green)
                             LabeledContent("Estimated time", value: "\(Int(route.duration / 60)) min")
                             LabeledContent("Distance", value: route.distance.milesText)
-                            LabeledContent("Risk indicator", value: RouteRiskEngine().assess(route.factors, allowDemo: route.isDemo).overallRiskScore.map(String.init) ?? "Unavailable")
+                            LabeledContent("Risk indicator", value: RouteRiskEngine().assess(route.factors, allowDemo: route.isDemo).overallRiskScore.map(String.init) ?? L10n.text("Unavailable"))
                             if let fastest = routes.min(by: { $0.duration < $1.duration }) {
                                 Text(L10n.format("Estimated time: %lld min. Difference from fastest: %lld min.", Int(route.duration / 60), Int((route.duration - fastest.duration) / 60))).font(.subheadline).foregroundStyle(.secondary)
                             }

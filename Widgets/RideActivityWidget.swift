@@ -12,9 +12,9 @@ struct RideActivityWidget: Widget {
             HStack(spacing: 16) {
                 Image(systemName: "bicycle").font(.largeTitle).foregroundStyle(.mint)
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(context.attributes.isDemo ? "RIDEGUARD · DEMO" : "RIDEGUARD").font(.caption2.bold())
+                    Text(LocalizedStringKey(context.attributes.isDemo ? "RIDEGUARD · DEMO" : "RIDEGUARD")).font(.caption2.bold())
                     Text(context.attributes.destination).font(.headline)
-                    Text(context.isStale ? "Update stale · open RideGuard" : context.state.status).font(.caption)
+                    Text(L10n.text(context.isStale ? "Update stale · open RideGuard" : context.state.status)).font(.caption)
                 }
                 Spacer()
                 VStack { Text("ETA").font(.caption2); Text(context.state.arrival, style: .time).font(.title3.bold()) }
@@ -24,7 +24,7 @@ struct RideActivityWidget: Widget {
                 DynamicIslandExpandedRegion(.leading) { Image(systemName: "bicycle").foregroundStyle(.mint) }
                 DynamicIslandExpandedRegion(.trailing) { Text(context.state.arrival, style: .time) }
                 DynamicIslandExpandedRegion(.bottom) {
-                    Text("\(context.attributes.isDemo ? "Demo · " : "")\(context.attributes.destination) · \(context.isStale ? "Update stale" : context.state.status)").font(.caption)
+                    Text("\(context.attributes.isDemo ? L10n.text("Demo · ") : "")\(context.attributes.destination) · \(L10n.text(context.isStale ? "Update stale" : context.state.status))").font(.caption)
                 }
             } compactLeading: { Image(systemName: "bicycle").foregroundStyle(.mint) }
             compactTrailing: { Text(context.state.arrival, style: .time).font(.caption2) }

@@ -1,0 +1,155 @@
+key	fr	es	de
+%.1f mi	%.1f mi	%.1f mi	%.1f mi
+%@ · %@\nLocal confirmations: %lld	%@ · %@\nConfirmations locales : %lld	%@ · %@\nConfirmaciones locales: %lld	%@ · %@\nLokale Bestätigungen: %lld
+Local data could not be read. Nothing has been overwritten. %@	Impossible de lire les données locales. Rien n’a été écrasé. %@	No se han podido leer los datos locales. No se ha sobrescrito nada. %@	Lokale Daten konnten nicht gelesen werden. Es wurde nichts überschrieben. %@
+Changes could not be saved: %@	Impossible d’enregistrer les modifications : %@	No se han podido guardar los cambios: %@	Änderungen konnten nicht gespeichert werden: %@
+Deletion failed: %@	Échec de la suppression : %@	No se ha podido eliminar: %@	Löschen fehlgeschlagen: %@
+Alternative %lld	Autre itinéraire %lld	Alternativa %lld	Alternative %lld
+RideGuard demo: I’m riding to %@. Estimated arrival: %@. This is a status message, not live tracking.	Démo RideGuard : je roule vers %@. Arrivée estimée : %@. Il s’agit d’un message d’information, pas d’un suivi en direct.	Demo de RideGuard: voy en bici a %@. Llegada estimada: %@. Este es un mensaje de estado, no un seguimiento en directo.	RideGuard-Demo: Ich fahre nach %@. Geschätzte Ankunft: %@. Dies ist eine Statusnachricht, keine Live-Ortung.
+I’m riding to %@. Estimated arrival: %@. This is a status message, not live tracking.	Je roule vers %@. Arrivée estimée : %@. Il s’agit d’un message d’information, pas d’un suivi en direct.	Voy en bici a %@. Llegada estimada: %@. Este es un mensaje de estado, no un seguimiento en directo.	Ich fahre nach %@. Geschätzte Ankunft: %@. Dies ist eine Statusnachricht, keine Live-Ortung.
+RideGuard demo: I’m checking in at %@.	Démo RideGuard : je donne de mes nouvelles à %@.	Demo de RideGuard: confirmo que estoy bien a las %@.	RideGuard-Demo: Ich melde mich um %@.
+I’m checking in at %@.	Je donne de mes nouvelles à %@.	Confirmo que estoy bien a las %@.	Ich melde mich um %@.
+Call %@	Appeler %@	Llamar a %@	%@ anrufen
+My current location: %@	Ma position actuelle : %@	Mi ubicación actual: %@	Mein aktueller Standort: %@
+RIDEGUARD · DEMO	RIDEGUARD · DÉMO	RIDEGUARD · DEMO	RIDEGUARD · DEMO
+Enter a destination	Saisir une destination	Introduce un destino	Ziel eingeben
+Destination	Destination	Destino	Ziel
+Fastest available	Le plus rapide disponible	La más rápida disponible	Schnellste verfügbare Route
+Continue	Continuer	Continuar	Weiter
+Cancel	Annuler	Cancelar	Abbrechen
+Delete	Supprimer	Eliminar	Löschen
+Start ride	Démarrer le trajet	Iniciar trayecto	Fahrt starten
+Your route, your choice	Votre itinéraire, votre choix	Tu ruta, tu elección	Deine Route, deine Wahl
+Saved places	Lieux enregistrés	Lugares guardados	Gespeicherte Orte
+About	À propos	Acerca de	Über die App
+Voice & audio	Voix et audio	Voz y audio	Sprache und Audio
+Available shortcuts	Raccourcis disponibles	Atajos disponibles	Verfügbare Kurzbefehle
+Shortcut	Raccourci	Atajo	Kurzbefehl
+Voice privacy	Confidentialité vocale	Privacidad de voz	Datenschutz bei Sprache
+Share export…	Partager l’export…	Compartir archivo exportado…	Export teilen…
+Share ride status…	Partager l’état du trajet…	Compartir estado del trayecto…	Fahrtstatus teilen…
+No trusted contacts saved.	Aucun contact de confiance enregistré.	No hay contactos de confianza guardados.	Keine Vertrauenspersonen gespeichert.
+Save contact	Enregistrer le contact	Guardar contacto	Kontakt speichern
+Ride with more\ninformation.	Roulez avec plus\nd’informations.	Pedalea con más\ninformación.	Fahre mit mehr\nInformationen.
+Junction concern	Intersection préoccupante	Cruce peligroso	Problematische Kreuzung
+Vehicle obstruction	Véhicule gênant	Vehículo que obstruye	Blockierung durch ein Fahrzeug
+Junction complexity	Complexité des intersections	Complejidad de los cruces	Komplexität der Kreuzungen
+What’s my ride ETA?	Quand vais-je arriver à destination ?	¿A qué hora llegaré a mi destino?	Wann komme ich bei meiner Fahrt an?
+Ride ETA	Arrivée estimée	Llegada estimada	Geschätzte Ankunft
+Update stale · check iPhone	Mise à jour ancienne · voir l’iPhone	Datos desactualizados · revisa el iPhone	Daten veraltet · iPhone prüfen
+Update stale · open RideGuard	Mise à jour ancienne · ouvrir RideGuard	Datos desactualizados · abre RideGuard	Daten veraltet · RideGuard öffnen
+Update stale	Mise à jour ancienne	Datos desactualizados	Daten veraltet
+Demo · 	Démo · 	Demo · 	Demo · 
+RideGuard sample fixture	Données fictives RideGuard	Datos de ejemplo de RideGuard	RideGuard-Beispieldaten
+Lower observed risk	Risque observé plus faible	Menor riesgo observado	Geringeres beobachtetes Risiko
+Relatively lower risk	Risque relativement plus faible	Riesgo relativamente menor	Vergleichsweise geringeres Risiko
+Moderate indicators	Indicateurs modérés	Indicadores moderados	Mäßige Indikatoren
+Elevated indicators	Indicateurs élevés	Indicadores elevados	Erhöhte Indikatoren
+Higher observed risk	Risque observé plus élevé	Mayor riesgo observado	Höheres beobachtetes Risiko
+Ride updates resumed.	Le suivi du trajet a repris.	Se han reanudado las actualizaciones del trayecto.	Fahrtaktualisierungen fortgesetzt.
+Location tracking continues during this ride, including while the screen is locked. End the ride to stop it. Turn-by-turn guidance is not available in this build.	Le suivi de position continue pendant ce trajet, même si l’écran est verrouillé. Terminez le trajet pour l’arrêter. Le guidage étape par étape n’est pas disponible dans cette version.	El seguimiento de ubicación continúa durante este trayecto, incluso con la pantalla bloqueada. Termina el trayecto para detenerlo. La navegación paso a paso no está disponible en esta versión.	Die Standortaufzeichnung läuft während dieser Fahrt auch bei gesperrtem Bildschirm weiter. Beende die Fahrt, um sie zu stoppen. Abbiegehinweise sind in dieser Version nicht verfügbar.
+This ends an active ride and removes local records. Copies you exported or sent to others cannot be recalled.	Cette action termine le trajet en cours et supprime les données locales. Les copies exportées ou envoyées à d’autres personnes ne peuvent pas être retirées.	Esto finaliza el trayecto activo y elimina los registros locales. No se pueden retirar las copias que hayas exportado o enviado a otras personas.	Dadurch wird eine laufende Fahrt beendet und lokale Daten werden gelöscht. Exportierte oder an andere gesendete Kopien können nicht zurückgerufen werden.
+Enable RideGuard actions in the Shortcuts app, then invoke them with Siri. Supported wording and locked-device behaviour depend on Siri and your device settings.	Activez les actions RideGuard dans l’app Raccourcis, puis utilisez-les avec Siri. Les formulations reconnues et le fonctionnement sur écran verrouillé dépendent de Siri et des réglages de votre appareil.	Activa las acciones de RideGuard en la app Atajos y úsalas con Siri. Las frases reconocidas y el funcionamiento con el dispositivo bloqueado dependen de Siri y de tus ajustes.	Aktiviere RideGuard-Aktionen in der App Kurzbefehle und rufe sie mit Siri auf. Unterstützte Formulierungen und das Verhalten bei gesperrtem Gerät hängen von Siri und deinen Geräteeinstellungen ab.
+On supported iPhones, hold the side button and a volume button to access Emergency SOS and Medical ID. Device settings may change this behaviour.	Sur les iPhone compatibles, maintenez le bouton latéral et un bouton de volume pour accéder à Appel d’urgence et à la fiche médicale. Les réglages de l’appareil peuvent modifier ce fonctionnement.	En los iPhone compatibles, mantén pulsados el botón lateral y uno de volumen para acceder a Emergencia SOS y a Datos médicos. Los ajustes del dispositivo pueden cambiar este funcionamiento.	Halte auf unterstützten iPhones die Seitentaste und eine Lautstärketaste gedrückt, um Notruf SOS und den Notfallpass zu öffnen. Geräteeinstellungen können dieses Verhalten ändern.
+No analytics, cloud account, microphone capture or third-party AI service is enabled. Local records remain until you delete them. System backups may retain copies according to your device settings.	Aucun outil d’analyse, compte cloud, enregistrement du microphone ni service d’IA tiers n’est activé. Les données locales restent jusqu’à leur suppression. Les sauvegardes du système peuvent conserver des copies selon les réglages de votre appareil.	No se han activado análisis, cuentas en la nube, grabación del micrófono ni servicios de IA de terceros. Los registros locales permanecen hasta que los eliminas. Las copias de seguridad del sistema pueden conservar copias según tus ajustes.	Analysefunktionen, Cloud-Konten, Mikrofonaufnahmen und KI-Dienste Dritter sind nicht aktiviert. Lokale Daten bleiben bis zu ihrer Löschung gespeichert. Systemsicherungen können je nach Geräteeinstellungen Kopien enthalten.
+Observed %@ · coverage %lld%%	Observation : %@ · couverture : %lld%%	Observado: %@ · cobertura: %lld%%	Beobachtet: %@ · Abdeckung: %lld%%
+Data confidence: %@	Fiabilité des données : %@	Confianza en los datos: %@	Datenvertrauen: %@
+Source: %@	Source : %@	Fuente: %@	Quelle: %@
+Last update %@	Dernière mise à jour : %@	Última actualización: %@	Letzte Aktualisierung: %@
+Your comfort: %@	Votre ressenti : %@	Tu comodidad: %@	Dein Empfinden: %@
+Check-in grace: %lld min	Délai avant rappel : %lld min	Margen para confirmar estado: %lld min	Frist zur Rückmeldung: %lld Min.
+Status: %@	Statut : %@	Estado: %@	Status: %@
+Demo: %@ saved on this device.	Démo : %@ enregistré sur cet appareil.	Demo: %@ guardado en este dispositivo.	Demo: %@ auf diesem Gerät gespeichert.
+%@ saved on this device.	%@ enregistré sur cet appareil.	%@ guardado en este dispositivo.	%@ auf diesem Gerät gespeichert.
+Demo. Estimated arrival: %@.	Démo. Arrivée estimée : %@.	Demo. Llegada estimada: %@.	Demo. Geschätzte Ankunft: %@.
+Estimated arrival: %@.	Arrivée estimée : %@.	Llegada estimada: %@.	Geschätzte Ankunft: %@.
+Route overview with %lld available reports	Aperçu de l’itinéraire avec %lld signalements disponibles	Vista de la ruta con %lld avisos disponibles	Routenübersicht mit %lld verfügbaren Meldungen
+Your ride	Votre trajet	Tu trayecto	Deine Fahrt
+Where are you riding?	Où allez-vous à vélo ?	¿Adónde vas en bici?	Wohin fährst du?
+A little more confidence.\nEvery time you ride.	Un peu plus de confiance.\nÀ chaque trajet.	Un poco más de confianza.\nEn cada trayecto.	Etwas mehr Zuversicht.\nBei jeder Fahrt.
+Search destination	Rechercher une destination	Buscar destino	Ziel suchen
+Use my location	Utiliser ma position	Usar mi ubicación	Meinen Standort verwenden
+Prepare my ride	Préparer mon trajet	Preparar mi trayecto	Meine Fahrt vorbereiten
+A look around · demo	Un aperçu · démo	Un vistazo · demo	Ein Überblick · Demo
+Explore how rider reports appear along a route.	Découvrez comment les signalements des cyclistes s’affichent le long d’un itinéraire.	Descubre cómo se muestran los avisos de ciclistas a lo largo de una ruta.	Sieh dir an, wie Meldungen von Radfahrenden entlang einer Route angezeigt werden.
+Reports are stored on this device. Community syncing is not connected.	Les signalements restent sur cet appareil. La synchronisation communautaire n’est pas connectée.	Los avisos se guardan en este dispositivo. La sincronización comunitaria no está conectada.	Meldungen werden auf diesem Gerät gespeichert. Eine Synchronisierung mit der Community ist nicht verfügbar.
+Done	Terminé	Listo	Fertig
+RideGuard risk indicator	Indicateur de risque RideGuard	Indicador de riesgo RideGuard	RideGuard-Risikoindikator
+Measured protected-lane coverage, major-road distance, junction counts, elevation and traffic are not available in this build.	Cette version ne dispose pas de mesures sur les pistes protégées, les routes principales, les intersections, le dénivelé ou la circulation.	Esta versión no dispone de mediciones de carriles protegidos, distancia por vías principales, cruces, desnivel o tráfico.	Diese Version enthält keine Messdaten zu geschützten Radwegen, Hauptstraßenabschnitten, Kreuzungen, Höhenunterschieden oder Verkehr.
+Every ride deserves a little more confidence.	Chaque trajet mérite un peu plus de confiance.	Cada trayecto merece un poco más de confianza.	Jede Fahrt verdient etwas mehr Zuversicht.
+Fastest isn’t always your only option.	Le plus rapide n’est pas toujours votre seule option.	La ruta más rápida no siempre es la única opción.	Die schnellste Route ist nicht immer die einzige Möglichkeit.
+Know what riders ahead are seeing.	Découvrez ce que les cyclistes devant vous observent.	Descubre lo que observan los ciclistas que van por delante.	Erfahre, was Radfahrende vor dir beobachten.
+Someone can know you’re on your way.	Informez quelqu’un de votre départ.	Haz saber a alguien que estás en camino.	Lass jemanden wissen, dass du unterwegs bist.
+Check in without having to remember.	Un rappel pour donner de vos nouvelles.	Un recordatorio para dar señales de vida.	Eine Erinnerung, dich zu melden.
+Your location is personal.	Votre position vous appartient.	Tu ubicación es personal.	Dein Standort ist privat.
+Compare cycling route factors, understand rider reports and prepare for your everyday journey.	Comparez les caractéristiques des itinéraires, consultez les signalements et préparez vos trajets quotidiens à vélo.	Compara las características de las rutas, consulta avisos de ciclistas y prepara tus trayectos diarios.	Vergleiche Routeneigenschaften, sieh dir Meldungen an und bereite deine täglichen Fahrten vor.
+Explore explainable route comparisons. Demo scores are illustrative, never a promise of safety.	Explorez des comparaisons d’itinéraires expliquées. Les scores de la démo sont fictifs et ne garantissent jamais la sécurité.	Explora comparaciones de rutas con explicaciones. Las puntuaciones de la demo son ejemplos, nunca una garantía de seguridad.	Erkunde nachvollziehbare Routenvergleiche. Demo-Werte dienen der Veranschaulichung und garantieren keine Sicherheit.
+Mark potholes, roadworks and blocked lanes. Reports in this build stay on your device.	Notez les nids-de-poule, travaux et pistes obstruées. Dans cette version, les signalements restent sur votre appareil.	Registra baches, obras y carriles bloqueados. En esta versión, los avisos permanecen en tu dispositivo.	Erfasse Schlaglöcher, Baustellen und blockierte Wege. Meldungen bleiben in dieser Version auf deinem Gerät.
+Prepare a ride and keep an eye on your ETA. Secure live sharing needs a connected service and is unavailable in this build.	Préparez un trajet et consultez votre arrivée estimée. Le partage sécurisé en direct nécessite un service connecté et n’est pas disponible dans cette version.	Prepara un trayecto y consulta tu llegada estimada. Compartir en directo de forma segura requiere un servicio conectado y no está disponible en esta versión.	Bereite eine Fahrt vor und behalte die Ankunftszeit im Blick. Sichere Live-Freigabe benötigt einen verbundenen Dienst und ist in dieser Version nicht verfügbar.
+Set a reminder for an overdue ride. You choose whether to send a check-in using your phone’s sharing options.	Programmez un rappel en cas de retard. Vous choisissez de donner ou non de vos nouvelles via les options de partage du téléphone.	Configura un recordatorio si te retrasas. Tú decides si envías una confirmación mediante las opciones de compartir del teléfono.	Richte eine Erinnerung bei Verspätung ein. Du entscheidest, ob du über die Teilen-Funktion deines Telefons eine Rückmeldung sendest.
+Planning uses location on request. Tracking runs only during rides you start. No location is shared automatically. Delete or export local records at any time.	La planification utilise votre position à votre demande. Le suivi fonctionne uniquement pendant les trajets que vous démarrez. Aucune position n’est partagée automatiquement. Supprimez ou exportez vos données locales à tout moment.	La planificación usa tu ubicación cuando lo solicitas. El seguimiento solo funciona en trayectos que inicies. No se comparte tu ubicación automáticamente. Elimina o exporta los registros locales cuando quieras.	Die Planung nutzt deinen Standort auf Anfrage. Die Aufzeichnung läuft nur während selbst gestarteter Fahrten. Dein Standort wird nicht automatisch geteilt. Lokale Daten kannst du jederzeit löschen oder exportieren.
+Get started	Commencer	Empezar	Loslegen
+Skip introduction	Passer l’introduction	Omitir introducción	Einführung überspringen
+Explore sample rider observations.	Découvrez des exemples d’observations de cyclistes.	Explora observaciones de ciclistas de ejemplo.	Entdecke beispielhafte Beobachtungen von Radfahrenden.
+Filter reports	Filtrer les signalements	Filtrar avisos	Meldungen filtern
+All reports	Tous les signalements	Todos los avisos	Alle Meldungen
+No reports yet	Aucun signalement	Aún no hay avisos	Noch keine Meldungen
+Sample	Exemple	Ejemplo	Beispiel
+Saved at your current location and time. Describe road conditions, not identifiable people or vehicles.	Enregistré avec votre position et l’heure actuelles. Décrivez l’état de la route, sans identifier de personnes ni de véhicules.	Se guarda con tu ubicación y hora actuales. Describe el estado de la vía, sin identificar personas ni vehículos.	Wird mit deinem aktuellen Standort und der Uhrzeit gespeichert. Beschreibe den Straßenzustand, ohne Personen oder Fahrzeuge identifizierbar zu machen.
+Sample location · Shoreditch	Lieu fictif · Shoreditch	Ubicación de ejemplo · Shoreditch	Beispielort · Shoreditch
+Location needed	Position nécessaire	Se necesita tu ubicación	Standort erforderlich
+Current location available	Position actuelle disponible	Ubicación actual disponible	Aktueller Standort verfügbar
+Get current location	Obtenir ma position	Obtener ubicación actual	Aktuellen Standort abrufen
+Save report on this device	Enregistrer le signalement	Guardar aviso en este dispositivo	Meldung auf diesem Gerät speichern
+What do you see?	Que constatez-vous ?	¿Qué observas?	Was siehst du?
+Still there	Toujours présent	Sigue ahí	Noch vorhanden
+Cleared	Disparu	Ya no está	Beseitigt
+Incorrect	Incorrect	Incorrecto	Falsch
+Delete my report	Supprimer mon signalement	Eliminar mi aviso	Meine Meldung löschen
+Report details	Détails du signalement	Detalles del aviso	Meldungsdetails
+Keep riding	Continuer le trajet	Seguir el trayecto	Fahrt fortsetzen
+Only you can see this ride	Vous seul pouvez voir ce trajet	Solo tú puedes ver este trayecto	Nur du kannst diese Fahrt sehen
+Sharing & check-in options	Partage et nouvelles	Compartir y confirmar estado	Teilen und Rückmeldung
+Start demo ride	Démarrer le trajet démo	Iniciar trayecto de demo	Demofahrt starten
+Plan a cycling route in Explore before starting.	Planifiez un itinéraire à vélo dans Explorer avant de partir.	Planifica una ruta en bicicleta en Explorar antes de empezar.	Plane vor dem Start unter Entdecken eine Fahrradroute.
+Plan a ride	Planifier un trajet	Planificar trayecto	Fahrt planen
+CHECK-IN DUE	NOUVELLES ATTENDUES	CONFIRMA TU ESTADO	RÜCKMELDUNG FÄLLIG
+NEAR DESTINATION	PRÈS DE LA DESTINATION	CERCA DEL DESTINO	NAHE AM ZIEL
+RIDE IN PROGRESS	TRAJET EN COURS	TRAYECTO EN CURSO	FAHRT LÄUFT
+Sharing off	Partage désactivé	No se está compartiendo	Freigabe aus
+Check in or end your ride when you’re ready.	Donnez de vos nouvelles ou terminez le trajet lorsque vous êtes prêt.	Confirma que estás bien o termina el trayecto cuando quieras.	Melde dich oder beende die Fahrt, sobald du bereit bist.
+Check-in options	Donner de vos nouvelles	Confirmar tu estado	Rückmeldung
+One more journey.\nA little more insight.	Un trajet de plus.\nUn nouveau bilan.	Un trayecto más.\nUn nuevo resumen.	Eine weitere Fahrt.\nNeue Einblicke.
+Reports saved	Signalements enregistrés	Avisos guardados	Gespeicherte Meldungen
+Check-in delivery	Envoi de vos nouvelles	Entrega de la confirmación	Zustellung der Rückmeldung
+Not verified	Non vérifié	No verificado	Nicht bestätigt
+How did this route feel?	Comment avez-vous vécu ce trajet ?	¿Cómo te has sentido en esta ruta?	Wie hast du diese Route empfunden?
+Mixed	Mitigé	Sensaciones mixtas	Gemischt
+Uncomfortable	Inconfortable	Incómodo	Unangenehm
+Plan another ride	Planifier un autre trajet	Planificar otro trayecto	Weitere Fahrt planen
+You control what leaves your phone	Vous décidez de ce qui est partagé	Tú controlas lo que sale de tu teléfono	Du entscheidest, was dein Telefon verlässt
+Share a check-in…	Donner de mes nouvelles…	Compartir que estoy bien…	Rückmeldung teilen…
+Trusted people · saved locally	Personnes de confiance · sur cet appareil	Personas de confianza · guardadas localmente	Vertrauenspersonen · lokal gespeichert
+Trusted people	Personnes de confiance	Personas de confianza	Vertrauenspersonen
+Trusted contacts	Contacts de confiance	Contactos de confianza	Vertrauenspersonen
+Your everyday ride.	Vos trajets quotidiens.	Tus trayectos diarios.	Deine täglichen Fahrten.
+Applies to new rides. A local reminder asks you to check in; it does not notify a trusted person.	S’applique aux nouveaux trajets. Un rappel local vous invite à donner de vos nouvelles ; il ne prévient pas vos contacts.	Se aplica a nuevos trayectos. Un recordatorio local te pide confirmar que estás bien; no avisa a tus contactos.	Gilt für neue Fahrten. Eine lokale Erinnerung bittet dich um eine Rückmeldung; sie benachrichtigt keine Vertrauensperson.
+Terms	Conditions d’utilisation	Condiciones de uso	Nutzungsbedingungen
+Development terms	Conditions de la version de développement	Condiciones de la versión de desarrollo	Bedingungen der Entwicklungsversion
+Made for your ride	Pensé pour vos trajets	Pensado para tus trayectos	Für deine Fahrten
+Voice guidance	Indications vocales	Indicaciones de voz	Sprachhinweise
+Check-in prompts	Rappels pour donner des nouvelles	Avisos para confirmar tu estado	Erinnerungen zur Rückmeldung
+Report confirmation	Confirmation des signalements	Confirmación de avisos	Bestätigung von Meldungen
+Test spoken guidance	Tester les indications vocales	Probar indicaciones de voz	Sprachhinweise testen
+What’s my ETA?	Quand vais-je arriver ?	¿A qué hora llegaré?	Wann komme ich an?
+RideGuard synthesises spoken responses on your device. It does not record raw audio, save transcripts or send language to an AI service. Siri’s own processing and privacy settings are managed by Apple.	RideGuard produit les réponses vocales sur votre appareil. L’app n’enregistre aucun son, ne conserve aucune transcription et n’envoie aucun texte à un service d’IA. Apple gère le traitement et les réglages de confidentialité de Siri.	RideGuard genera las respuestas de voz en tu dispositivo. No graba audio, no guarda transcripciones ni envía texto a un servicio de IA. Apple gestiona el procesamiento y los ajustes de privacidad de Siri.	RideGuard erzeugt Sprachausgaben auf deinem Gerät. Die App zeichnet kein Audio auf, speichert keine Transkripte und sendet keinen Text an einen KI-Dienst. Verarbeitung und Datenschutzeinstellungen von Siri werden von Apple verwaltet.
+Save a place	Enregistrer un lieu	Guardar un lugar	Ort speichern
+Save place	Enregistrer le lieu	Guardar lugar	Ort speichern
+Your everyday\njourneys, understood.	Le bilan de vos\ntrajets quotidiens.	El resumen de tus\ntrayectos diarios.	Deine täglichen\nFahrten im Überblick.
+Your story starts with a ride	Votre histoire commence par un trajet	Tu historia empieza con un trayecto	Deine Geschichte beginnt mit einer Fahrt
+Completed rides	Trajets terminés	Trayectos completados	Abgeschlossene Fahrten
+Reports saved during rides	Signalements pendant les trajets	Avisos guardados durante trayectos	Meldungen während der Fahrten
+Ride history	Historique des trajets	Historial de trayectos	Fahrtverlauf
+Riding insights	Bilan des trajets	Resumen de trayectos	Fahrtübersicht
+Demo ride check-in	Rappel du trajet démo	Recordatorio del trayecto de demo	Rückmeldung zur Demofahrt
+Your expected arrival has passed. Open RideGuard to check in or add more time.	Votre heure d’arrivée estimée est dépassée. Ouvrez RideGuard pour donner de vos nouvelles ou ajouter du temps.	Ya ha pasado tu hora de llegada estimada. Abre RideGuard para confirmar que estás bien o añadir más tiempo.	Deine geschätzte Ankunftszeit ist überschritten. Öffne RideGuard, um dich zu melden oder mehr Zeit hinzuzufügen.

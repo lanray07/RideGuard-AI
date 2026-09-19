@@ -39,5 +39,5 @@ struct InfoRow: View {
     }
 }
 extension Double {
-    var milesText: String { String(format: "%.1f mi", self / 1609.344) }
+    var milesText: String { String(format: "%.1f mi", locale: Locale.current, self / 1609.344) }
 }

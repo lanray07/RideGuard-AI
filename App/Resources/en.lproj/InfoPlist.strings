@@ -1,0 +1,3 @@
+"NSLocationWhenInUseUsageDescription" = "Your location helps plan a ride, record hazards, and track a ride you start.";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "During a ride you start, location can keep ride progress updated while the screen is locked. Sharing requires a separate choice.";
+"NSFaceIDUsageDescription" = "Confirm it is you before exporting sensitive ride history and saved locations.";
