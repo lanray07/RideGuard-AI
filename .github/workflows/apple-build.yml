@@ -13,6 +13,8 @@ jobs:
         run: bash scripts/build-macos.sh
       - name: Capture real iPhone and iPad screenshots
         run: python3 scripts/capture-simulators.py
+      - name: Capture Apple Watch companion
+        run: python3 scripts/capture-watch.py
       - name: Upload build results and artwork
         if: always()
         uses: actions/upload-artifact@v4
