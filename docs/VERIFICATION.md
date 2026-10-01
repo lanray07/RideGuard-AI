@@ -4,6 +4,19 @@ Local environment: Windows, Swift 6.3.1. Apple validation was subsequently run o
 
 ## GitHub Apple platform results
 
+### App Review 2.1(b) correction — 1 October 2026
+
+- Apple reported that the visible Pro section produced In-App Purchase errors on
+  iPhone 17 Pro Max with iOS 27.0 while reviewing build 103.
+- Version 1.0 is a free release, so the unconfigured Pro screen and all StoreKit
+  startup, product, purchase, entitlement and restore code were removed.
+- `python scripts/check-release-storefront.py` prevents release builds from
+  exposing StoreKit or purchase UI until a complete paid offering is implemented.
+- Terms in English, French, Spanish and German now explicitly state that this
+  version has no subscriptions or other in-app purchases.
+- `swift test`: **15 tests, zero failures**. Localization validation: **427 keys**
+  in French, Spanish and German.
+
 ### Localization update — 19 September 2026
 
 - English, French, Spanish and German use bundled localization resources. The

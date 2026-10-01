@@ -20,7 +20,9 @@ jobs:
       - name: Warm screenshot simulator
         run: python3 scripts/warm-simulator.py
       - name: Build and test
-        run: bash scripts/build-macos.sh
+        run: |
+          python3 scripts/check-release-storefront.py
+          bash scripts/build-macos.sh
       - name: Verify bundled localization
         run: |
           python3 scripts/localize.py --check

@@ -41,7 +41,6 @@ final class RideStore {
     let routing = RoutingService()
     let voice = RideVoiceService()
     let alerts = SpokenAlertManager()
-    let subscriptions = SubscriptionService()
     let activities = LiveActivityService()
     let notifications = RideNotificationService()
     let watch = PhoneWatchBridge()

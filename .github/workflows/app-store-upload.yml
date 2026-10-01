@@ -13,6 +13,8 @@ jobs:
       ASC_PRIVATE_KEY: ${{ secrets.APP_STORE_CONNECT_API_PRIVATE_KEY }}
     steps:
       - uses: actions/checkout@v4
+      - name: Verify release storefront
+        run: python3 scripts/check-release-storefront.py
       - name: Install XcodeGen
         run: brew install xcodegen
       - name: Prepare project and isolated signing key

@@ -9798,6 +9798,29 @@
           }
         }
       }
+    },
+    "RideGuard provides contextual information, not a guarantee of safety, crash detection or emergency response. Risk indicators are experimental, not calibrated collision probabilities. Reports may be incomplete, stale or inaccurate. Follow applicable road rules and use your judgement.\n\nDo not use demo routes for navigation. Interact with detailed screens only when stationary. Configure voice actions before riding.\n\nCloud sharing, automated contact escalation and community publication are unavailable. No message is described as delivered without provider confirmation.\n\nThis version is free and does not offer subscriptions or other in-app purchases. Operator: O. Bankole. Support: https://github.com/lanray07/RideGuard-AI/issues. Privacy: https://github.com/lanray07/RideGuard-AI/blob/main/docs/privacy.md.": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RideGuard fournit des informations contextuelles et ne garantit ni la sécurité, ni la détection d’accidents, ni une intervention d’urgence. Les indicateurs de risque sont expérimentaux ; ils ne sont pas des probabilités de collision étalonnées. Les signalements peuvent être incomplets, périmés ou inexacts. Respectez le code de la route et faites preuve de discernement.\n\nN’utilisez pas les itinéraires de démonstration pour vous orienter. Utilisez les écrans détaillés uniquement à l’arrêt. Configurez les actions vocales avant de partir.\n\nLe partage dans le cloud, l’alerte automatique des contacts et la publication communautaire sont indisponibles. Aucun message n’est présenté comme remis sans confirmation du fournisseur.\n\nCette version est gratuite et ne propose aucun abonnement ni autre achat intégré. Exploitant : O. Bankole. Assistance : https://github.com/lanray07/RideGuard-AI/issues. Confidentialité : https://github.com/lanray07/RideGuard-AI/blob/main/docs/privacy.md."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RideGuard proporciona información contextual; no garantiza la seguridad, no detecta accidentes ni ofrece respuesta a emergencias. Los indicadores de riesgo son experimentales, no probabilidades de colisión calibradas. Los avisos pueden estar incompletos, desactualizados o ser inexactos. Respeta las normas de circulación y utiliza tu criterio.\n\nNo uses las rutas de demostración para navegar. Utiliza las pantallas detalladas únicamente cuando estés parado. Configura las acciones de voz antes de salir.\n\nNo están disponibles el uso compartido en la nube, los avisos automáticos a contactos ni la publicación comunitaria. Ningún mensaje se presenta como entregado sin confirmación del proveedor.\n\nEsta versión es gratuita y no ofrece suscripciones ni otras compras dentro de la app. Responsable: O. Bankole. Soporte: https://github.com/lanray07/RideGuard-AI/issues. Privacidad: https://github.com/lanray07/RideGuard-AI/blob/main/docs/privacy.md."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RideGuard bietet Kontextinformationen, garantiert jedoch keine Sicherheit, erkennt keine Unfälle und leistet keine Nothilfe. Risikoindikatoren sind experimentell und keine kalibrierten Unfallwahrscheinlichkeiten. Meldungen können unvollständig, veraltet oder ungenau sein. Beachte die Verkehrsregeln und nutze dein eigenes Urteilsvermögen.\n\nNutze Demo-Routen nicht zur Navigation. Bediene detaillierte Ansichten nur im Stillstand. Richte Sprachaktionen vor der Fahrt ein.\n\nCloud-Freigabe, automatische Alarmierung von Kontakten und Community-Veröffentlichung sind nicht verfügbar. Ohne Bestätigung des Anbieters wird keine Nachricht als zugestellt bezeichnet.\n\nDiese Version ist kostenlos und bietet keine Abonnements oder anderen In-App-Käufe an. Betreiber: O. Bankole. Support: https://github.com/lanray07/RideGuard-AI/issues. Datenschutz: https://github.com/lanray07/RideGuard-AI/blob/main/docs/privacy.md."
+          }
+        }
+      }
     }
   },
   "version": "1.0"

@@ -41,7 +41,7 @@ struct RootView: View {
         .alert("RideGuard", isPresented: Binding(get: { store.error != nil }, set: { if !$0 { store.error = nil } })) {
             Button("OK") { store.error = nil }
         } message: { Text(L10n.text(store.error ?? "")) }
-        .task { store.configure(context: context); await store.subscriptions.start() }
+        .task { store.configure(context: context) }
         .onChange(of: scenePhase) { _, phase in if phase == .active { store.tick() } }
     }
 }
